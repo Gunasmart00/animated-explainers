@@ -1,0 +1,131 @@
+title: "The Man Who Vanished Mid-Flight"
+preset: explainer
+structure: reveal
+hook: "Why do jets have this flap?"
+# Owner direction 2026-10-18: no dates, focus on how he did it, name revealed only in the last line, and the opening
+# must not give the case away (it opens on the mystery flap, not the hijacking or the jump).
+caption: |
+  This tiny flap under a jet's tail exists because of one man. Nobody knows who he was. 🤫
+  How one passenger pulled off the only unsolved hijacking in commercial aviation history.
+  Watch till the end for his name.
+
+  Follow @howzit.explains for how things work in 60 seconds.
+  Did you guess who it was before the end? 👇
+hashtags: [unsolvedmysteries, truecrime, aviationhistory, mysteryfacts, dbcooper]
+cover_text: "Why is this flap here?"
+alt_text: "3D animation of a famous unsolved hijacking: a man in a suit jumps from a jet's rear stairs at night, and a boy later finds old banknotes in river sand."
+
+overrides:
+  music: { volume: 0.26 }   # a little louder than default: tense music matters in this story
+
+characters:
+  - name: "the hijacker"
+    look: "a calm man in his mid-forties, slim, short dark hair, dark business suit, white shirt, thin black tie, carrying a cheap black briefcase; always seen from behind, in shadow or with his face turned away, never a clear face"
+  - name: "the flight attendant"
+    look: "a young 1970s airline flight attendant in a plain navy uniform jacket and skirt, neat hair, no airline logo"
+  - name: "the jet"
+    look: "a 1970s three-engine passenger jet with a white body and a plain red tail, no logos, with a folding stairway under the tail"
+  - name: "the boy"
+    look: "an 8-year-old boy in 1980 clothes, striped T-shirt and jeans, short brown hair"
+
+facts:
+  - claim: "He paid cash for a one-way ticket under the name Dan Cooper and sat in the last row"
+    sources: ["https://archives.fbi.gov/archives/news/stories/2006/november/dbcooper_112406", "https://historylink.org/File/23059"]
+  - claim: "After takeoff he handed a flight attendant a note saying he had a bomb (red sticks and wires in his briefcase)"
+    sources: ["https://archives.fbi.gov/archives/news/stories/2006/november/dbcooper_112406", "https://en.wikipedia.org/wiki/D._B._Cooper"]
+  - claim: "He demanded $200,000 in $20 bills and four parachutes"
+    sources: ["https://archives.fbi.gov/archives/news/stories/2006/november/dbcooper_112406", "https://historylink.org/File/23059"]
+  - claim: "After landing he released the passengers for the money and parachutes and kept the crew"
+    sources: ["https://archives.fbi.gov/archives/news/stories/2006/november/dbcooper_112406", "https://en.wikipedia.org/wiki/D._B._Cooper"]
+  - claim: "He ordered the plane to fly low and slow toward Mexico"
+    sources: ["https://migflug.com/jetflights/db-cooper-northwest-305-hijacking-1971-unsolved/", "https://en.wikipedia.org/wiki/D._B._Cooper"]
+  - claim: "The Boeing 727's rear stairs could be lowered in flight; he lowered them and jumped at night"
+    sources: ["https://migflug.com/jetflights/db-cooper-northwest-305-hijacking-1971-unsolved/", "https://historylink.org/File/23059"]
+  - claim: "The FBI never found him"
+    sources: ["https://archives.fbi.gov/archives/news/stories/2006/november/dbcooper_112406", "https://en.wikipedia.org/wiki/D._B._Cooper"]
+  - claim: "A boy found rotting $20 bills in Columbia River sand; serial numbers matched the ransom ($5,800)"
+    sources: ["https://historylink.org/File/23059", "https://archives.fbi.gov/archives/news/stories/2006/november/dbcooper_112406"]
+  - claim: "Planes were fitted with a flap that locks the rear stairs in flight, named the Cooper vane"
+    sources: ["https://en.wikipedia.org/wiki/Cooper_vane", "https://www.traveller.com.au/db-cooper-the-mystery-hijacker-who-jumped-from-an-airliner-and-changed-commercial-plane-design-gyur8x"]
+  - claim: "He called himself Dan Cooper; the press turned it into D.B. Cooper"
+    sources: ["https://archives.fbi.gov/archives/news/stories/2006/november/dbcooper_112406", "https://en.wikipedia.org/wiki/D._B._Cooper"]
+
+scenes:
+  - id: s01
+    narration: "This tiny metal flap under a jet's tail exists because of one man, and nobody knows who he was."
+    visual: "extreme close-up of a small spring-loaded metal flap on the underside of the jet's tail beside the folded rear stairway, mysterious moody light, shallow depth of field"
+    motion: zoom_in
+
+  - id: s02
+    narration: "He paid cash for a one-way ticket and sat in the very last row."
+    visual: "the hijacker seen from behind, sitting alone in the last row of a 1970s jet cabin, briefcase on his lap, face turned to the window in shadow"
+    motion: zoom_in
+
+  - id: s03
+    narration: "After takeoff, he handed a flight attendant a note: he had a bomb."
+    visual: "close-up of the hijacker's hand passing a folded note to the flight attendant in the aisle, a glass of bourbon on the tray table, his face out of frame"
+    motion: zoom_in
+    veo: "the flight attendant unfolds the note and her eyes widen; cabin lights flicker softly"
+
+  - id: s04
+    narration: "His demand: two hundred thousand dollars and four parachutes."
+    visual: "an open cheap black briefcase on a seat showing red cylinders and coiled wires, next to stacks of twenty-dollar bills and four packed parachutes, dramatic top-down lighting"
+    motion: zoom_out
+    popups:
+      - text: "$200,000"
+        at_word: "two"
+        hold: 1.2
+      - text: "4 PARACHUTES"
+        at_word: "four"
+        size: 110
+        hold: 1.4
+
+  - id: s05
+    narration: "When they landed, he swapped the passengers for the cash, but kept the crew."
+    visual: "the jet on a rainy runway at dusk, passengers hurrying down the front stairs in the rain while a man carries a canvas money bag toward the plane, wide shot"
+    motion: pan_left
+
+  - id: s06
+    narration: "Then the clever part: he told the pilots to fly low and slow, all the way to Mexico."
+    visual: "inside the 1970s cockpit at night, two pilots seen from behind with tense shoulders, glowing round gauges, rain on the windshield"
+    motion: zoom_in
+    popups:
+      - text: "LOW & SLOW"
+        at_word: "low"
+        size: 130
+
+  - id: s07
+    narration: "This jet's rear stairs could open in flight. He lowered them and jumped into the rainy night."
+    visual: "the hijacker seen from behind standing on the lowered rear stairway of the jet in heavy rain and wind, a money bag strapped to his body, dark forest far below, cinematic low angle"
+    motion: zoom_in
+    veo: "wind and rain whip around the figure on the stairway; he steps off and falls into the dark clouds"
+
+  - id: s08
+    narration: "The FBI searched for years and found nothing."
+    visual: "search teams with flashlights walking through a misty, rain-soaked pine forest at dawn, wide shot"
+    motion: pan_right
+
+  - id: s09
+    narration: "Then a boy digging in river sand found rotting bundles of twenty-dollar bills. The serial numbers matched."
+    visual: "the boy kneeling on a sandy riverbank, brushing away sand to reveal three old, rotting bundles of twenty-dollar bills held by rubber bands, soft daylight, close-up"
+    motion: zoom_in
+    veo: "the boy brushes away the wet sand and slowly lifts a rotting bundle of old bills, staring at it"
+    popups:
+      - text: "$5,800"
+        at_word: "matched."
+
+  - id: s10
+    narration: "So planes got that flap. It locks those stairs shut in flight, so no one can do it again."
+    visual: "the jet taking off on a bright day, close view of the tail where the small metal flap swings flat against the folded rear stairway, clean engineering detail"
+    motion: zoom_in
+
+  - id: s11
+    narration: "It's called the Cooper vane, named after the man himself. The world knows him as D.B. Cooper."
+    visual: "the hijacker's silhouette standing in an open aircraft doorway against a dark stormy sky, back to the camera, rain blowing in, mysterious rim light"
+    motion: zoom_out
+    popups:
+      - text: "D.B. COOPER"
+        at_word: "D.B."
+        color: lime
+        size: 150
+        hold: 2.4

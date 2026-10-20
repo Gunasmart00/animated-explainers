@@ -1,0 +1,44 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environment
+.venv/
+env/
+venv/
+
+# Episode build caches (scratch chunks and unjoined temp files)
+episodes/*/.cache/
+
+# Local voice tests & third-party tools
+voice-tests/
+tools/realesrgan/
+docs/reference-analysis/
+
+# Windows shortcuts & OS files
+*.lnk
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+desktop.ini
+.DS_Store
+
+# Editor & IDE configurations
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Environment variables & secrets (defense-in-depth)
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.cert
+
+# Logs and scratchpad
+*.log
+scratch/

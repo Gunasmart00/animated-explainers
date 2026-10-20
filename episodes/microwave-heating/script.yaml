@@ -1,0 +1,81 @@
+title: "How a Microwave Heats Food"
+preset: explainer
+structure: hook
+hook: "How does a microwave heat food?"     # lime hook box, first 3 seconds
+caption: |
+  Your microwave never gets hot. So how does it cook? 🤔
+  It's not heat rays. It's water molecules twisting billions of times a second.
+  How a microwave oven works, explained in 60 seconds.
+
+  Follow @howzit.explains for how things work in 60 seconds.
+  Did you know metal walls keep the waves inside? 👇
+hashtags: [howitworks, microwave, kitchenscience, physicsfacts, sciencelovers]
+cover_text: "Microwave secret"
+alt_text: "3D animation of a microwave oven showing waves making water molecules spin and heat food."
+characters:
+  - name: "the microwave"
+    look: "a rounded retro countertop microwave oven, pale mint body, dark glass door, glowing lime interior light"
+
+# Fact check: every claim needs 2 reliable sources before posting (prompt G2).
+facts:
+  - claim: "Home microwave ovens use about 2.45 GHz (2,450 MHz)"
+    sources: []          # TO VERIFY with G2
+  - claim: "The door's metal mesh holes are smaller than the wavelength, so microwaves stay inside"
+    sources: []
+  - claim: "Water molecules are polar and rotate with the changing field; the motion becomes heat"
+    sources: []
+  - claim: "Standing waves create hot and cold spots; the turntable evens them out"
+    sources: []
+
+scenes:
+  - id: s01
+    narration: "Your microwave can boil water in two minutes, but the oven itself barely gets warm. So where does the heat come from?"
+    visual: "the microwave on a dark kitchen counter, door open, a mug of water inside with steam rising, low-angle close-up"
+    motion: zoom_in
+    veo: "steam curls up from the mug while the microwave's lime interior light pulses softly"
+
+  - id: s02
+    narration: "Inside, a part called a magnetron makes invisible waves called microwaves."
+    visual: "cutaway of the microwave, the magnetron glowing lime in the corner, sending soft wavy beams into the cooking chamber"
+    motion: pan_right
+    popups:
+      - text: "MAGNETRON"
+        at_word: "magnetron"
+        size: 120
+
+  - id: s03
+    narration: "The metal walls bounce the waves around, and the tiny holes in the door are too small for them to escape."
+    visual: "inside the microwave chamber, glowing wave beams bouncing off shiny metal walls and stopping at the door mesh, wide shot"
+    motion: zoom_in
+
+  - id: s04
+    narration: "Now the clever part. Every water molecule has a slightly positive end and a slightly negative end."
+    visual: "one big glossy water molecule floating, a lime oxygen ball with two mint hydrogen balls, dramatic close-up"
+    motion: zoom_in
+
+  - id: s05
+    narration: "The waves flip direction about 2.45 billion times every second, and the water molecules twist back and forth to keep up."
+    visual: "hundreds of tiny water molecules spinning back and forth inside a bowl of soup, motion blur, top-down"
+    motion: zoom_out
+    veo: "the water molecules twist rapidly back and forth; the soup surface starts to shimmer"
+    popups:
+      - text: "2.45 BILLION\n/ SECOND"
+        at_word: "2.45"
+        color: lime
+        size: 120
+        hold: 2.2
+
+  - id: s06
+    narration: "All that twisting jostles the molecules around them, and that motion turns into heat."
+    visual: "molecules bumping into each other, a soft lime glow of heat building in the middle of the soup"
+    motion: zoom_in
+
+  - id: s07
+    narration: "That's why wet food heats up fast, while a dry plate stays cool."
+    visual: "a steaming bowl of soup glowing warm on a plain cool plate, side view"
+    motion: pan_left
+
+  - id: s08
+    narration: "And the spinning plate? The waves leave hot and cold spots, so turning the food evens them out."
+    visual: "top view of the turntable spinning with the soup, faint glowing hot spots and dim cold spots on the floor of the oven"
+    motion: zoom_out

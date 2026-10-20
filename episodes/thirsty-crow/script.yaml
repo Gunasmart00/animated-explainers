@@ -1,0 +1,47 @@
+title: "The Thirsty Crow"
+preset: kids
+
+scenes:
+  - id: s01
+    narration: "On a hot, sunny day, a little crow was very, very thirsty."
+    visual: "cute cartoon crow with big eyes on a tree branch, bright hot sun, dry village field, soft 3D cartoon style"
+    motion: zoom_in
+
+  - id: s02
+    narration: "He flew and flew, until he found a pot with a little water at the bottom."
+    visual: "the crow landing beside a clay pot in a courtyard, peeking inside, water far down at the bottom"
+    motion: pan_right
+
+  - id: s03
+    narration: "His beak could not reach it. What could he do?"
+    visual: "crow stretching his beak into the pot but it doesn't reach, puzzled face, question mark feeling"
+    motion: zoom_in
+    popups:
+      - text: "?"
+        at_word: "do"
+        color: white
+
+  - id: s04
+    narration: "He picked up pebbles, one by one, and dropped them in. One, two, three!"
+    visual: "crow dropping small round pebbles into the pot, pile of pebbles nearby"
+    motion: zoom_out
+    popups:
+      - text: "1"
+        at_word: "One,"
+        color: white
+        x: 0.3
+        hold: 0.6
+      - text: "2"
+        at_word: "two"
+        color: ink
+        hold: 0.6
+      - text: "3"
+        at_word: "three"
+        color: lime
+        x: 0.7
+        hold: 0.8
+
+  - id: s05
+    narration: "The water rose up, and up, and the crow drank happily. Never give up!"
+    visual: "water now near the brim, the crow happily drinking, sparkles, sunny cheerful colours"
+    motion: zoom_in

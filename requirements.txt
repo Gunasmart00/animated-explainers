@@ -1,0 +1,7 @@
+edge-tts>=7.0
+pyyaml>=6.0
+pillow>=10.0
+fonttools>=4.40
+numpy>=1.24
+# times captions and scenes to the ElevenLabs voiceover (first run downloads a ~460 MB speech model once)
+faster-whisper>=1.0

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+  <title>HowZit Instagram profile picture</title>
+  <defs>
+    <pattern id="hex" width="36" height="62.4" patternUnits="userSpaceOnUse">
+      <path d="M18 0 L36 10.4 L36 31.2 L18 41.6 L0 31.2 L0 10.4 Z M18 41.6 L18 62.4" fill="none" stroke="#6CFF2E" stroke-width="1.4"/>
+    </pattern>
+  </defs>
+  <rect width="1080" height="1080" fill="#08110B"/>
+  <rect width="1080" height="1080" fill="url(#hex)" opacity="0.12"/>
+  <svg x="190" y="200" width="700" height="700" viewBox="0 0 100 100">
+    <path d="M20 14 H80 A12 12 0 0 1 92 26 V60 A12 12 0 0 1 80 72 H46 L30 88 V72 H20 A12 12 0 0 1 8 60 V26 A12 12 0 0 1 20 14 Z" fill="#6CFF2E"/>
+    <text x="50" y="57" text-anchor="middle" font-family="'Bricolage Grotesque', 'Segoe UI', sans-serif" font-size="36" font-weight="800" fill="#08110B">Z?</text>
+    <circle cx="86" cy="12" r="4" fill="#E6F4E8"/>
+  </svg>
+</svg>

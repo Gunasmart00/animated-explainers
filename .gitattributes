@@ -1,0 +1,25 @@
+# Auto-detect text files and normalize line endings to LF
+* text=auto eol=lf
+
+# Windows batch files must retain CRLF
+*.bat text eol=crlf
+
+# Source and documentation
+*.py text eol=lf
+*.md text eol=lf
+*.yaml text eol=lf
+*.yml text eol=lf
+*.json text eol=lf
+*.html text eol=lf
+*.csv text eol=lf
+*.agent text eol=lf
+
+# Binary media assets
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.svg text
+*.ttf binary
+*.wav binary
+*.mp3 binary
+*.mp4 binary

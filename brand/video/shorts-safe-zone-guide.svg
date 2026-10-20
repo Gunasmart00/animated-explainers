@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920">
+  <title>Shorts / Reels layout guide (editing reference only, never export into a video)</title>
+  <rect width="1080" height="1920" fill="#34363A"/>
+  <!-- Areas covered by app UI (third-party estimates; check on a real phone) -->
+  <rect x="0" y="0" width="1080" height="220" fill="#FF4FA3" opacity="0.25"/>
+  <rect x="0" y="1500" width="1080" height="420" fill="#FF4FA3" opacity="0.25"/>
+  <rect x="960" y="220" width="120" height="1280" fill="#FF4FA3" opacity="0.25"/>
+  <!-- Hook box zone -->
+  <rect x="60" y="260" width="740" height="200" rx="24" fill="#6CFF2E"/>
+  <text x="90" y="380" font-family="'Bricolage Grotesque', 'Segoe UI', sans-serif" font-size="56" font-weight="800" fill="#08110B">HOOK TEXT (first 3 s)</text>
+  <!-- Watermark position -->
+  <rect x="834" y="236" width="110" height="110" rx="55" fill="none" stroke="#E6F4E8" stroke-width="4" stroke-dasharray="12 10"/>
+  <text x="790" y="380" font-family="'Bricolage Grotesque', 'Segoe UI', sans-serif" font-size="26" fill="#E6F4E8">watermark</text>
+  <!-- Caption zone -->
+  <rect x="90" y="1080" width="840" height="300" rx="20" fill="none" stroke="#6CFF2E" stroke-width="5" stroke-dasharray="20 14"/>
+  <text x="540" y="1250" text-anchor="middle" font-family="'Bricolage Grotesque', 'Segoe UI', sans-serif" font-size="84" font-weight="800" fill="#FFFFFF" stroke="#000000" stroke-width="6" paint-order="stroke">this is <tspan fill="#6CFF2E">lowkey</tspan> wild</text>
+  <text x="540" y="1360" text-anchor="middle" font-family="'Bricolage Grotesque', 'Segoe UI', sans-serif" font-size="28" fill="#E6F4E8">captions: 2–4 words, centre, inside this box</text>
+  <text x="540" y="1720" text-anchor="middle" font-family="'Bricolage Grotesque', 'Segoe UI', sans-serif" font-size="32" fill="#E6F4E8">covered by title, channel name, buttons — keep clear</text>
+  <rect x="0" y="1912" width="1080" height="8" fill="#6CFF2E"/>
+</svg>

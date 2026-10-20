@@ -1,0 +1,255 @@
+<title>HowZit Reel Checklist</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,500;12..96,800&display=swap">
+<style>
+/* Layout: one reading column, sticky progress bar, phases as numbered sections of tickable steps; HowZit brand tokens, dark only. */
+:root {
+  --ground: #08110B;
+  --surface: #13261A;
+  --ink: #E6F4E8;
+  --lime: #6CFF2E;
+  --forest: #1E7B3C;
+  --muted: color-mix(in srgb, var(--ink) 62%, var(--ground));
+  --line: color-mix(in srgb, var(--forest) 55%, var(--ground));
+  --code-bg: color-mix(in srgb, var(--ground) 70%, black);
+  --display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --body: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --mono: ui-monospace, "Cascadia Mono", Consolas, "SFMono-Regular", Menlo, monospace;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--ground);
+  color: var(--ink);
+  font: 400 16px/1.55 var(--body);
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='62.4'%3E%3Cpath d='M18 0 L36 10.4 L36 31.2 L18 41.6 L0 31.2 L0 10.4 Z M18 41.6 L18 62.4' fill='none' stroke='%236CFF2E' stroke-width='1.2' opacity='0.07'/%3E%3C/svg%3E");
+}
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--ground); }
+.wrap { max-width: 780px; margin: 0 auto; padding-block: 28px 80px; display: grid; gap: 28px; }
+h1, h2, h3 { font-family: var(--display); text-wrap: balance; margin: 0; }
+h1 { font-size: clamp(2rem, 6vw, 3rem); font-weight: 800; line-height: 1.02; letter-spacing: -0.02em; }
+h1 .z { color: var(--lime); }
+h2 { font-size: 1.45rem; font-weight: 800; line-height: 1.15; }
+h3 { font-size: 1.05rem; font-weight: 800; }
+p { margin: 0; max-width: 65ch; }
+a { color: var(--lime); }
+.lede { color: var(--muted); font-size: 1.05rem; }
+.eyebrow { font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); font-weight: 500; }
+
+/* sticky progress */
+.bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: color-mix(in srgb, var(--ground) 92%, transparent);
+  backdrop-filter: blur(6px); border-bottom: 1px solid var(--line); margin-inline: calc(-1 * max(16px, env(safe-area-inset-left, 0px)));
+  padding: 10px max(16px, env(safe-area-inset-left, 0px)); }
+.bar-in { max-width: 780px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; }
+.ep { display: flex; align-items: center; gap: 8px; flex: 1 1 260px; min-width: 0; }
+.ep label { font-size: 0.82rem; color: var(--muted); white-space: nowrap; }
+.ep input { flex: 1; min-width: 0; background: var(--surface); color: var(--ink); border: 1px solid var(--line); border-radius: 8px;
+  padding: 7px 10px; font: 500 0.95rem var(--mono); }
+.ep input:focus-visible, button:focus-visible, .step input:focus-visible + .box { outline: 2px solid var(--lime); outline-offset: 2px; }
+.meter { flex: 1 1 160px; display: flex; align-items: center; gap: 10px; min-width: 0; }
+.track { flex: 1; height: 8px; background: var(--surface); border-radius: 4px; overflow: hidden; }
+.fill { height: 100%; width: 0; background: var(--lime); transition: width .3s; }
+.count { font-variant-numeric: tabular-nums; font-size: 0.9rem; color: var(--muted); white-space: nowrap; }
+.btn { background: transparent; color: var(--ink); border: 1px solid var(--line); border-radius: 8px; padding: 6px 12px; font: 500 0.85rem var(--body); cursor: pointer; }
+.btn:hover { border-color: var(--lime); }
+.btn.warn { border-color: var(--lime); color: var(--lime); }
+.sync { font-size: 0.75rem; color: var(--muted); width: 100%; }
+
+/* overview */
+.flow { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 8px; }
+.flow div { background: var(--surface); border-radius: 10px; padding: 10px 12px; display: grid; gap: 2px; }
+.flow b { font-family: var(--display); font-weight: 800; }
+.flow span { font-size: 0.85rem; color: var(--muted); }
+.flow .tool { font-size: 0.72rem; letter-spacing: .08em; text-transform: uppercase; color: var(--lime); }
+table { border-collapse: collapse; width: 100%; font-size: 0.92rem; }
+th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font-size: 0.75rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 500; }
+.tbl { overflow-x: auto; }
+.note { border-left: 3px solid var(--forest); padding: 4px 0 4px 14px; color: var(--muted); }
+.note b { color: var(--ink); }
+
+/* phases and steps */
+.phase { display: grid; gap: 12px; }
+.phase-head { display: flex; align-items: baseline; gap: 12px; border-top: 1px solid var(--line); padding-top: 18px; }
+.phase-head .n { font: 800 1.45rem var(--display); color: var(--lime); font-variant-numeric: tabular-nums; }
+.phase-head .pc { margin-left: auto; font-size: 0.82rem; color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.step { display: grid; grid-template-columns: 28px 1fr; gap: 4px 12px; background: var(--surface); border-radius: 12px; padding: 14px 16px; }
+.step > input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.box { width: 22px; height: 22px; border: 2px solid var(--forest); border-radius: 6px; margin-top: 2px; cursor: pointer; display: grid; place-items: center; }
+.step.done .box { background: var(--lime); border-color: var(--lime); }
+.step.done .box::after { content: ""; width: 10px; height: 6px; border: solid var(--ground); border-width: 0 0 3px 3px; transform: rotate(-45deg) translate(1px, -1px); }
+.step.done h3 { color: var(--muted); text-decoration: line-through; text-decoration-color: var(--forest); }
+.step .body { display: grid; gap: 8px; min-width: 0; }
+.step h3 { cursor: pointer; display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: baseline; }
+.chip { font: 500 0.7rem var(--body); letter-spacing: .08em; text-transform: uppercase; color: var(--ground); background: var(--ink); border-radius: 999px; padding: 2px 8px; }
+.chip.gem { background: var(--lime); }
+.chip.ps { background: var(--ink); }
+.chip.ig { background: color-mix(in srgb, var(--ink) 70%, var(--lime)); }
+.chip.np { background: var(--muted); }
+.step p, .step li { color: color-mix(in srgb, var(--ink) 86%, var(--ground)); }
+.step ul, .step ol { margin: 0; padding-left: 20px; display: grid; gap: 3px; }
+code { font-family: var(--mono); font-size: 0.88em; background: var(--code-bg); padding: 1px 5px; border-radius: 4px; overflow-wrap: anywhere; }
+.code { position: relative; background: var(--code-bg); border: 1px solid var(--line); border-radius: 10px; min-width: 0; }
+.code pre { margin: 0; padding: 12px 14px; padding-right: 78px; font: 0.82rem/1.5 var(--mono); white-space: pre-wrap; overflow-wrap: anywhere; max-height: 260px; overflow: auto; }
+.code.short pre { max-height: none; }
+.code .copy { position: absolute; top: 8px; right: 8px; background: var(--lime); color: var(--ground); border: 0; border-radius: 6px; padding: 5px 10px; font: 800 0.78rem var(--body); cursor: pointer; }
+.code .label { position: absolute; bottom: 6px; right: 10px; font-size: 0.7rem; color: var(--muted); pointer-events: none; }
+.save { font-size: 0.88rem; color: var(--muted); }
+.save b { color: var(--lime); font-weight: 500; }
+footer { color: var(--muted); font-size: 0.85rem; border-top: 1px solid var(--line); padding-top: 16px; }
+@media (prefers-reduced-motion: reduce) { .fill { transition: none; } }
+@media (max-width: 480px) { .step { grid-template-columns: 24px 1fr; padding: 12px; } .code pre { padding-right: 14px; padding-top: 40px; } }
+</style>
+
+<div class="bar" role="region" aria-label="Progress">
+  <div class="bar-in">
+    <div class="ep"><label for="ep">Episode folder</label><input id="ep" type="text" spellcheck="false" placeholder="why-do-onions-make-you-cry" autocomplete="off"></div>
+    <div class="meter"><div class="track"><div class="fill" id="fill"></div></div><span class="count" id="count">0 / 0</span></div>
+    <button class="btn" id="reset" type="button">New video</button>
+    <div class="sync" id="sync">Ticks are saved on this device.</div>
+  </div>
+</div>
+
+<main class="wrap">
+  <header style="display:grid;gap:12px">
+    <span class="eyebrow">How<span style="color:var(--lime)">Zit</span> · @howzit.explains · Collab with Lowkey Genius</span>
+    <h1>Story to 3D Reel, <span class="z">step by step</span></h1>
+    <p class="lede">From a story in your notes to a posted HowZit Reel. Gemini writes and draws, this project voices, captions and brands it, you post it on HowZit with the Lowkey Genius page as collaborator. Type the episode folder above and every command below fills it in.</p>
+  </header>
+
+  <section style="display:grid;gap:12px" aria-labelledby="how">
+    <h2 id="how">How it fits together</h2>
+    <div class="flow">
+      <div><span class="tool">You</span><b>Story</b><span>notes, facts, a twist</span></div>
+      <div><span class="tool">Gemini</span><b>Script</b><span>G1 write · G2 fact-check · G3 retention</span></div>
+      <div><span class="tool">PowerShell</span><b>Draft</b><span>real voice, timing, placeholders</span></div>
+      <div><span class="tool">Gemini</span><b>Pictures</b><span>G4 sheets · G5 scenes · G6 Veo clips</span></div>
+      <div><span class="tool">PowerShell</span><b>Final</b><span>captions, sounds, music, watermark, end card</span></div>
+      <div><span class="tool">Instagram</span><b>Post</b><span>HowZit + Collab invite</span></div>
+    </div>
+    <div class="tbl"><table>
+      <thead><tr><th>Tool</th><th>Cost</th><th>What it does here</th></tr></thead>
+      <tbody>
+        <tr><td>Gemini Pro (app)</td><td>your plan</td><td>Script, fact check with Google Search, 3D pictures, Veo clips, caption and 5 hashtags</td></tr>
+        <tr><td>This project (Python)</td><td>free</td><td>Narration, smooth camera moves, captions in the reference Reel's style, glowing pop-ups, whoosh and pop sounds, music, HowZit watermark and end card, posting copy</td></tr>
+        <tr><td>edge-tts</td><td>free</td><td>Built-in narrator voices with exact word timings (needs internet)</td></tr>
+        <tr><td>Google AI Studio</td><td>free tier</td><td>Optional, most natural narrator (G8), timed to captions automatically</td></tr>
+        <tr><td>Pixabay Music</td><td>free</td><td>Background tracks; the music dips whenever the narrator speaks</td></tr>
+        <tr><td>Real-ESRGAN</td><td>free</td><td>Optional upscaler for sharper Gemini pictures</td></tr>
+        <tr><td>ffmpeg</td><td>free</td><td>All video and audio processing</td></tr>
+        <tr><td>Claude Pro</td><td>your plan</td><td>Optional: second script checker, fixing renders in Claude Code</td></tr>
+        <tr><td>OpusClip</td><td>—</td><td>Not used. Claude won't touch it unless you ask.</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <!--PHASES-->
+
+  <footer>
+    Prompts come from <code>prompts\gemini.md</code> in <code>G:\Apps\animated-explainers</code>. Rebuild this page after editing them: <code>python tools\make_checklist.py</code>.
+    Instagram limits Reels to 5 hashtags (since Dec 2025). Brand: <code>brand\brand-guide.md</code>.
+  </footer>
+</main>
+
+<script>
+(() => {
+  const KEY = "howzit-checklist-v1";
+  let state = { episode: "", done: {} };
+  let dbDoc = null, saveTimer = null, lastSaved = "";
+
+  const $ = (s, el = document) => el.querySelector(s);
+  const $$ = (s, el = document) => [...el.querySelectorAll(s)];
+  const steps = $$(".step");
+  const epInput = $("#ep");
+
+  function render() {
+    const ep = (state.episode || "").trim();
+    if (document.activeElement !== epInput) epInput.value = ep;
+    steps.forEach(st => {
+      const on = !!state.done[st.dataset.id];
+      st.classList.toggle("done", on);
+      $("input", st).checked = on;
+    });
+    $$("[data-cmd]").forEach(el => { el.textContent = el.dataset.cmd.replaceAll("{EP}", ep || "<episode>"); });
+    const total = steps.length, n = steps.filter(s => state.done[s.dataset.id]).length;
+    $("#count").textContent = `${n} / ${total}`;
+    $("#fill").style.width = total ? `${(n / total) * 100}%` : "0";
+    $$(".phase").forEach(ph => {
+      const ss = $$(".step", ph), d = ss.filter(s => state.done[s.dataset.id]).length;
+      $(".pc", ph).textContent = `${d} of ${ss.length}`;
+    });
+  }
+
+  function persist() {
+    try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {}
+    if (!dbDoc) return;
+    clearTimeout(saveTimer);
+    saveTimer = setTimeout(async () => {
+      const body = JSON.stringify(state);
+      if (body === lastSaved) return;
+      try { await dbDoc.set(JSON.parse(body)); lastSaved = body; $("#sync").textContent = "Saved. Ticks follow you to your phone and laptop."; }
+      catch (e) { $("#sync").textContent = "Couldn't save online just now; ticks are kept on this device."; }
+    }, 600);
+  }
+
+  try { const s = JSON.parse(localStorage.getItem(KEY) || "null"); if (s && s.done) state = s; } catch (e) {}
+
+  steps.forEach(st => {
+    const box = $("input", st);
+    box.addEventListener("change", () => { state.done[st.dataset.id] = box.checked; if (!box.checked) delete state.done[st.dataset.id]; render(); persist(); });
+    $(".box", st).addEventListener("click", () => { box.checked = !box.checked; box.dispatchEvent(new Event("change")); });
+    $("h3", st).addEventListener("click", () => { box.checked = !box.checked; box.dispatchEvent(new Event("change")); });
+  });
+
+  let epTimer = null;
+  epInput.addEventListener("input", () => {
+    state.episode = epInput.value.trim().replace(/[\\/]+$/, "");
+    render();
+    clearTimeout(epTimer); epTimer = setTimeout(persist, 500);
+  });
+
+  const reset = $("#reset"); let armed = null;
+  reset.addEventListener("click", () => {
+    if (!armed) {
+      reset.textContent = "Tap again to clear phases 2–7"; reset.classList.add("warn");
+      armed = setTimeout(() => { armed = null; reset.textContent = "New video"; reset.classList.remove("warn"); }, 4000);
+      return;
+    }
+    clearTimeout(armed); armed = null; reset.textContent = "New video"; reset.classList.remove("warn");
+    const keep = {}; Object.keys(state.done).filter(k => k.startsWith("a")).forEach(k => keep[k] = true);
+    state = { episode: "", done: keep }; render(); persist(); epInput.focus();
+  });
+
+  $$(".copy").forEach(btn => btn.addEventListener("click", () => {
+    const pre = btn.parentElement.querySelector("pre");
+    const text = pre.textContent;
+    const done = ok => { btn.textContent = ok ? "Copied" : "Select + copy"; setTimeout(() => btn.textContent = "Copy", 1600); };
+    try {
+      navigator.clipboard.writeText(text).then(() => done(true), () => { selectPre(pre); done(false); });
+    } catch (e) { selectPre(pre); done(false); }
+  }));
+  function selectPre(pre) { const r = document.createRange(); r.selectNodeContents(pre); const s = getSelection(); s.removeAllRanges(); s.addRange(r); }
+
+  render();
+
+  (async () => {
+    try {
+      const db = await window.claude?.use?.("db");
+      if (!db) return;
+      dbDoc = db.doc("progress/current");
+      dbDoc.onSnapshot(snap => {
+        if (!snap.exists || snap.metadata.hasPendingWrites) return;
+        const d = snap.data();
+        lastSaved = JSON.stringify(d);
+        state = { episode: d.episode || "", done: { ...(d.done || {}) } };
+        render();
+        $("#sync").textContent = "Saved. Ticks follow you to your phone and laptop.";
+      }, () => { $("#sync").textContent = "Ticks are saved on this device."; });
+    } catch (e) {}
+  })();
+})();
+</script>

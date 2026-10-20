@@ -1,0 +1,54 @@
+{
+ "s01": {
+  "start": 0.0,
+  "seconds": 4.25
+ },
+ "s02": {
+  "start": 4.25,
+  "seconds": 3.8
+ },
+ "s03": {
+  "start": 8.05,
+  "seconds": 5.47
+ },
+ "s04": {
+  "start": 13.52,
+  "seconds": 3.24
+ },
+ "s05": {
+  "start": 16.76,
+  "seconds": 5.73
+ },
+ "s06": {
+  "start": 22.49,
+  "seconds": 4.44
+ },
+ "s07": {
+  "start": 26.93,
+  "seconds": 5.85
+ },
+ "s08": {
+  "start": 32.78,
+  "seconds": 5.21
+ },
+ "s09": {
+  "start": 37.99,
+  "seconds": 2.54
+ },
+ "s10": {
+  "start": 40.53,
+  "seconds": 4.97
+ },
+ "s11": {
+  "start": 45.5,
+  "seconds": 3.33
+ },
+ "s12": {
+  "start": 48.83,
+  "seconds": 4.33
+ },
+ "s13": {
+  "start": 53.16,
+  "seconds": 5.28
+ }
+}

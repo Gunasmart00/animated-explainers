@@ -1,0 +1,72 @@
+# How the HowZit / Lowkey Genius brand is applied to videos.
+# Colours and fonts come only from tokens.json (copied from G:\Apps\youtube_clipping\brand).
+# Colour values below are token names (lime, ground, ink, forest, surface, white) or hex.
+
+tokens: brand/tokens.json
+fonts_dir: brand/fonts
+
+# Each export profile renders its own copy of the video: same scenes, different branding.
+# `python -m studio.build <episode>` makes every profile listed in `default_profiles`.
+# Explainers post on HowZit (Instagram) as a Collab with the Lowkey Genius Instagram page,
+# so one HowZit export is enough. Add `--profile youtube` for a Lowkey Genius YouTube Short.
+default_profiles: [howzit]
+
+collab:
+  instagram: "@lowkeygenius"   # Lowkey Genius clips page; confirm the exact handle (see youtube_clipping/research/02-brand-names.md)
+
+profiles:
+  howzit:                                   # Instagram Reel, @howzit.explains
+    suffix: howzit
+    watermark:
+      file: brand/howzit/watermark-150.png  # HowZit bubble on the dark circle
+      x: 834                                # top-left corner of the watermark, 1080x1920 canvas
+      y: 236
+      size: 110
+      opacity: 0.95
+    # No end card (owner, 2026-10-18: "add our brand logo, that's enough"; the reference Reels end right on the
+    # payoff). To bring it back, uncomment:
+    # end_card:
+    #   file: brand/howzit/wordmark-on-dark.png
+    #   width: 0.78
+    #   line: "Follow HowZit for how things work."
+    #   min_seconds: 2.5
+
+  youtube:                                  # optional: YouTube Short, Lowkey Genius @LowkeyGenius00
+    suffix: youtube
+    watermark:
+      file: brand/youtube/watermark-150.png # Orbit bulb on the dark circle
+      x: 834
+      y: 236
+      size: 110
+      opacity: 0.95
+    end_card:
+      file: brand/logo/lockup-on-dark.png
+      width: 0.86
+      line: "Subscribe to Lowkey Genius for more."
+      min_seconds: 2.5
+
+# Hook box: lime box with ground text for the first seconds (brand guide, Shorts layout).
+# Off by default since 2026-10-17: the owner wants the reference-sample look, which opens straight
+# on the picture and narration. Turn on per episode with `overrides: {brand: {hook_box: {enabled: true}}}`.
+hook_box:
+  enabled: false
+  x: 60
+  y: 260
+  w: 740
+  h: 200
+  radius: 24
+  seconds: 3.0
+  fill: lime
+  text: ground
+  size: 84
+
+# Optional 8 px lime progress bar along the very bottom.
+progress_bar: false
+
+# Text watermark (handle). Off: the logo watermark already marks every frame.
+text_watermark:
+  text: ""
+  position: bottom-center
+  size: 40
+  color: ink
+  opacity: 0.55

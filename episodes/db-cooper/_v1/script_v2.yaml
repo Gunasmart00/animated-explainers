@@ -1,0 +1,183 @@
+title: "The Man Who Vanished Mid-Flight"
+preset: explainer
+structure: reveal
+hook: "Why do jets have this flap?"
+# Owner direction 2026-10-18: no dates, focus on how he did it, name revealed only in the last line, and the opening
+# must not give the case away (it opens on the mystery flap, not the hijacking or the jump).
+caption: |
+  This tiny flap under a jet's tail exists because of one man. Nobody knows who he was. 🤫
+  How one passenger pulled off the only unsolved hijacking in commercial aviation history.
+  Watch till the end for his name.
+
+  Follow @howzit.explains for how things work in 60 seconds.
+  Did you guess who it was before the end? 👇
+hashtags: [unsolvedmysteries, truecrime, aviationhistory, mysteryfacts, dbcooper]
+cover_text: "Why is this flap here?"
+alt_text: "3D animation of a famous unsolved hijacking: a man in a suit jumps from a jet's rear stairs at night, and a boy later finds old banknotes in river sand."
+
+characters:
+  - name: "the hijacker"
+    look: "a calm man in his forties, slim, short dark hair, dark grey business suit, white shirt, thin black tie, sunglasses, carrying a black briefcase; always seen from behind, in silhouette or with his face turned away, never a clear face"
+  - name: "the flight attendant"
+    look: "a young flight attendant in a 1970s-style navy uniform jacket and skirt, neat brown hair in a bun, friendly face, no airline logo"
+  - name: "the boy"
+    look: "an 8-year-old boy in a red striped T-shirt and jeans, messy brown hair, big curious eyes"
+
+setting: "a bright, clean 1970s passenger jet cabin with pastel-blue seats and white walls"
+
+facts:
+  - claim: "He paid cash for a one-way ticket under the name Dan Cooper and sat in the last row"
+    sources: ["https://archives.fbi.gov/archives/news/stories/2006/november/dbcooper_112406", "https://historylink.org/File/23059"]
+  - claim: "After takeoff he handed a flight attendant a note saying he had a bomb (red sticks and wires in his briefcase)"
+    sources: ["https://archives.fbi.gov/archives/news/stories/2006/november/dbcooper_112406", "https://en.wikipedia.org/wiki/D._B._Cooper"]
+  - claim: "He demanded $200,000 in $20 bills and four parachutes"
+    sources: ["https://archives.fbi.gov/archives/news/stories/2006/november/dbcooper_112406", "https://historylink.org/File/23059"]
+  - claim: "After landing he released the passengers for the money and parachutes and kept the crew"
+    sources: ["https://archives.fbi.gov/archives/news/stories/2006/november/dbcooper_112406", "https://en.wikipedia.org/wiki/D._B._Cooper"]
+  - claim: "He ordered the plane to fly low and slow toward Mexico"
+    sources: ["https://migflug.com/jetflights/db-cooper-northwest-305-hijacking-1971-unsolved/", "https://en.wikipedia.org/wiki/D._B._Cooper"]
+  - claim: "The Boeing 727's rear stairs could be lowered in flight; he lowered them and jumped at night"
+    sources: ["https://migflug.com/jetflights/db-cooper-northwest-305-hijacking-1971-unsolved/", "https://historylink.org/File/23059"]
+  - claim: "The FBI never found him"
+    sources: ["https://archives.fbi.gov/archives/news/stories/2006/november/dbcooper_112406", "https://en.wikipedia.org/wiki/D._B._Cooper"]
+  - claim: "A boy found rotting $20 bills in Columbia River sand; serial numbers matched the ransom ($5,800)"
+    sources: ["https://historylink.org/File/23059", "https://archives.fbi.gov/archives/news/stories/2006/november/dbcooper_112406"]
+  - claim: "Planes were fitted with a flap that locks the rear stairs in flight, named the Cooper vane"
+    sources: ["https://en.wikipedia.org/wiki/Cooper_vane", "https://www.traveller.com.au/db-cooper-the-mystery-hijacker-who-jumped-from-an-airliner-and-changed-commercial-plane-design-gyur8x"]
+  - claim: "He called himself Dan Cooper; the press turned it into D.B. Cooper"
+    sources: ["https://archives.fbi.gov/archives/news/stories/2006/november/dbcooper_112406", "https://en.wikipedia.org/wiki/D._B._Cooper"]
+
+scenes:
+  - id: s01
+    narration: "This tiny flap under a jet's tail exists because of one man."
+    shot: "0-2 s: extreme macro close-up of a small spring-loaded metal flap under the tail of a white passenger jet, next to the folded rear stairway; 2-4 s: the flap flicks shut with a click as the jet starts to roll."
+    camera: "slow orbit around the flap, then a gentle push-in"
+    setting: "a sunny airport apron, clean white jet with a plain red tail, blue sky"
+    sfx: "jet engines spooling up in the distance, a crisp metallic click, light wind"
+
+  - id: s02
+    narration: "And nobody knows who he was."
+    characters: ["the hijacker"]
+    shot: "The hijacker walks away from the camera across a bright airport tarmac toward the jet's front stairs, briefcase in hand; he never turns around."
+    camera: "low tracking shot following behind him at knee height, then rising"
+    setting: "a bright, sunny airport tarmac with the white jet ahead"
+    sfx: "footsteps on tarmac, jet engines whining, a soft gust of wind"
+
+  - id: s03
+    narration: "He paid cash for his ticket and sat in the very last row."
+    characters: ["the hijacker"]
+    shot: "0-3 s: close-up of his hand sliding crisp cash across a ticket counter and taking a ticket; 3-6 s: he sits down in the last row of the cabin, briefcase on his lap, face turned to the window."
+    camera: "top-down on the counter, then a smooth whip-pan into an over-the-shoulder shot in the cabin"
+    sfx: "cash rustle, a rubber stamp thump, a seat creak"
+
+  - id: s04
+    narration: "After takeoff, he handed a flight attendant a note."
+    characters: ["the hijacker", "the flight attendant"]
+    shot: "0-4 s: his hand (face out of frame) holds out a folded note; the flight attendant takes it with a polite smile; 4-8 s: she unfolds it, reads, and her eyes go wide with shock."
+    camera: "close-up on the hands, then a smooth push-in onto her surprised face"
+    sfx: "paper rustle, paper unfolding, a quiet cabin hum"
+
+  - id: s05
+    narration: "It said he had a bomb."
+    clip: clips/s04.mp4
+    clip_start: 4.5
+
+  - id: s06
+    narration: "He opened his briefcase. Wires, and red sticks."
+    characters: ["the hijacker"]
+    shot: "Close-up of an old black briefcase on his knees; the latches snap open and the lid lifts to reveal bundles of red cylinders tied with coiled wires and a battery."
+    camera: "slow push-in from the latches to the inside of the case"
+    sfx: "two sharp latch clicks, the lid creaking open"
+
+  - id: s07
+    narration: "His demand? Two hundred thousand dollars and four parachutes."
+    shot: "Stacks of twenty-dollar bills drop onto a cabin seat, then four packed parachutes thud down next to them one after another."
+    camera: "top-down shot with a slow rotation"
+    sfx: "bundles of cash slapping onto the seat, four soft heavy thuds"
+    popups:
+      - text: "$200,000"
+        at_word: "two"
+        hold: 1.2
+      - text: "4 PARACHUTES"
+        at_word: "four"
+        size: 110
+        hold: 1.4
+
+  - id: s08
+    narration: "When they landed, he swapped the passengers for the cash, but kept the crew."
+    shot: "Passengers hurry down the jet's front stairs in light rain while a man carries a canvas money bag and parachute packs up toward the door."
+    camera: "wide crane shot slowly descending toward the stairs"
+    setting: "a wet runway at dusk under bright floodlights, clean and well lit"
+    sfx: "rain on metal, footsteps clanging down metal stairs, jet engine idle"
+
+  - id: s09
+    narration: "Then he told the pilots to fly low and slow."
+    shot: "0-3 s: inside the cockpit, two pilots seen from behind glance at each other; 3-6 s: outside, the jet flies very low and slowly over dark green pine forests in the rain, landing gear down."
+    camera: "over-the-shoulder in the cockpit, then a smooth fly-by alongside the jet"
+    setting: "the cockpit with glowing round gauges, then the sky over pine forests at dusk, clear blue moonlight"
+    sfx: "cockpit beeps, rain on the windshield, a deep engine drone"
+    popups:
+      - text: "LOW & SLOW"
+        at_word: "low"
+        size: 130
+
+  - id: s10
+    narration: "This jet had stairs under its tail that could open in flight."
+    shot: "A see-through cutaway of the jet's tail in flight: the hidden rear stairway glows with a soft green outline (x-ray highlight) and slowly hinges down into the open air."
+    camera: "slow orbit around the tail from below"
+    setting: "the sky at dusk, clean blue light"
+    sfx: "hydraulic whirr, wind roar growing louder"
+
+  - id: s11
+    narration: "He lowered them, strapped on the money, and jumped into the night."
+    characters: ["the hijacker"]
+    shot: "0-4 s: the hijacker, seen from behind, walks down the lowered rear stairway in howling wind and rain, a money bag strapped to his chest and a parachute on his back; 4-8 s: he steps off the last stair and drops into the clouds."
+    camera: "behind him, low angle, then the camera tilts down to follow his fall"
+    setting: "the lowered rear stairs of the jet in flight over forests, stylised moonlit night that is still clearly lit"
+    sfx: "howling wind, rain lashing metal, a big whoosh as he falls"
+
+  - id: s12
+    narration: "The FBI searched for years. Nothing."
+    shot: "Search teams with flashlights and dogs comb through a misty pine forest; one agent shrugs at the camera."
+    camera: "slow tracking shot through the trees"
+    setting: "a misty pine forest at dawn, soft bright light through the trees"
+    sfx: "footsteps in wet leaves, a dog sniffing, distant radio static"
+
+  - id: s13
+    narration: "Until a boy, digging in river sand, found bundles of rotting twenty-dollar bills."
+    characters: ["the boy"]
+    shot: "The boy kneels on a sunny riverbank, scraping sand away with his hands, and uncovers three old, rotting bundles of twenty-dollar bills held by rubber bands; he lifts one up, amazed."
+    camera: "close-up on his hands digging, then a quick push-in to his surprised face"
+    setting: "a sunny sandy riverbank with a wide river behind"
+    sfx: "sand scraping, river water lapping, a soft papery crunch"
+
+  - id: s14
+    narration: "The serial numbers matched the ransom."
+    shot: "Close-up of a weathered twenty-dollar bill under a large magnifying glass on a desk; the serial number area glows softly green as the magnifier passes over it."
+    camera: "slow slide of the magnifier across the bill, macro"
+    setting: "a tidy, bright office desk"
+    sfx: "paper rustle, a soft glass tap on wood"
+    popups:
+      - text: "$5,800"
+        at_word: "matched"
+
+  - id: s15
+    narration: "So jets got that little flap. In flight, air pushes it shut and locks the stairs."
+    shot: "A see-through cutaway of the jet's tail during takeoff: the small flap swings flat in the airflow, slides under the stairway and locks it; the flap glows with a soft green outline."
+    camera: "close-up under the tail, tracking with the jet as it lifts off"
+    setting: "a bright runway on a sunny day"
+    sfx: "jet engine roar, rushing air, a solid mechanical clunk"
+
+  - id: s16
+    narration: "It's called the Cooper vane, after the man the world knows as D.B. Cooper."
+    characters: ["the hijacker"]
+    shot: "The hijacker's silhouette stands in the open rear doorway of the jet against a stormy sky, back to the camera, rain blowing in, his tie flapping in the wind."
+    camera: "slow push-in from inside the cabin toward his back"
+    setting: "inside the bright cabin looking out to a dramatic stormy dusk sky"
+    sfx: "strong wind, rain, a low rumble of thunder"
+    popups:
+      - text: "D.B. COOPER"
+        at_word: "D.B."
+        color: lime
+        size: 150
+        hold: 2.4

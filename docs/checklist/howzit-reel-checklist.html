@@ -1,0 +1,428 @@
+<title>HowZit Reel Checklist</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,500;12..96,800&display=swap">
+<style>
+/* Layout: one reading column, sticky progress bar, phases as numbered sections of tickable steps; HowZit brand tokens, dark only. */
+:root {
+  --ground: #08110B;
+  --surface: #13261A;
+  --ink: #E6F4E8;
+  --lime: #6CFF2E;
+  --forest: #1E7B3C;
+  --muted: color-mix(in srgb, var(--ink) 62%, var(--ground));
+  --line: color-mix(in srgb, var(--forest) 55%, var(--ground));
+  --code-bg: color-mix(in srgb, var(--ground) 70%, black);
+  --display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --body: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --mono: ui-monospace, "Cascadia Mono", Consolas, "SFMono-Regular", Menlo, monospace;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--ground);
+  color: var(--ink);
+  font: 400 16px/1.55 var(--body);
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='62.4'%3E%3Cpath d='M18 0 L36 10.4 L36 31.2 L18 41.6 L0 31.2 L0 10.4 Z M18 41.6 L18 62.4' fill='none' stroke='%236CFF2E' stroke-width='1.2' opacity='0.07'/%3E%3C/svg%3E");
+}
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--ground); }
+.wrap { max-width: 780px; margin: 0 auto; padding-block: 28px 80px; display: grid; gap: 28px; }
+h1, h2, h3 { font-family: var(--display); text-wrap: balance; margin: 0; }
+h1 { font-size: clamp(2rem, 6vw, 3rem); font-weight: 800; line-height: 1.02; letter-spacing: -0.02em; }
+h1 .z { color: var(--lime); }
+h2 { font-size: 1.45rem; font-weight: 800; line-height: 1.15; }
+h3 { font-size: 1.05rem; font-weight: 800; }
+p { margin: 0; max-width: 65ch; }
+a { color: var(--lime); }
+.lede { color: var(--muted); font-size: 1.05rem; }
+.eyebrow { font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); font-weight: 500; }
+
+/* sticky progress */
+.bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: color-mix(in srgb, var(--ground) 92%, transparent);
+  backdrop-filter: blur(6px); border-bottom: 1px solid var(--line); margin-inline: calc(-1 * max(16px, env(safe-area-inset-left, 0px)));
+  padding: 10px max(16px, env(safe-area-inset-left, 0px)); }
+.bar-in { max-width: 780px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; }
+.ep { display: flex; align-items: center; gap: 8px; flex: 1 1 260px; min-width: 0; }
+.ep label { font-size: 0.82rem; color: var(--muted); white-space: nowrap; }
+.ep input { flex: 1; min-width: 0; background: var(--surface); color: var(--ink); border: 1px solid var(--line); border-radius: 8px;
+  padding: 7px 10px; font: 500 0.95rem var(--mono); }
+.ep input:focus-visible, button:focus-visible, .step input:focus-visible + .box { outline: 2px solid var(--lime); outline-offset: 2px; }
+.meter { flex: 1 1 160px; display: flex; align-items: center; gap: 10px; min-width: 0; }
+.track { flex: 1; height: 8px; background: var(--surface); border-radius: 4px; overflow: hidden; }
+.fill { height: 100%; width: 0; background: var(--lime); transition: width .3s; }
+.count { font-variant-numeric: tabular-nums; font-size: 0.9rem; color: var(--muted); white-space: nowrap; }
+.btn { background: transparent; color: var(--ink); border: 1px solid var(--line); border-radius: 8px; padding: 6px 12px; font: 500 0.85rem var(--body); cursor: pointer; }
+.btn:hover { border-color: var(--lime); }
+.btn.warn { border-color: var(--lime); color: var(--lime); }
+.sync { font-size: 0.75rem; color: var(--muted); width: 100%; }
+
+/* overview */
+.flow { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 8px; }
+.flow div { background: var(--surface); border-radius: 10px; padding: 10px 12px; display: grid; gap: 2px; }
+.flow b { font-family: var(--display); font-weight: 800; }
+.flow span { font-size: 0.85rem; color: var(--muted); }
+.flow .tool { font-size: 0.72rem; letter-spacing: .08em; text-transform: uppercase; color: var(--lime); }
+table { border-collapse: collapse; width: 100%; font-size: 0.92rem; }
+th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font-size: 0.75rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 500; }
+.tbl { overflow-x: auto; }
+.note { border-left: 3px solid var(--forest); padding: 4px 0 4px 14px; color: var(--muted); }
+.note b { color: var(--ink); }
+
+/* phases and steps */
+.phase { display: grid; gap: 12px; }
+.phase-head { display: flex; align-items: baseline; gap: 12px; border-top: 1px solid var(--line); padding-top: 18px; }
+.phase-head .n { font: 800 1.45rem var(--display); color: var(--lime); font-variant-numeric: tabular-nums; }
+.phase-head .pc { margin-left: auto; font-size: 0.82rem; color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.step { display: grid; grid-template-columns: 28px 1fr; gap: 4px 12px; background: var(--surface); border-radius: 12px; padding: 14px 16px; }
+.step > input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.box { width: 22px; height: 22px; border: 2px solid var(--forest); border-radius: 6px; margin-top: 2px; cursor: pointer; display: grid; place-items: center; }
+.step.done .box { background: var(--lime); border-color: var(--lime); }
+.step.done .box::after { content: ""; width: 10px; height: 6px; border: solid var(--ground); border-width: 0 0 3px 3px; transform: rotate(-45deg) translate(1px, -1px); }
+.step.done h3 { color: var(--muted); text-decoration: line-through; text-decoration-color: var(--forest); }
+.step .body { display: grid; gap: 8px; min-width: 0; }
+.step h3 { cursor: pointer; display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: baseline; }
+.chip { font: 500 0.7rem var(--body); letter-spacing: .08em; text-transform: uppercase; color: var(--ground); background: var(--ink); border-radius: 999px; padding: 2px 8px; }
+.chip.gem { background: var(--lime); }
+.chip.ps { background: var(--ink); }
+.chip.ig { background: color-mix(in srgb, var(--ink) 70%, var(--lime)); }
+.chip.np { background: var(--muted); }
+.step p, .step li { color: color-mix(in srgb, var(--ink) 86%, var(--ground)); }
+.step ul, .step ol { margin: 0; padding-left: 20px; display: grid; gap: 3px; }
+code { font-family: var(--mono); font-size: 0.88em; background: var(--code-bg); padding: 1px 5px; border-radius: 4px; overflow-wrap: anywhere; }
+.code { position: relative; background: var(--code-bg); border: 1px solid var(--line); border-radius: 10px; min-width: 0; }
+.code pre { margin: 0; padding: 12px 14px; padding-right: 78px; font: 0.82rem/1.5 var(--mono); white-space: pre-wrap; overflow-wrap: anywhere; max-height: 260px; overflow: auto; }
+.code.short pre { max-height: none; }
+.code .copy { position: absolute; top: 8px; right: 8px; background: var(--lime); color: var(--ground); border: 0; border-radius: 6px; padding: 5px 10px; font: 800 0.78rem var(--body); cursor: pointer; }
+.code .label { position: absolute; bottom: 6px; right: 10px; font-size: 0.7rem; color: var(--muted); pointer-events: none; }
+.save { font-size: 0.88rem; color: var(--muted); }
+.save b { color: var(--lime); font-weight: 500; }
+footer { color: var(--muted); font-size: 0.85rem; border-top: 1px solid var(--line); padding-top: 16px; }
+@media (prefers-reduced-motion: reduce) { .fill { transition: none; } }
+@media (max-width: 480px) { .step { grid-template-columns: 24px 1fr; padding: 12px; } .code pre { padding-right: 14px; padding-top: 40px; } }
+</style>
+
+<div class="bar" role="region" aria-label="Progress">
+  <div class="bar-in">
+    <div class="ep"><label for="ep">Episode folder</label><input id="ep" type="text" spellcheck="false" placeholder="why-do-onions-make-you-cry" autocomplete="off"></div>
+    <div class="meter"><div class="track"><div class="fill" id="fill"></div></div><span class="count" id="count">0 / 0</span></div>
+    <button class="btn" id="reset" type="button">New video</button>
+    <div class="sync" id="sync">Ticks are saved on this device.</div>
+  </div>
+</div>
+
+<main class="wrap">
+  <header style="display:grid;gap:12px">
+    <span class="eyebrow">How<span style="color:var(--lime)">Zit</span> · @howzit.explains · Collab with Lowkey Genius</span>
+    <h1>Story to 3D Reel, <span class="z">step by step</span></h1>
+    <p class="lede">From a story in your notes to a posted HowZit Reel. Gemini writes and draws, this project voices, captions and brands it, you post it on HowZit with the Lowkey Genius page as collaborator. Type the episode folder above and every command below fills it in.</p>
+  </header>
+
+  <section style="display:grid;gap:12px" aria-labelledby="how">
+    <h2 id="how">How it fits together</h2>
+    <div class="flow">
+      <div><span class="tool">You</span><b>Story</b><span>notes, facts, a twist</span></div>
+      <div><span class="tool">Gemini</span><b>Script</b><span>G1 write · G2 fact-check · G3 retention</span></div>
+      <div><span class="tool">PowerShell</span><b>Draft</b><span>real voice, timing, placeholders</span></div>
+      <div><span class="tool">Gemini</span><b>Pictures</b><span>G4 sheets · G5 scenes · G6 Veo clips</span></div>
+      <div><span class="tool">PowerShell</span><b>Final</b><span>captions, sounds, music, watermark, end card</span></div>
+      <div><span class="tool">Instagram</span><b>Post</b><span>HowZit + Collab invite</span></div>
+    </div>
+    <div class="tbl"><table>
+      <thead><tr><th>Tool</th><th>Cost</th><th>What it does here</th></tr></thead>
+      <tbody>
+        <tr><td>Gemini Pro (app)</td><td>your plan</td><td>Script, fact check with Google Search, 3D pictures, Veo clips, caption and 5 hashtags</td></tr>
+        <tr><td>This project (Python)</td><td>free</td><td>Narration, smooth camera moves, captions in the reference Reel's style, glowing pop-ups, whoosh and pop sounds, music, HowZit watermark and end card, posting copy</td></tr>
+        <tr><td>edge-tts</td><td>free</td><td>Built-in narrator voices with exact word timings (needs internet)</td></tr>
+        <tr><td>Google AI Studio</td><td>free tier</td><td>Optional, most natural narrator (G8), timed to captions automatically</td></tr>
+        <tr><td>Pixabay Music</td><td>free</td><td>Background tracks; the music dips whenever the narrator speaks</td></tr>
+        <tr><td>Real-ESRGAN</td><td>free</td><td>Optional upscaler for sharper Gemini pictures</td></tr>
+        <tr><td>ffmpeg</td><td>free</td><td>All video and audio processing</td></tr>
+        <tr><td>Claude Pro</td><td>your plan</td><td>Optional: second script checker, fixing renders in Claude Code</td></tr>
+        <tr><td>OpusClip</td><td>—</td><td>Not used. Claude won't touch it unless you ask.</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <div class="note"><b>About trending.</b> Nobody can guarantee it. Instagram pushes Reels that people watch to the end, rewatch, share and save; hashtags only help a little, and Instagram allows 5. So the work that matters most is the hook or the reveal (phase 2) and the phone check (phase 5).</div>
+<section class="phase" aria-labelledby="p1"><div class="phase-head"><span class="n">01</span><h2 id="p1">Once: set up the laptop</h2><span class="pc"></span></div><p class="lede">Do this the first time only. Untick nothing here when you start a new video.</p><div class="step" data-id="a1"><input type="checkbox" id="c-a1" aria-label="Check the project folder"><span class="box" aria-hidden="true"></span><div class="body"><h3>Check the project folder <span class="chip ps">PowerShell</span></h3><p>The project lives in <code>G:\Apps\animated-explainers</code>. If it isn't there, unzip <code>animated-explainers.zip</code> into <code>G:\Apps</code>.</p><div class="code short"><pre data-cmd="cd G:\Apps\animated-explainers
+dir">cd G:\Apps\animated-explainers
+dir</pre><button class="copy" type="button">Copy</button></div></div></div><div class="step" data-id="a2"><input type="checkbox" id="c-a2" aria-label="Install ffmpeg"><span class="box" aria-hidden="true"></span><div class="body"><h3>Install ffmpeg <span class="chip ps">PowerShell</span></h3><p>Close and reopen PowerShell afterwards, then check it prints a version.</p><div class="code short"><pre data-cmd="winget install Gyan.FFmpeg">winget install Gyan.FFmpeg</pre><button class="copy" type="button">Copy</button></div><div class="code short"><pre data-cmd="ffmpeg -version">ffmpeg -version</pre><button class="copy" type="button">Copy</button></div></div></div><div class="step" data-id="a3"><input type="checkbox" id="c-a3" aria-label="Create the Python environment"><span class="box" aria-hidden="true"></span><div class="body"><h3>Create the Python environment <span class="chip ps">PowerShell</span></h3><p><b>Easiest:</b> double-click <code>setup.bat</code> in the project folder. It installs ffmpeg and the Python packages, makes the voice samples (step 7) and a test render (step 4). Or run the commands yourself:</p><div class="code short"><pre data-cmd="cd G:\Apps\animated-explainers
+python -m venv .venv
+.venv\Scripts\Activate.ps1
+python -m pip install -r requirements.txt">cd G:\Apps\animated-explainers
+python -m venv .venv
+.venv\Scripts\Activate.ps1
+python -m pip install -r requirements.txt</pre><button class="copy" type="button">Copy</button></div><p class="save">If PowerShell blocks <code>Activate.ps1</code>, run <code>Set-ExecutionPolicy -Scope CurrentUser RemoteSigned</code> once and answer Y.</p></div></div><div class="step" data-id="a4"><input type="checkbox" id="c-a4" aria-label="Test render the sample"><span class="box" aria-hidden="true"></span><div class="body"><h3>Test render the sample <span class="chip ps">PowerShell</span></h3><p>Makes a half-size draft with the real voice. Open the mp4 it prints and check you hear the narrator.</p><div class="code short"><pre data-cmd="python -m studio.build episodes\microwave-heating --draft">python -m studio.build episodes\microwave-heating --draft</pre><button class="copy" type="button">Copy</button></div></div></div><div class="step" data-id="a5"><input type="checkbox" id="c-a5" aria-label="Confirm the Lowkey Genius Instagram handle"><span class="box" aria-hidden="true"></span><div class="body"><h3>Confirm the Lowkey Genius Instagram handle <span class="chip np">Notepad</span></h3><p>Open <code>brand\brand.yaml</code> and set <code>collab: instagram:</code> to the exact Lowkey Genius page handle. It's used in every posting note.</p><div class="code short"><pre data-cmd="notepad brand\brand.yaml">notepad brand\brand.yaml</pre><button class="copy" type="button">Copy</button></div></div></div><div class="step" data-id="a7"><input type="checkbox" id="c-a7" aria-label="Pick your narrator voice"><span class="box" aria-hidden="true"></span><div class="body"><h3>Pick your narrator voice <span class="chip ps">PowerShell</span></h3><p>Writes the same two lines in 8 free voices. Play them and choose the one closest to the reference Reel (young, quick, friendly). Put its name, rate and pitch under <code>voice:</code> in <code>presets\explainer.yaml</code>. For an even more natural read, use Google AI Studio per video (phase 3).</p><div class="code short"><pre data-cmd="python -m studio.voices">python -m studio.voices</pre><button class="copy" type="button">Copy</button></div><div class="code short"><pre data-cmd="start voice-tests">start voice-tests</pre><button class="copy" type="button">Copy</button></div><div class="code short"><pre data-cmd="notepad presets\explainer.yaml">notepad presets\explainer.yaml</pre><button class="copy" type="button">Copy</button></div></div></div><div class="step" data-id="a8"><input type="checkbox" id="c-a8" aria-label="Add background music"><span class="box" aria-hidden="true"></span><div class="body"><h3>Add background music </h3><p>Download 3–5 instrumental tracks from <a href="https://pixabay.com/music/" target="_blank" rel="noopener">Pixabay Music</a> (search <i>curious</i>, <i>suspense</i>, <i>documentary</i>; no vocals; skip tracks with the shield icon) into <code>assets\music\</code>. The first track is used automatically and dips under the voice.</p><div class="code short"><pre data-cmd="start assets\music">start assets\music</pre><button class="copy" type="button">Copy</button></div></div></div><div class="step" data-id="a9"><input type="checkbox" id="c-a9" aria-label="Optional: sharper pictures with Real-ESRGAN"><span class="box" aria-hidden="true"></span><div class="body"><h3>Optional: sharper pictures with Real-ESRGAN <span class="chip ps">PowerShell</span></h3><p>Free AI upscaler that runs on your laptop's graphics card. Open <a href="https://github.com/xinntao/Real-ESRGAN/releases" target="_blank" rel="noopener">Real-ESRGAN releases</a>, download <code>realesrgan-ncnn-vulkan-…-windows.zip</code>, and unzip it so the file <code>tools\realesrgan\realesrgan-ncnn-vulkan.exe</code> exists (with its <code>models</code> folder next to it). Final renders then upscale small pictures automatically.</p><div class="code short"><pre data-cmd="dir tools\realesrgan">dir tools\realesrgan</pre><button class="copy" type="button">Copy</button></div></div></div><div class="step" data-id="a10"><input type="checkbox" id="c-a10" aria-label="Optional: install faster-whisper for voiceover files"><span class="box" aria-hidden="true"></span><div class="body"><h3>Optional: install faster-whisper for voiceover files <span class="chip ps">PowerShell</span></h3><p>Needed only when you use an AI Studio or self-recorded voiceover. The first use downloads a speech model once.</p><div class="code short"><pre data-cmd="python -m pip install faster-whisper">python -m pip install faster-whisper</pre><button class="copy" type="button">Copy</button></div></div></div><div class="step" data-id="a6"><input type="checkbox" id="c-a6" aria-label="Save the project in git"><span class="box" aria-hidden="true"></span><div class="body"><h3>Save the project in git <span class="chip ps">PowerShell</span></h3><div class="code short"><pre data-cmd="git init
+git add .
+git commit -m &quot;Start HowZit animated explainers&quot;">git init
+git add .
+git commit -m &quot;Start HowZit animated explainers&quot;</pre><button class="copy" type="button">Copy</button></div></div></div></section>
+<section class="phase" aria-labelledby="p2"><div class="phase-head"><span class="n">02</span><h2 id="p2">Story to script</h2><span class="pc"></span></div><p class="lede">Every new video starts here. Press <b>New video</b> at the top to clear the ticks from phase 2 on.</p><div class="step" data-id="b0"><input type="checkbox" id="c-b0" aria-label="Pick a viral idea (Gemini G0)"><span class="box" aria-hidden="true"></span><div class="body"><h3>Pick a viral idea (Gemini G0) <span class="chip gem">Gemini</span><span class="chip np">Notepad</span></h3><p>Skip this if you already have a story. Open the idea list, copy its titles into the last HowZit rule of G0, and send G0 in a new Gemini chat. Pick the title you would tap on first, and add the other good ones to the list with status <code>idea</code>.</p><div class="code short"><pre data-cmd="notepad ideas\backlog.csv">notepad ideas\backlog.csv</pre><button class="copy" type="button">Copy</button></div><div class="code"><pre>You are a viral short-video idea generator specialised in high-retention storytelling in the style of Zack D Films. Your goal is to generate ideas that follow formats PROVEN to go viral on real high-performing videos.
+
+TASK
+Generate 10 HIGHLY VIRAL titles for 45–60 second Instagram Reels and YouTube Shorts for HowZit, a page of 3D animated explainers for a US audience.
+
+CORE VIRAL RULES (VERY IMPORTANT)
+Each idea MUST follow at least ONE of these proven formats:
+1. How something works. Example: How Gas Pumps Know When To Stop
+2. What happens if / inside. Example: What Happens If You Swallow A Tooth
+3. Dangerous or survival scenario. Example: Stuck In A Water Slide
+4. Weird or disturbing concept. Example: Island Of Toenail Clippings
+5. Body / medical curiosity. Example: Blown Veins Explained
+6. Unknown truth or hidden function. Example: Why Soda Tabs Have That Hole
+
+IDEA CHARACTERISTICS
+- Must be instantly understandable in under 1 second
+- Must create immediate curiosity
+- Must feel slightly shocking, weird, or dangerous
+- Must be VERY visual (easy to imagine scenes)
+- Must feel like &quot;I need to know this&quot;
+
+CONTENT FOCUS
+- Human body reactions
+- Dangerous environments
+- Survival situations
+- Hidden mechanisms
+- Weird facts
+- Rare or unknown scenarios
+
+HOWZIT RULES
+- Every idea must be true and explainable in 45–60 seconds with facts that can be checked on reliable sources. No myths presented as fact, no made-up events.
+- Survival ideas show what really happens or how people get out safely; never how to hurt someone or do something dangerous.
+- No gore and nothing about self-harm.
+- Don&#x27;t repeat or closely copy these ideas we already have: [PASTE THE TITLES FROM ideas\backlog.csv, or write &quot;none&quot;]
+
+DO NOT
+- Write generic ideas
+- Write long titles
+- Explain anything
+- Use boring topics
+- Repeat similar ideas
+
+STYLE
+- Short (3–10 words ideally)
+- Clean and punchy
+- Natural language
+- Slight curiosity tone
+- Occasionally use parentheses like (explained) or (what happens?)
+
+OUTPUT FORMAT (STRICT)
+1. Title
+2. Title
+3. Title
+4. Title
+5. Title
+6. Title
+7. Title
+8. Title
+9. Title
+10. Title
+
+Generate ONLY the titles. NO explanations.</pre><button class="copy" type="button">Copy</button><span class="label">G0</span></div></div></div><div class="step" data-id="b1"><input type="checkbox" id="c-b1" aria-label="Make the episode folder"><span class="box" aria-hidden="true"></span><div class="body"><h3>Make the episode folder <span class="chip ps">PowerShell</span></h3><p>Use a short title. The command prints the folder name; type that name into <b>Episode folder</b> at the top.</p><div class="code short"><pre data-cmd=".venv\Scripts\Activate.ps1
+python -m studio.new &quot;Why do onions make you cry&quot;">.venv\Scripts\Activate.ps1
+python -m studio.new &quot;Why do onions make you cry&quot;</pre><button class="copy" type="button">Copy</button></div></div></div><div class="step" data-id="b2"><input type="checkbox" id="c-b2" aria-label="Paste your story"><span class="box" aria-hidden="true"></span><div class="body"><h3>Paste your story <span class="chip np">Notepad</span></h3><p>Write or paste the story, the facts you know, and the twist if there is one. If you only have a title from G0, paste just the title: G1 researches it. Save.</p><div class="code short"><pre data-cmd="notepad episodes\{EP}\story.md">notepad episodes\&lt;episode&gt;\story.md</pre><button class="copy" type="button">Copy</button></div></div></div><div class="step" data-id="b3"><input type="checkbox" id="c-b3" aria-label="Decide: hook or reveal"><span class="box" aria-hidden="true"></span><div class="body"><h3>Decide: hook or reveal </h3><div class="tbl"><table><thead><tr><th>Use</th><th>When</th><th>How it plays</th></tr></thead><tbody><tr><td><b>hook</b></td><td>There's a surprising fact or a question people already ask (how does Wi-Fi work?)</td><td>Question + surprising fact in the first 3 s, in the lime hook box. Three steps, then the payoff.</td></tr><tr><td><b>reveal</b></td><td>The story has a twist, a mystery or a surprising ending (an invention by accident, a hidden reason)</td><td>Scene 1 teases the ending. An open loop every 2–3 scenes ("but that wasn't the strangest part"). The answer only in the last scene, with the one lime pop-up.</td></tr></tbody></table></div><p class="save">G1 picks one for you. To force it, add <code>Use structure: reveal.</code> after your story.</p></div></div><div class="step" data-id="b4"><input type="checkbox" id="c-b4" aria-label="Gemini G1: write the script"><span class="box" aria-hidden="true"></span><div class="body"><h3>Gemini G1: write the script <span class="chip gem">Gemini</span></h3><p>Open a <b>new chat</b> in Gemini. Copy this, replace the last line with your story, send.</p><div class="code"><pre>You are the script writer for HowZit, an Instagram page of 45–60 second 3D animated explainers for a US audience: how things work, how things are made, how inventions happened, true stories behind everyday things.
+
+Turn MY STORY (at the end) into a Reel script in YAML, exactly in the FORMAT below.
+
+CHOOSE THE STRUCTURE
+- &quot;hook&quot;: the topic has a surprising fact or a question people already ask. Scene 1 = that question plus the most surprising fact, inside the first 3 seconds.
+- &quot;reveal&quot;: the story has a twist, a mystery or a surprising ending. Scene 1 teases the ending without giving it away. Keep the answer hidden. Every 2–3 scenes add an open loop (for example &quot;but that wasn&#x27;t the strangest part&quot;). The last scene is the reveal.
+Write the one you chose in `structure:`.
+
+RULES
+- 140–160 words of narration in total, 7–10 scenes, each narration 8–20 words and one idea.
+- Simple spoken English, short sentences, contractions are fine. Write numbers the way they are said.
+- If MY STORY is only a title or a short idea, first use Google Search to research it, and build the story only from what reliable sources say.
+- Scene 1 must stop the scroll in under 3 seconds. No &quot;Hi&quot;, no &quot;Today we will learn&quot;.
+- Don&#x27;t answer the hook before the last third of the video.
+- Last scene: the payoff or reveal, a line people want to repeat or share. Do NOT write &quot;follow&quot; or &quot;subscribe&quot;; the video adds that.
+- `hook`: 3–7 words shown in a box on screen for the first 3 seconds (a question or a teaser).
+- `popups`: add one when a number or key word matters. `at_word` must be copied EXACTLY from that scene&#x27;s narration, same spelling and punctuation. Colours: white (default), ink or lime. Use lime only once in the whole video: the most surprising number or the reveal.
+- `visual`: one clear 3D shot: who or what, doing what, where, and the camera angle (close-up, wide, low angle, top-down). Never text, letters or numbers in the picture. Describe characters the same way every time, using the names from `characters`.
+- `motion`: zoom_in, zoom_out, pan_left, pan_right, pan_up, pan_down or none.
+- `veo`: on the 2–3 scenes that most need real movement only, one line saying what moves in an 8-second clip (for example &quot;the chocolate bar slowly melts and drips&quot;). Leave it out on the other scenes.
+- `characters`: every recurring person, animal or object with a fixed look (age, build, hair, clothes, colours). For real historical people describe a generic look only (for example &quot;a 1940s engineer in a white shirt and tie&quot;), never a real person&#x27;s face.
+- `facts`: every factual claim in the script. Only list a source URL if you are sure it exists; otherwise leave `sources` empty. Never invent numbers.
+- `caption`: Instagram caption, max 120 words. Line 1 = the hook (it shows before &quot;more&quot;). Then 2–3 short lines using the words people search for this topic. Then &quot;Follow @howzit.explains for how things work in 60 seconds.&quot; Then one question that invites comments. No hashtags in the caption.
+- `hashtags`: exactly 5, without the # sign: 1 broad (like howitworks), 2 about the topic, 1 niche, 1 community. Never reels, viral, explore or fyp.
+- `cover_text`: 2–4 words. `alt_text`: one sentence describing the video.
+
+FORMAT (return only this YAML, in one code block)
+title: &quot;...&quot;
+preset: explainer
+structure: hook
+hook: &quot;...&quot;
+caption: |
+  ...
+hashtags: [howitworks, ..., ..., ..., ...]
+cover_text: &quot;...&quot;
+alt_text: &quot;...&quot;
+characters:
+  - name: &quot;...&quot;
+    look: &quot;...&quot;
+facts:
+  - claim: &quot;...&quot;
+    sources: []
+scenes:
+  - id: s01
+    narration: &quot;...&quot;
+    visual: &quot;...&quot;
+    motion: zoom_in
+    veo: &quot;...&quot;
+    popups:
+      - text: &quot;...&quot;
+        at_word: &quot;...&quot;
+        color: white
+
+MY STORY:
+[PASTE YOUR STORY HERE]</pre><button class="copy" type="button">Copy</button><span class="label">G1</span></div></div></div><div class="step" data-id="b5"><input type="checkbox" id="c-b5" aria-label="Gemini G2: fact check"><span class="box" aria-hidden="true"></span><div class="body"><h3>Gemini G2: fact check <span class="chip gem">Gemini</span></h3><p>Same chat. Copy, then paste Gemini's YAML from G1 where it says. Read every ⚠️ and ❌ yourself.</p><div class="code"><pre>Use Google Search. Fact-check every claim in `facts` and every number and name in the narration of this script.
+
+For each claim give: ✅ correct, ⚠️ partly correct or ❌ wrong; the corrected wording if needed; and 2 reliable sources with their URLs (official sites, encyclopedias, universities, textbooks, major news or science sites; no forums, no AI content sites).
+
+Then return the full YAML again in one code block with the narration corrected and the source URLs filled into `facts`. Keep every `at_word` matching its narration exactly.
+
+[PASTE script.yaml]</pre><button class="copy" type="button">Copy</button><span class="label">G2</span></div></div></div><div class="step" data-id="b6"><input type="checkbox" id="c-b6" aria-label="Gemini G3: keep people watching"><span class="box" aria-hidden="true"></span><div class="body"><h3>Gemini G3: keep people watching <span class="chip gem">Gemini</span></h3><p>Same chat, with the YAML from G2. Aim for a first-3-seconds score of 8 or more; if lower, ask: <i>Give me 5 stronger first lines</i>.</p><div class="code"><pre>You are a short-form video editor. Read this Reel script as someone scrolling Instagram.
+1. Score the first 3 seconds out of 10 for stopping the scroll, and say why.
+2. Mark every line where a viewer might swipe away, and rewrite it shorter or more curious.
+3. If `structure` is &quot;reveal&quot;: check the answer stays hidden until the last scene and there is an open loop every 2–3 scenes.
+4. Keep 140–160 words in total and keep every `at_word` matching its narration.
+Give your notes first, then the improved YAML in one code block.
+
+[PASTE script.yaml]</pre><button class="copy" type="button">Copy</button><span class="label">G3</span></div></div></div><div class="step" data-id="b7"><input type="checkbox" id="c-b7" aria-label="Save script.yaml"><span class="box" aria-hidden="true"></span><div class="body"><h3>Save script.yaml <span class="chip np">Notepad</span></h3><p>Click the copy button on Gemini's last YAML block. In Notepad press Ctrl+A, paste, Ctrl+S.</p><div class="code short"><pre data-cmd="notepad episodes\{EP}\script.yaml">notepad episodes\&lt;episode&gt;\script.yaml</pre><button class="copy" type="button">Copy</button></div></div></div></section>
+<section class="phase" aria-labelledby="p3"><div class="phase-head"><span class="n">03</span><h2 id="p3">Voice, music and timing</h2><span class="pc"></span></div><p class="lede">Cheap to fix now, before any pictures exist.</p><div class="step" data-id="c0"><input type="checkbox" id="c-c0" aria-label="Choose the voice for this video"><span class="box" aria-hidden="true"></span><div class="body"><h3>Choose the voice for this video <span class="chip gem">Gemini</span></h3><p><b>Quick:</b> do nothing; the voice from step 1·7 reads the script. <b>Most natural:</b> run the draft once (next step), open the prompts file, and use the G8 block in <a href="https://aistudio.google.com" target="_blank" rel="noopener">Google AI Studio</a> (speech generation, single speaker, try Puck or Fenrir). Save the WAV as <code>audio\voiceover.wav</code> in the episode folder and add this line to script.yaml:</p><div class="code short"><pre>voiceover: audio\voiceover.wav</pre><button class="copy" type="button">Copy</button></div><div class="code"><pre>Read this as a young American male storyteller for a 60-second animated explainer: quick, energetic, curious and a little playful, like telling a friend a surprising story. Natural short pauses between sentences, a little extra emphasis on numbers and surprising words. Read every word exactly as written; don&#x27;t add or change anything.</pre><button class="copy" type="button">Copy</button><span class="label">G8 style line</span></div></div></div><div class="step" data-id="c1"><input type="checkbox" id="c-c1" aria-label="Draft render"><span class="box" aria-hidden="true"></span><div class="body"><h3>Draft render <span class="chip ps">PowerShell</span></h3><p>Placeholder cards instead of pictures, real narrator, real timing. Also writes the filled-in picture prompts for phase 4.</p><div class="code short"><pre data-cmd="python -m studio.build episodes\{EP} --draft">python -m studio.build episodes\&lt;episode&gt; --draft</pre><button class="copy" type="button">Copy</button></div></div></div><div class="step" data-id="c2"><input type="checkbox" id="c-c2" aria-label="Watch and listen to the draft"><span class="box" aria-hidden="true"></span><div class="body"><h3>Watch and listen to the draft <span class="chip ps">PowerShell</span></h3><p>The draft is half size and blurry on purpose (fast). Judge timing and sound only.</p><ul><li>Do the first 3 seconds make you want to keep watching?</li><li>Is the voice clear over the music? Music too loud → lower <code>music: volume</code> in the preset.</li><li>Do pop-ups land on the right word, with a pop sound?</li><li>Any line too long or hard to follow? Shorten it in script.yaml.</li><li>45–60 seconds long?</li></ul><div class="code short"><pre data-cmd="start episodes\{EP}\output\{EP}_howzit_draft.mp4">start episodes\&lt;episode&gt;\output\&lt;episode&gt;_howzit_draft.mp4</pre><button class="copy" type="button">Copy</button></div></div></div><div class="step" data-id="c3"><input type="checkbox" id="c-c3" aria-label="Fix warnings and re-run"><span class="box" aria-hidden="true"></span><div class="body"><h3>Fix warnings and re-run <span class="chip ps">PowerShell</span><span class="chip np">Notepad</span></h3><p><code>pop-up word not found</code> → make <code>at_word</code> match the narration exactly. <code>hook text is long</code> → shorten <code>hook</code> to 3–7 words. <code>formatting problem near line N</code> → re-copy the YAML with Gemini's copy button. Re-running is fast: the voice is cached.</p></div></div></section>
+<section class="phase" aria-labelledby="p4"><div class="phase-head"><span class="n">04</span><h2 id="p4">Pictures and clips in Gemini</h2><span class="pc"></span></div><p class="lede">Keep every picture for this episode in one Gemini chat so the characters stay the same.</p><div class="step" data-id="d1"><input type="checkbox" id="c-d1" aria-label="Open the filled-in prompts"><span class="box" aria-hidden="true"></span><div class="body"><h3>Open the filled-in prompts <span class="chip np">Notepad</span></h3><p>The draft wrote every G4, G5 and G6 prompt with your characters and scenes already filled in. Use those blocks; the templates below are for reference.</p><div class="code short"><pre data-cmd="notepad episodes\{EP}\output\{EP}_gemini_prompts.md">notepad episodes\&lt;episode&gt;\output\&lt;episode&gt;_gemini_prompts.md</pre><button class="copy" type="button">Copy</button></div></div></div><div class="step" data-id="d2"><input type="checkbox" id="c-d2" aria-label="G4: reference sheet for each character or key object"><span class="box" aria-hidden="true"></span><div class="body"><h3>G4: reference sheet for each character or key object <span class="chip gem">Gemini</span></h3><p>New Gemini chat. One sheet per character. Regenerate until it looks right, then keep that chat open.</p><div class="code"><pre>Create a reference sheet for a 3D animated explainer, vertical 9:16.
+Subject: [PASTE the `look` line from characters, e.g. &quot;a 1940s engineer, mid-30s, slim, short dark hair, white shirt, grey tie, rolled sleeves&quot;]
+Show: front view, three-quarter view, side view, and one close-up detail (the face, for a character), neutral pose, on a plain dark-green background (#13261A).
+Style: High-end 3D animated render with the look of a polished 3D explainer short: semi-realistic 3D characters with natural skin, expressive faces and detailed clothing; clean, modern, well-lit spaces with soft pastel blue-grey walls and simple props; soft global illumination, gentle shadows and warm accent lights; shallow depth of field with a softly blurred background; crisp, sharp, highly detailed, rendered like Unreal Engine 5. Not a photograph and not a cartoon. Highest quality, sharp focus, no blur on the main subject.
+No text, letters, numbers, logos or watermarks.</pre><button class="copy" type="button">Copy</button><span class="label">G4 template</span></div></div></div><div class="step" data-id="d3"><input type="checkbox" id="c-d3" aria-label="G5: one picture per scene"><span class="box" aria-hidden="true"></span><div class="body"><h3>G5: one picture per scene <span class="chip gem">Gemini</span></h3><p>First scene: attach the reference sheet and send the first block. Every next scene: the short block. If Gemini offers an image size, pick the largest. Download each picture with the download button (never a screenshot).</p><div class="code"><pre>Use the attached reference for [CHARACTER NAME]: keep exactly the same look, shape, clothes and colours.
+Create one frame of a 3D animated explainer, vertical 9:16 (1080x1920).
+Scene: [PASTE the scene&#x27;s `visual` line]
+Composition: the main subject in the middle of the frame, between 20% and 62% of the height. Keep the area around 70% of the height calm, because captions go there, and put nothing important at the right edge or the bottom 20%.
+Style: High-end 3D animated render with the look of a polished 3D explainer short: semi-realistic 3D characters with natural skin, expressive faces and detailed clothing; clean, modern, well-lit spaces with soft pastel blue-grey walls and simple props; soft global illumination, gentle shadows and warm accent lights; shallow depth of field with a softly blurred background; crisp, sharp, highly detailed, rendered like Unreal Engine 5. Not a photograph and not a cartoon. Highest quality, sharp focus, no blur on the main subject.
+No text, letters, numbers, logos or watermarks anywhere in the image.</pre><button class="copy" type="button">Copy</button><span class="label">G5 first scene</span></div><div class="code short"><pre>Same characters, same style, same composition rules. Next frame, vertical 9:16: [PASTE the next scene&#x27;s `visual` line]. No text in the image.</pre><button class="copy" type="button">Copy</button><span class="label">G5 next scenes</span></div><p class="save">Save as <b>episodes\&lt;episode&gt;\images\s01.png</b>, s02.png … (the scene id). If a character drifts, re-attach the sheet and say <i>same character as the reference, same clothes</i>. Reject any picture with text or letters in it.</p></div></div><div class="step" data-id="d4"><input type="checkbox" id="c-d4" aria-label="G6: 2–3 moving clips with Veo"><span class="box" aria-hidden="true"></span><div class="body"><h3>G6: 2–3 moving clips with Veo <span class="chip gem">Gemini</span></h3><p>Only for scenes with a <code>veo:</code> line. Attach that scene's picture. Gemini Pro has a daily limit on videos, so pick the best moments.</p><div class="code"><pre>Animate the attached image into an 8-second vertical 9:16 video.
+Motion: [WHAT MOVES, e.g. &quot;the chocolate bar slowly melts and drips; the engineer looks down in surprise&quot;].
+Camera: [slow push-in / slow orbit / static].
+Keep the characters, colours and 3D style exactly the same as the image. No text, no subtitles, no music, no talking, no new characters.</pre><button class="copy" type="button">Copy</button><span class="label">G6 template</span></div><p class="save">Save as <b>episodes\&lt;episode&gt;\clips\s05.mp4</b> (the scene id). Its own sound is dropped.</p></div></div><div class="step" data-id="d5"><input type="checkbox" id="c-d5" aria-label="Check every scene has a picture"><span class="box" aria-hidden="true"></span><div class="body"><h3>Check every scene has a picture <span class="chip ps">PowerShell</span></h3><div class="code short"><pre data-cmd="dir episodes\{EP}\images
+dir episodes\{EP}\clips">dir episodes\&lt;episode&gt;\images
+dir episodes\&lt;episode&gt;\clips</pre><button class="copy" type="button">Copy</button></div></div></div></section>
+<section class="phase" aria-labelledby="p5"><div class="phase-head"><span class="n">05</span><h2 id="p5">Final render and phone check</h2><span class="pc"></span></div><div class="step" data-id="e1"><input type="checkbox" id="c-e1" aria-label="Final render"><span class="box" aria-hidden="true"></span><div class="body"><h3>Final render <span class="chip ps">PowerShell</span></h3><p>Full quality: 1080×1920, smooth camera moves, near-lossless video, music and sound effects. Takes several minutes.</p><div class="code short"><pre data-cmd="python -m studio.build episodes\{EP}">python -m studio.build episodes\&lt;episode&gt;</pre><button class="copy" type="button">Copy</button></div></div></div><div class="step" data-id="e2"><input type="checkbox" id="c-e2" aria-label="Watch it on your phone, full screen"><span class="box" aria-hidden="true"></span><div class="body"><h3>Watch it on your phone, full screen <span class="chip np">Phone</span></h3><p>Send <code>output\&lt;episode&gt;_howzit.mp4</code> to your phone (WhatsApp to yourself as a document, or Google Drive). Check:</p><ul><li>The hook works in the first 3 seconds (or the reveal teaser makes you curious).</li><li>Captions are readable over every picture.</li><li>No text or letters inside Gemini's pictures.</li><li>Voice clear, music audible but quiet, whoosh and pop not too loud.</li><li>Pictures sharp, no blocky or smeared patches.</li><li>Nothing important under Instagram's buttons (right edge, bottom).</li><li>HowZit watermark top-right, HowZit end card at the end.</li><li>People look realistic → remember to turn on Instagram's AI label when posting.</li><li>For reveal videos: the answer isn't given away early.</li></ul></div></div><div class="step" data-id="e3"><input type="checkbox" id="c-e3" aria-label="Fix one scene quickly if needed"><span class="box" aria-hidden="true"></span><div class="body"><h3>Fix one scene quickly if needed <span class="chip ps">PowerShell</span></h3><p>Replace the picture or edit the line, check just that scene, then run the final render again.</p><div class="code short"><pre data-cmd="python -m studio.build episodes\{EP} --draft --only s04">python -m studio.build episodes\&lt;episode&gt; --draft --only s04</pre><button class="copy" type="button">Copy</button></div></div></div><div class="step" data-id="e4"><input type="checkbox" id="c-e4" aria-label="Every fact has 2 sources"><span class="box" aria-hidden="true"></span><div class="body"><h3>Every fact has 2 sources <span class="chip np">Notepad</span></h3><p>The table at the top of the posting note must have no <b>NEEDS 2 SOURCES</b> left. If it does, run G2 again for those claims.</p><div class="code short"><pre data-cmd="notepad episodes\{EP}\output\{EP}_post.md">notepad episodes\&lt;episode&gt;\output\&lt;episode&gt;_post.md</pre><button class="copy" type="button">Copy</button></div></div></div></section>
+<section class="phase" aria-labelledby="p6"><div class="phase-head"><span class="n">06</span><h2 id="p6">Post on HowZit, Collab with Lowkey Genius</h2><span class="pc"></span></div><div class="step" data-id="f1"><input type="checkbox" id="c-f1" aria-label="Get the caption, hashtags, cover text"><span class="box" aria-hidden="true"></span><div class="body"><h3>Get the caption, hashtags, cover text <span class="chip np">Notepad</span></h3><p>All in the posting note: the caption (first line is the hook), exactly 5 hashtags, cover text and alt text.</p><div class="code short"><pre data-cmd="notepad episodes\{EP}\output\{EP}_post.md">notepad episodes\&lt;episode&gt;\output\&lt;episode&gt;_post.md</pre><button class="copy" type="button">Copy</button></div></div></div><div class="step" data-id="f2"><input type="checkbox" id="c-f2" aria-label="Optional, Gemini G7: fresher caption"><span class="box" aria-hidden="true"></span><div class="body"><h3>Optional, Gemini G7: fresher caption <span class="chip gem">Gemini</span></h3><p>Uses Google Search for how people search the topic right now. Paste your script.yaml where it says.</p><div class="code"><pre>Use Google Search to see how people currently talk about and search for this topic on Instagram: [TOPIC].
+Write the Instagram caption for my HowZit Reel (script below):
+- Line 1: the hook, max 10 words, makes people tap &quot;more&quot;.
+- 2–3 short lines that use the words people actually search for this topic.
+- &quot;Follow @howzit.explains for how things work in 60 seconds.&quot;
+- One question that gets comments.
+- Then exactly 5 hashtags (Instagram allows 5): 1 broad, 2 topic, 1 niche, 1 community. No #reels #viral #explore #fyp.
+Also give: cover text (2–4 words), alt text (1 sentence), and 3 other first lines I could test.
+
+[PASTE script.yaml]</pre><button class="copy" type="button">Copy</button><span class="label">G7</span></div></div></div><div class="step" data-id="f3"><input type="checkbox" id="c-f3" aria-label="Post the Reel on @howzit.explains"><span class="box" aria-hidden="true"></span><div class="body"><h3>Post the Reel on @howzit.explains <span class="chip ig">Instagram</span></h3><ol><li>+ → Reel → pick the video → Next.</li><li>Paste the caption and hashtags.</li><li>Edit cover → pick the frame with the lime hook box.</li><li>Tag people → <b>Invite collaborator</b> → the Lowkey Genius page.</li><li>Advanced settings → turn on the <b>AI label</b> (the 3D scenes are AI-made and look fairly real).</li><li>If Advanced settings shows Accessibility → Alt text, paste the alt text.</li><li>Share.</li></ol></div></div><div class="step" data-id="f4"><input type="checkbox" id="c-f4" aria-label="Accept the Collab on the Lowkey Genius page"><span class="box" aria-hidden="true"></span><div class="body"><h3>Accept the Collab on the Lowkey Genius page <span class="chip ig">Instagram</span></h3><p>Switch to the Lowkey Genius account → DMs → open the invite → Accept. The Reel then shows on both pages and likes, comments, shares and saves are combined.</p></div></div><div class="step" data-id="f5"><input type="checkbox" id="c-f5" aria-label="Pin a question comment, reply in the first hour"><span class="box" aria-hidden="true"></span><div class="body"><h3>Pin a question comment, reply in the first hour <span class="chip ig">Instagram</span></h3><p>Pin the question from the caption ("Did you know…? 👇"). Reply to every comment in the first hour; note new questions as topic ideas.</p></div></div></section>
+<section class="phase" aria-labelledby="p7"><div class="phase-head"><span class="n">07</span><h2 id="p7">After 48 hours</h2><span class="pc"></span></div><div class="step" data-id="g1"><input type="checkbox" id="c-g1" aria-label="Read the Reel&#x27;s insights"><span class="box" aria-hidden="true"></span><div class="body"><h3>Read the Reel&#x27;s insights <span class="chip ig">Instagram</span></h3><p>Note plays, average watch time, how many watched to the end, shares and saves. Shares and full watches matter most.</p></div></div><div class="step" data-id="g2"><input type="checkbox" id="c-g2" aria-label="Learn one thing for the next video"><span class="box" aria-hidden="true"></span><div class="body"><h3>Learn one thing for the next video </h3><ul><li>Most people leave in the first 3 s → stronger hook or teaser next time.</li><li>People leave in the middle → shorter scenes, more open loops.</li><li>Lots of shares or saves → make a part 2 on the same topic.</li></ul><p class="save">Log the topic as posted in <code>G:\Apps\youtube_clipping\templates\trackers\explainer-ideas.csv</code>.</p></div></div></section>
+
+  <footer>
+    Prompts come from <code>prompts\gemini.md</code> in <code>G:\Apps\animated-explainers</code>. Rebuild this page after editing them: <code>python tools\make_checklist.py</code>.
+    Instagram limits Reels to 5 hashtags (since Dec 2025). Brand: <code>brand\brand-guide.md</code>.
+  </footer>
+</main>
+
+<script>
+(() => {
+  const KEY = "howzit-checklist-v1";
+  let state = { episode: "", done: {} };
+  let dbDoc = null, saveTimer = null, lastSaved = "";
+
+  const $ = (s, el = document) => el.querySelector(s);
+  const $$ = (s, el = document) => [...el.querySelectorAll(s)];
+  const steps = $$(".step");
+  const epInput = $("#ep");
+
+  function render() {
+    const ep = (state.episode || "").trim();
+    if (document.activeElement !== epInput) epInput.value = ep;
+    steps.forEach(st => {
+      const on = !!state.done[st.dataset.id];
+      st.classList.toggle("done", on);
+      $("input", st).checked = on;
+    });
+    $$("[data-cmd]").forEach(el => { el.textContent = el.dataset.cmd.replaceAll("{EP}", ep || "<episode>"); });
+    const total = steps.length, n = steps.filter(s => state.done[s.dataset.id]).length;
+    $("#count").textContent = `${n} / ${total}`;
+    $("#fill").style.width = total ? `${(n / total) * 100}%` : "0";
+    $$(".phase").forEach(ph => {
+      const ss = $$(".step", ph), d = ss.filter(s => state.done[s.dataset.id]).length;
+      $(".pc", ph).textContent = `${d} of ${ss.length}`;
+    });
+  }
+
+  function persist() {
+    try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {}
+    if (!dbDoc) return;
+    clearTimeout(saveTimer);
+    saveTimer = setTimeout(async () => {
+      const body = JSON.stringify(state);
+      if (body === lastSaved) return;
+      try { await dbDoc.set(JSON.parse(body)); lastSaved = body; $("#sync").textContent = "Saved. Ticks follow you to your phone and laptop."; }
+      catch (e) { $("#sync").textContent = "Couldn't save online just now; ticks are kept on this device."; }
+    }, 600);
+  }
+
+  try { const s = JSON.parse(localStorage.getItem(KEY) || "null"); if (s && s.done) state = s; } catch (e) {}
+
+  steps.forEach(st => {
+    const box = $("input", st);
+    box.addEventListener("change", () => { state.done[st.dataset.id] = box.checked; if (!box.checked) delete state.done[st.dataset.id]; render(); persist(); });
+    $(".box", st).addEventListener("click", () => { box.checked = !box.checked; box.dispatchEvent(new Event("change")); });
+    $("h3", st).addEventListener("click", () => { box.checked = !box.checked; box.dispatchEvent(new Event("change")); });
+  });
+
+  let epTimer = null;
+  epInput.addEventListener("input", () => {
+    state.episode = epInput.value.trim().replace(/[\\/]+$/, "");
+    render();
+    clearTimeout(epTimer); epTimer = setTimeout(persist, 500);
+  });
+
+  const reset = $("#reset"); let armed = null;
+  reset.addEventListener("click", () => {
+    if (!armed) {
+      reset.textContent = "Tap again to clear phases 2–7"; reset.classList.add("warn");
+      armed = setTimeout(() => { armed = null; reset.textContent = "New video"; reset.classList.remove("warn"); }, 4000);
+      return;
+    }
+    clearTimeout(armed); armed = null; reset.textContent = "New video"; reset.classList.remove("warn");
+    const keep = {}; Object.keys(state.done).filter(k => k.startsWith("a")).forEach(k => keep[k] = true);
+    state = { episode: "", done: keep }; render(); persist(); epInput.focus();
+  });
+
+  $$(".copy").forEach(btn => btn.addEventListener("click", () => {
+    const pre = btn.parentElement.querySelector("pre");
+    const text = pre.textContent;
+    const done = ok => { btn.textContent = ok ? "Copied" : "Select + copy"; setTimeout(() => btn.textContent = "Copy", 1600); };
+    try {
+      navigator.clipboard.writeText(text).then(() => done(true), () => { selectPre(pre); done(false); });
+    } catch (e) { selectPre(pre); done(false); }
+  }));
+  function selectPre(pre) { const r = document.createRange(); r.selectNodeContents(pre); const s = getSelection(); s.removeAllRanges(); s.addRange(r); }
+
+  render();
+
+  (async () => {
+    try {
+      const db = await window.claude?.use?.("db");
+      if (!db) return;
+      dbDoc = db.doc("progress/current");
+      dbDoc.onSnapshot(snap => {
+        if (!snap.exists || snap.metadata.hasPendingWrites) return;
+        const d = snap.data();
+        lastSaved = JSON.stringify(d);
+        state = { episode: d.episode || "", done: { ...(d.done || {}) } };
+        render();
+        $("#sync").textContent = "Saved. Ticks follow you to your phone and laptop.";
+      }, () => { $("#sync").textContent = "Ticks are saved on this device."; });
+    } catch (e) {}
+  })();
+})();
+</script>

@@ -1,0 +1,184 @@
+title: "What Happens When You Stop Drinking Water"
+preset: explainer
+structure: hook
+hook: "The moment you stop drinking water, your body starts fighting to survive."
+# Owner brief 2026-10-18: from first thirst to dangerous organ stress; realistic (accurate) and easy to understand.
+# Visual approach: one hiker on a hot trail + x-ray views of his real organs at their real size and place (story.md).
+# Loop: the last line runs into the first ("...don't ignore it. Because" -> "The moment you stop drinking water...")
+# and the last clip ends on the first clip's first frame.
+caption: |
+  Your body has a whole emergency plan for when you stop drinking water. 💧
+  From the first sip you skip to your kidneys shutting down, here's what happens inside.
+  Feeling dizzy or confused in the heat? That's an emergency: drink, cool down and get help.
+
+  Follow @howzit.explains for how things work in under a minute.
+  How much water did you drink today? 👇
+hashtags: [humanbody, dehydration, howthebodyworks, sciencefacts, health]
+cover_text: "Stop drinking water?"
+alt_text: "3D animation of a hiker on a hot trail with x-ray views inside his body: his brain triggers thirst, his kidneys hold on to water, his heart beats faster, his cells lose water and his kidneys struggle as dehydration gets worse."
+
+flow_lengths: [8]               # Veo 3.1 Fast on this plan only makes 8 s clips
+flow_ingredients: false         # one character, described in full in every prompt
+loop: true
+
+characters:
+  - name: "the hiker"
+    look: "a cartoon young Indian man in his mid-20s, slim, short neat black hair, light-brown skin, big expressive brown eyes, a bright orange T-shirt, khaki cargo shorts, a grey backpack, white sneakers; he looks exactly the same in every shot"
+    size: "1.75 m tall adult man"
+
+objects:
+  - name: "the water bottle"
+    look: "a plain 1-litre clear plastic water bottle with a blue screw cap, no label, no writing"
+    size: "27 cm tall, 8 cm wide; about the length of his forearm"
+  - name: "the x-ray view"
+    look: "his skin and clothes turn softly see-through like a clean glowing medical x-ray, showing his real organs in their true anatomical size, shape and place (brain inside the skull, heart behind the breastbone, two kidneys against the back wall of the belly either side of the spine just below the ribs), body water shown as a soft glowing blue"
+    size: "covers his whole 1.75 m body; every organ inside it keeps its true size"
+  - name: "the hypothalamus"
+    look: "a small rounded almond-shaped region at the base of the brain, just above the brainstem, with the pea-sized pituitary gland hanging directly below it on a short thin stalk"
+    size: "hypothalamus about the size of an almond (about 2 cm); pituitary about the size of a pea (about 1 cm); both tiny compared with the whole brain (about 15 cm long)"
+  - name: "the kidneys"
+    look: "two dark-red bean-shaped kidneys against the back wall of the belly on either side of the spine, just below the lowest ribs, each with a thin tube (ureter) running down to the bladder"
+    size: "each kidney about the size of his fist (about 11 cm long), the left one slightly higher than the right"
+  - name: "the heart"
+    look: "a realistic-shaped heart (not a symbol), in the middle of the chest behind the breastbone, tilted slightly to the left, with the big blood vessels on top"
+    size: "about the size of his fist (about 12 cm long)"
+
+setting: "a sun-baked rocky hiking trail in dry golden hills on a hot summer afternoon, harsh bright sun high in a deep blue sky, heat shimmer above the ground"
+
+facts:
+  - claim: "An adult body is about 55-65% water"
+    sources: ["https://www.ncbi.nlm.nih.gov/sites/books/NBK555956/", "https://www.usgs.gov/special-topic/water-science-school/science/water-you"]
+  - claim: "Blood gets more concentrated as you lose water; sensors in the hypothalamus detect it and trigger thirst"
+    sources: ["https://www.ncbi.nlm.nih.gov/sites/books/NBK555956/", "https://www.msdmanuals.com/home/kidney-disorders/water-balance/dehydration"]
+  - claim: "Thirst doesn't appear until you're about 1-2% dehydrated"
+    sources: ["https://today.uconn.edu/2012/02/even-mild-dehydration-can-alter-mood/", "https://www.ncbi.nlm.nih.gov/sites/books/NBK555956/"]
+  - claim: "The brain releases vasopressin (ADH), which makes the kidneys hold on to water, so urine gets darker and scarcer"
+    sources: ["https://my.clevelandclinic.org/health/body/23150-posterior-pituitary", "https://my.clevelandclinic.org/health/diseases/9013-dehydration"]
+  - claim: "Mild dehydration brings headaches, tiredness and trouble concentrating"
+    sources: ["https://today.uconn.edu/2012/02/even-mild-dehydration-can-alter-mood/", "https://my.clevelandclinic.org/health/diseases/21517-dehydration-headache"]
+  - claim: "Blood volume falls, the heart beats faster, standing up can make you dizzy"
+    sources: ["https://www.ncbi.nlm.nih.gov/sites/books/NBK555956/", "https://www.msdmanuals.com/home/kidney-disorders/water-balance/dehydration"]
+  - claim: "You sweat less and can overheat"
+    sources: ["https://www.msdmanuals.com/home/kidney-disorders/water-balance/dehydration", "https://my.clevelandclinic.org/health/diseases/9013-dehydration"]
+  - claim: "Water is pulled out of cells, including brain cells; confusion is a sign of severe dehydration"
+    sources: ["https://www.msdmanuals.com/home/kidney-disorders/water-balance/dehydration", "https://www.ncbi.nlm.nih.gov/sites/books/NBK555956/"]
+  - claim: "With less blood reaching them, the kidneys can be injured and fail"
+    sources: ["https://www.ncbi.nlm.nih.gov/sites/books/NBK555956/", "https://www.medicalnewstoday.com/articles/325174"]
+  - claim: "Most people survive only about 3 days without water, less in heat"
+    sources: ["https://www.medicalnewstoday.com/articles/325174", "https://www.healthline.com/health/food-nutrition/how-long-can-you-live-without-water"]
+
+scenes:
+  - id: s01
+    narration: "The moment you stop drinking water, your body starts fighting to survive."
+    characters: ["the hiker"]
+    shot: '0-1.2 s: close-up of the hiker on the sunny trail tipping the water bottle up to his lips; it is empty, one last drop falls onto his tongue and he lowers it, disappointed; 1.2-3.5 s: the camera pushes in toward his chest as the x-ray view switches on: his skin turns softly see-through and his whole body glows with soft blue body water, his heart beating behind the breastbone.'
+    camera: close-up on his face and the bottle, then a smooth push-in to his chest as the x-ray view switches on
+    opens: close-up of the hiker on the sunny trail lifting the empty water bottle to his lips, sweat on his forehead
+    ends: medium shot of his see-through x-ray body glowing soft blue, heart visible behind the breastbone
+    sfx: an empty plastic bottle crinkling, a single drip, a hot dry wind, a soft rising shimmer as the x-ray view switches on, a steady heartbeat
+    must: ["the bottle is empty", "the heart is behind the breastbone, slightly left, fist-sized"]
+    never: ["a heart symbol shape", "text or labels"]
+  - id: s02
+    narration: "You're about sixty percent water, and you're losing it every minute."
+    characters: ["the hiker"]
+    shot: '0-1.5 s: full-body x-ray view of the hiker standing on the trail, his body filled with glowing blue water up to a little above his waist line, like a glass filled a bit more than halfway; 1.5-3.5 s: tiny blue droplets leave him: beads of sweat rise off his skin into the hot air, a faint puff of moist breath leaves his mouth, and the glowing blue level inside him dips slightly.'
+    camera: steady full-body shot that slowly pushes in a little
+    opens: full-body x-ray view of the hiker on the trail glowing soft blue
+    ends: the glowing blue water level inside him slightly lower, sweat drops floating off his skin
+    sfx: a soft watery slosh, tiny sizzles as sweat drops evaporate, a slow breath out, hot wind
+    must: ["the blue water fills a bit more than half of his body", "the drops are tiny compared with him"]
+    never: ["text, numbers or a gauge with markings"]
+    popups:
+      - { text: "60%", at_word: "sixty" }
+  - id: s03
+    narration: "So your blood gets saltier. A sensor deep in your brain notices, and makes you thirsty."
+    characters: ["the hiker"]
+    shot: 'One continuous camera journey. 0-1.5 s: macro view inside a blood vessel: red blood cells flowing in clear plasma as tiny white sparkling salt specks become more crowded between them; 1.5-3 s: the camera follows the flow up into the brain to the hypothalamus at its base, which lights up with a soft green glow and sends a bright pulse; 3-4 s: the camera pulls back out through his face: the hiker swallows, licks his dry cracked lips and touches his throat, clearly thirsty. 4-6 s: he looks at the empty water bottle in his hand with a worried face, sweat on his forehead.'
+    camera: macro tracking shot inside the blood vessel, rising into the brain, then a smooth pull-back out to a close-up of his face
+    opens: macro view inside a blood vessel, red blood cells flowing in glowing blue-tinted plasma
+    ends: close-up of the hiker's worried face looking at the empty bottle, dry lips, bright sun
+    sfx: a deep whooshing blood flow, a soft electric ping as the hypothalamus lights up, a dry swallow, lips smacking
+    must: ["the hypothalamus is a tiny almond-sized spot at the base of the brain", "red blood cells only appear in the macro view inside the vessel"]
+    never: ["giant blood cells next to organs", "text or labels"]
+  - id: s04
+    narration: "But by then, you've already lost one to two percent."
+    clip: clips/s03.mp4
+    clip_start: 4.0
+    popups:
+      - { text: "1–2%", at_word: "one" }
+  - id: s05
+    narration: "Your brain also tells your kidneys: hold on to every drop. So your pee turns dark."
+    characters: ["the hiker"]
+    shot: 'One continuous move in the x-ray view. 0-1.5 s: the pea-sized pituitary gland under the hypothalamus releases a stream of glowing golden hormone sparks into the blood; 1.5-3 s: the sparks race down through the blood vessels of the neck and body to the two fist-sized kidneys against his back, which glow and pull blue water back into the blood like sponges; 3-4.8 s: cut to a clean clear glass sample cup on a white bathroom shelf: the liquid inside turns from pale straw yellow to dark amber.'
+    camera: macro on the pituitary, a fast smooth tracking move down the body to the kidneys, then a cut to a close-up of the cup
+    opens: close-up x-ray of the base of the brain, the tiny pituitary below the glowing hypothalamus
+    ends: close-up of the clear glass cup with dark amber liquid on a white shelf
+    sfx: a sparkling chime as the hormone is released, a rushing flow, a soft suction slurp as the kidneys pull water back, a liquid swirl
+    must: ["the kidneys are at his back on either side of the spine, just below the ribs, each fist-sized", "the pituitary is pea-sized directly below the almond-sized hypothalamus"]
+    never: ["a toilet", "people in the bathroom", "text or labels"]
+  - id: s06
+    narration: "Even now, headaches kick in, you feel tired, and it's hard to focus."
+    characters: ["the hiker"]
+    shot: '0-1.5 s: the hiker walking slowly on the hot trail rubs his temples; a soft red throbbing glow pulses at his forehead; 1.5-3.6 s: his shoulders sag, he yawns heavily and squints at the bright trail ahead as the background goes slightly blurry, then sharp again.'
+    camera: medium tracking shot walking backwards in front of him, then a slow push-in on his tired face
+    opens: medium shot of the hiker walking slowly on the sunny trail, empty bottle in hand
+    ends: close-up of his tired squinting face in the harsh sun
+    sfx: slow crunching footsteps on gravel, a dull throbbing pulse, a long tired yawn, buzzing insects
+    must: ["bright harsh sunlight"]
+    never: ["text or labels"]
+  - id: s07
+    narration: "There's less blood, so your heart beats faster to keep up. Stand up fast? Dizzy."
+    characters: ["the hiker"]
+    shot: '0-2 s: x-ray close-up of his chest: the fist-sized heart behind the breastbone pumps faster and faster while the red blood in the vessels around it flows thinner; 2-3.5 s: the x-ray fades off: the hiker, who was sitting on a rock in the sun, stands up quickly, sways, and puts a hand to his head as his view spins slightly; 3.5-5.6 s: he steadies himself in the harsh sun; the sweat on his skin dries up and stops, his face and arms flush red, and a hot orange heat glow builds over his body as heat waves shimmer around him.'
+    camera: close-up on the beating heart, then a pull-back to a medium shot as he stands and sways
+    opens: x-ray close-up of his chest, the heart beating behind the breastbone
+    ends: medium shot of the hiker standing in the sun, face flushed red, orange heat glow around him
+    sfx: a heartbeat speeding up, a rock scrape as he stands, a woozy whoosh as he sways, a rising sizzle of heat
+    must: ["the heart is fist-sized behind the breastbone", "his sweat stops and dries"]
+    never: ["a heart symbol shape", "text or labels"]
+  - id: s08
+    narration: "You sweat less, so you start to overheat."
+    clip: clips/s07.mp4
+    clip_start: 3.6
+  - id: s09
+    narration: "Then water gets pulled out of your cells, even in your brain, and you get confused."
+    characters: ["the hiker"]
+    shot: '0-2 s: macro view of plump round body cells; blue water is drawn out through their walls into the surrounding blood and the cells shrink and wrinkle like grapes turning into raisins; 2-3.5 s: the camera moves to brain cells with long branches, which shrink the same way and their glow flickers; 3.5-4.8 s: cut out to the hiker in the sun, eyes unfocused, slowly turning his head as if lost.'
+    camera: macro tracking shot across the cells, then a cut to a close-up of his confused face
+    opens: macro view of plump round cells full of blue water
+    ends: close-up of the hiker's confused face in the sun, eyes unfocused
+    sfx: wet squeezing and shrinking sounds, a faint crackling flicker, a low disoriented ringing hum
+    must: ["the cells are seen in a macro view only"]
+    never: ["text or labels", "blood or gore"]
+  - id: s10
+    narration: "Your kidneys, starved of blood, start shutting down."
+    characters: ["the hiker"]
+    shot: '0-1 s: x-ray view of his back: the two fist-sized kidneys either side of the spine below the ribs, with thin red blood vessels feeding them; 1-2.4 s: the flow in the vessels slows to a trickle and the kidneys dim from a healthy glow to dull grey with a slow red warning pulse.'
+    camera: steady close x-ray shot of the lower back, slow push-in
+    opens: x-ray view of his lower back, kidneys either side of the spine
+    ends: the two kidneys dim grey with a slow red warning pulse
+    sfx: a slowing trickle, a low warning hum, a fading heartbeat-like thump
+    must: ["the kidneys are at the back on either side of the spine, just below the ribs, each fist-sized"]
+    never: ["text or labels"]
+  - id: s11
+    narration: "Without water, most people last about three days, less in the heat."
+    shot: '0-3.5 s: a wide time-lapse of the dry rocky hills: the sun races across the sky and sets, the night sky flashes past with stars, and the sun rises again, three times in a row; heat shimmer over the ground in the daytime; no people.'
+    camera: locked-off wide time-lapse shot, very slight push-in
+    opens: wide shot of the dry golden hills under the harsh sun
+    ends: wide shot of the hills as the third sunrise blazes over them
+    sfx: a fast ticking time-lapse whoosh, a hot wind, a quiet night chirp between the days
+    must: ["three full sunrises", "no people"]
+    never: ["a body or anyone lying on the ground", "text or numbers"]
+    popups:
+      - { text: "3 DAYS", at_word: "three", color: lime, size: 150 }
+  - id: s12
+    narration: "So when you feel thirsty, don't ignore it. Because"
+    characters: ["the hiker"]
+    end_frame: "s01@0"              # LOOP: ends on the first frame, and the last word runs into the first line
+    shot: 'One continuous shot on the sunny trail. The hiker, healthy again, stops walking, feels his dry throat, and lifts the water bottle up to his lips, the camera moving into a close-up that lands exactly on the end frame.'
+    camera: medium shot moving smoothly into a close-up of his face and the bottle
+    opens: medium shot of the hiker walking on the sunny trail
+    ends: exactly the end frame (close-up of the hiker lifting the bottle to his lips in the sun)
+    sfx: footsteps stopping on gravel, a dry swallow, the bottle crinkling as he lifts it
+    must: ["bright harsh sunlight", "the same orange T-shirt and grey backpack"]
+    never: ["text or labels"]

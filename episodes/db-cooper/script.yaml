@@ -1,0 +1,203 @@
+title: "The Man Who Vanished Mid-Flight"
+preset: explainer
+structure: reveal
+hook: "Why do jets have this flap?"
+# Owner direction 2026-10-18: no dates, focus on how he did it, name revealed only in the last line, and the opening
+# must not give the case away (it opens on the mystery flap, not the hijacking or the jump).
+# v3 2026-10-18: rescripted to the 8-video rules (30-45 s, rapid montage, layered sfx), casual storytelling voice. v2 is in _v1/script_v2.yaml.
+caption: |
+  This tiny flap under a jet's tail exists because of one passenger. Nobody ever found out who he was. 🤫
+  The only unsolved hijacking in commercial aviation history, in 49 seconds.
+  Watch till the end for his name.
+
+  Follow @howzit.explains for how things work in under a minute.
+  Did you guess who it was before the end? 👇
+hashtags: [unsolvedmysteries, truecrime, aviationhistory, mysteryfacts, dbcooper]
+cover_text: "Why is this flap here?"
+alt_text: "3D animation of a famous unsolved hijacking: a man in a suit and sunglasses walks down the stairway under a jet's tail at night and parachutes away; a boy later finds old banknotes in river sand, and the man points at the small flap now fitted to stop it happening again."
+
+voiceover: audio/voiceover.mp3   # ElevenLabs, Mark - Natural Conversations, Eleven v4 (take 1 of 2)
+flow_lengths: [8]               # Veo 3.1 Fast on this plan only makes 8 s clips
+flow_ingredients: false         # characters appear once or only from behind: Text to Video, clip length follows the voice
+objects:                        # fixed looks for recurring objects (added to every prompt that mentions them)
+  - name: "the airliner"
+    size: "40.6 m long, 32.9 m wingspan, 10.4 m tall to the top of the tail (Boeing 727-100); a 1.78 m man is about a sixth of its height"
+    look: 'a cartoon-styled 1971 Boeing 727-100 three-engine jet airliner: white upper body, polished silver belly, a thin red stripe along the round windows, a tall red T-shaped tail; NO engines under the wings (the wings are thin and completely clean, with nothing hanging under them); all three engines are at the very back: one engine pod on each side of the rear fuselage and the third built into the base of the tail fin, with an S-shaped air intake on top of the fuselage just in front of the fin; a folding stairway built into the underside of the tail cone, directly beneath the tail engines; no airline name, no logos, no writing'
+  - name: "the small paddle"
+    size: "a small hand-sized blade, roughly 20-30 cm long (approximate)"
+    look: a small plain flat rectangular metal blade (a simple vane about as long as a ruler, with rounded corners) on a spring hinge, mounted on the underside of the rear fuselage right beside the closed rear stairway hatch, linked to a small metal locking plate at the edge of the stairway
+characters:
+  - name: "the hijacker"
+    size: "1.78 m tall adult man"
+    look: "a cartoon man in a classic 1970s businessman look: calm, mysterious in his mid-40s, slim, neat short dark hair with a side part, black wraparound sunglasses that he never takes off, dark charcoal-black business suit, crisp white shirt, thin black tie with a small pearl tie pin, black leather briefcase; cool, expressionless face; he looks exactly the same in every shot"
+  - name: "the flight attendant"
+    size: "1.65 m tall adult woman"
+    look: "a young flight attendant with big expressive eyes, neat brown hair in a bun, a bright teal 1970s-style uniform jacket and skirt with a small white neck scarf, no logos or badges"
+  - name: "the second flight attendant"
+    size: "1.63 m tall adult woman"
+    look: a young cartoon flight attendant with short dark brown hair in a neat bob, big expressive eyes, a bright teal 1970s-style uniform jacket and skirt with a small white neck scarf, no logos or badges
+  - name: "the airline man"
+    size: "1.75 m tall adult man"
+    look: a middle-aged cartoon airline manager in an ordinary tan raincoat and a grey felt hat, not in uniform
+  - name: "the boy"
+    size: "1.28 m tall 8-year-old boy"
+    look: "an 8-year-old boy with messy brown hair and big curious eyes, a bright red-and-white striped T-shirt, blue jeans rolled at the ankle"
+
+setting: "a bright, sunlit 1970s passenger jet cabin with pastel-blue seats, white walls and warm wood trim"
+
+facts:
+  - claim: "He paid cash for a one-way ticket under the name Dan Cooper and sat in the last row"
+    sources: ["https://archives.fbi.gov/archives/news/stories/2006/november/dbcooper_112406", "https://historylink.org/File/23059"]
+  - claim: "After takeoff he handed a flight attendant a note saying he had a bomb (red sticks and wires in his briefcase)"
+    sources: ["https://archives.fbi.gov/archives/news/stories/2006/november/dbcooper_112406", "https://en.wikipedia.org/wiki/D._B._Cooper"]
+  - claim: "He demanded $200,000 in $20 bills and four parachutes"
+    sources: ["https://archives.fbi.gov/archives/news/stories/2006/november/dbcooper_112406", "https://historylink.org/File/23059"]
+  - claim: "After landing he released the passengers for the money and parachutes and kept the crew"
+    sources: ["https://archives.fbi.gov/archives/news/stories/2006/november/dbcooper_112406", "https://en.wikipedia.org/wiki/D._B._Cooper"]
+  - claim: "He ordered the plane to fly low and slow toward Mexico"
+    sources: ["https://migflug.com/jetflights/db-cooper-northwest-305-hijacking-1971-unsolved/", "https://en.wikipedia.org/wiki/D._B._Cooper"]
+  - claim: "The Boeing 727's rear stairs could be lowered in flight; he lowered them and jumped at night"
+    sources: ["https://migflug.com/jetflights/db-cooper-northwest-305-hijacking-1971-unsolved/", "https://historylink.org/File/23059"]
+  - claim: "The FBI never found him"
+    sources: ["https://archives.fbi.gov/archives/news/stories/2006/november/dbcooper_112406", "https://en.wikipedia.org/wiki/D._B._Cooper"]
+  - claim: "A boy found rotting $20 bills in Columbia River sand; serial numbers matched the ransom ($5,800)"
+    sources: ["https://historylink.org/File/23059", "https://archives.fbi.gov/archives/news/stories/2006/november/dbcooper_112406"]
+  - claim: "Planes were fitted with a flap that locks the rear stairs in flight, named the Cooper vane"
+    sources: ["https://en.wikipedia.org/wiki/Cooper_vane", "https://www.traveller.com.au/db-cooper-the-mystery-hijacker-who-jumped-from-an-airliner-and-changed-commercial-plane-design-gyur8x"]
+  - claim: "He called himself Dan Cooper; the press turned it into D.B. Cooper"
+    sources: ["https://archives.fbi.gov/archives/news/stories/2006/november/dbcooper_112406", "https://en.wikipedia.org/wiki/D._B._Cooper"]
+
+scenes:
+  - id: s01
+    narration: "See this tiny flap under a jet's tail? It's there because of one guy."
+    loop_in: { zoom: 1.045, dy: 0.0125, ease: 1.0 }   # matches s13's last frame (measured), so the replay is seamless
+    shot: '0-1.5 s: low close-up under the tail cone of the airliner parked on a sunny ramp: right beside the closed rear stairway hatch, the small paddle sticks straight out from the belly on its spring, outlined with a soft green glow; 1.5-3 s: the airliner starts rolling forward, the wind builds and the paddle swings flat against the belly with a click; 3-4.7 s: the camera glides back a little and tilts up to show the rear of the airliner from close behind and below: the two engine pods on the sides of the tail, the third engine in the base of the tall red T-shaped tail, and the closed stairway hatch under the tail cone.'
+    camera: low close-up under the tail, then a smooth pull-back that reveals the rear of the airliner
+    opens: close-up of the small paddle sticking out beside the closed rear stairway hatch under the tail
+    ends: "close view from behind and below the tail, the three tail engines and the red T-tail filling the frame, the wings out of frame"
+    setting: a sunny airport ramp, clean concrete with yellow lines, deep blue sky
+    sfx: a crisp metallic click, three jet engines spooling up, light wind
+  - id: s02
+    narration: "He paid cash for his ticket and sat right at the back."
+    characters: ["the hijacker"]
+    shot: 'One continuous shot in the cabin of the airliner. 0-1.2 s: chest-height close-up as the hijacker walks down the aisle: his hand tucks a paper plane ticket and a few green banknotes of change into the breast pocket of his dark suit; 1.2-3.1 s: the camera follows him to the very last row, where he sits down calmly by the window, puts his briefcase on his lap and looks straight ahead through his black sunglasses, expressionless.'
+    camera: smooth handheld-free tracking shot following him down the aisle from slightly in front, settling into a steady medium shot from the aisle at seat height
+    opens: chest-height close-up of his hand tucking the ticket and banknotes into his suit pocket in the aisle
+    ends: medium shot of the hijacker seated in the last-row window seat, sunglasses on, briefcase on his lap, the long empty pastel-blue cabin behind him
+    setting: the bright, sunlit cabin of the airliner with pastel-blue seats, white walls and warm wood trim, sunlight through the round windows
+    sfx: soft footsteps on carpet, paper and banknotes rustling into a pocket, a seat cushion creak, soft cabin hum
+  - id: s03
+    narration: "Right after takeoff, he slipped the flight attendant a note: he had a bomb."
+    characters: ["the hijacker", "the flight attendant"]
+    shot: "0-3 s: close-up, his hand (only his sleeve and hand in frame) holds out a small folded note; the flight attendant takes it with a polite smile; 3-5 s: she unfolds it and her eyes go huge, her jaw drops, she freezes; 5-8 s: the camera drops to his lap where the black briefcase lid lifts open, revealing bundles of red cylinders wrapped in coiled wires and a battery."
+    camera: "close-up on the hands, push-in onto her shocked face, then a smooth tilt down to the opening briefcase"
+    sfx: "paper unfolding, two sharp briefcase latch clicks, the lid creaking open, a low tense rumble"
+
+  - id: s04
+    narration: "Yep, red sticks and wires."
+    clip: clips/s03.mp4
+    clip_start: 5
+
+  - id: s05
+    narration: "All he wanted was two hundred grand and four parachutes."
+    shot: '0-1.7 s: top-down close-up on a wooden bank table: quick hands stack paper-banded bundles of green twenty-dollar bills and push them into a white cloth bank bag until it bulges; 1.7-3.4 s: the camera slides sideways along the table to four parachute packs lined up next to the bag: two larger backpack parachutes and two smaller chest parachutes, in plain olive-green and tan nylon with harness straps and metal buckles.'
+    camera: top-down close-up, then a smooth sideways slide along the table
+    opens: top-down close-up of hands stacking bundles of twenty-dollar bills beside a white cloth bank bag
+    ends: the bulging white cloth money bag and the four parachute packs side by side on the table
+    setting: a 1970s bank back room at night, warm desk lamps, polished wood table
+    sfx: paper bills riffling, bundles thudding into a cloth bag, heavy nylon packs thumping onto wood, buckles clinking
+    popups:
+      - text: "$200,000"
+        at_word: "two"
+        hold: 1.2
+      - text: "4 PARACHUTES"
+        at_word: "four"
+        size: 110
+        hold: 1.3
+  - id: s06
+    narration: "So they landed, swapped the passengers for the cash,"
+    characters: ["the second flight attendant", "the airline man"]
+    shot: 'One continuous shot at night in steady rain on a remote, dim part of the airfield. 0-1.2 s: wide side view of the airliner parked on the wet tarmac with its window shades closed, a fuel truck beside the wing, and a mobile boarding-stair truck pushed against the front passenger door on the left side of the fuselage, just behind the cockpit; 1.2-3.1 s: the camera moves closer to those stairs: cartoon passengers in 1970s coats and hats hurry down the stairs into the rain, while at the top of the stairs the airline man hands a bulging white cloth bank bag to the second flight attendant standing in the doorway.'
+    camera: smooth push-in from a wide side view to a medium shot of the front stairs and doorway
+    opens: wide side view of the airliner parked on the wet tarmac at night, stair truck at the front left door, fuel truck by the wing
+    ends: 'the doorway at the top of the stairs: the second flight attendant taking the money bag as the last passengers step down into the rain'
+    setting: a remote part of an airfield at night in steady rain, lit by the warm light from the open door, the fuel truck's headlights and a few floodlights, shiny wet reflections
+    sfx: steady rain on metal, footsteps clanging down metal stairs, engines idling, a fuel pump humming
+  - id: s07
+    narration: "and took off again, flying low and slow."
+    shot: 'One continuous tracking shot at night in steady rain. 0-1.3 s: the airliner lifts off a wet runway lined with runway lights, nose up, its landing gear left hanging down and its wing flaps lowered, the rear stairway closed; 1.3-2.8 s: just past the end of the runway it flies slowly and low over a dark forest of tall fir trees and rolling hills, wheels still down, red and green wingtip lights and a red beacon blinking, rain streaking past.'
+    camera: smooth side tracking shot moving with the airliner, easing behind and below it at the end
+    opens: side view of the airliner lifting off the rainy runway at night, runway lights streaking past
+    ends: the airliner flying slowly and low over dark fir trees, seen from behind and below, the three tail engines and red T-tail facing the camera
+    setting: an airport runway at night in steady rain, then the dark fir forest just beyond it, the airliner brightly rim-lit by its own lights
+    sfx: three jet engines roaring at take-off then settling into a steady drone, rain hitting metal, wind
+    popups:
+      - text: "LOW & SLOW"
+        at_word: "low"
+        size: 130
+  - id: s08
+    narration: "You see, this jet had a stairway in its tail that opens mid-air."
+    shot: 'One continuous shot under the tail in flight, at night in heavy rain over a dark fir forest. 0-1.2 s: close view from behind and below the tail of the airliner: the three tail engines glowing softly, the closed stairway hatch on the underside of the tail cone; 1.2-4 s: the stairway, outlined with a bright green glow so it is easy to see, swings down from the underside of the tail like a drawbridge until it hangs open in the rushing air and rain, its steps and handrails visible and warm cabin light spilling out of the opening.'
+    camera: steady close view from behind and below the tail, holding as the stairway swings down
+    opens: the airliner's tail seen from behind and below at night, three tail engines glowing, rain streaking past
+    ends: the stairway hanging fully open under the tail, warm cabin light glowing in the opening, rain streaking past, dark forest far below
+    setting: the night sky in heavy rain above a dark fir forest, the tail rim-lit by the cabin light and the engines' glow
+    sfx: a mechanical clunk and a hydraulic whirr, a sudden roar of wind and rain as the stairway opens
+  - id: s09
+    narration: "So he lowered it, strapped on the money, and just jumped."
+    characters: ["the hijacker"]
+    start_frame: "s08@4.04"         # s08's frame: the stairway already correct (out of the belly, under the tail)
+    opens: exactly the start frame (the empty green-outlined stairway hanging from the belly under the tail)
+    shot: 'Continue from the start frame: the rear of the airliner in flight at night in heavy rain, seen from behind and below; the stairway hangs from a hatch in the BELLY directly under the tail, on the centre line between the two rear engines, sloping down and backwards toward the camera, outlined in green, warm light glowing in the opening at its top. 0-1 s: the hijacker steps out of the glowing opening at the top of the belly stairway and starts walking DOWN the steps toward the camera, gripping both green handrails, rain and wind whipping his suit; he wears a parachute pack on his back with harness straps over both shoulders and around both legs, a small reserve parachute pack on his chest, and a white cloth money bag tied tight to his waist with cord. 1-2.3 s: he keeps walking down, getting closer and bigger in the frame, stops on the lowest step at the end of the stairway and looks straight at the camera for a moment, his black sunglasses glinting in the cabin light. 2.3-3.4 s: he jumps off the bottom end of the stairway and drops straight DOWN out of the bottom of the frame; the camera tilts down after him and a round white-and-orange parachute canopy bursts open below, over the clouds.'
+    camera: starts exactly at the start frame, holds steady while he walks down toward the camera, then a smooth tilt down to follow his fall
+    ends: the round parachute canopy open over the rain clouds below the tail, the empty stairway still hanging from the belly
+    setting: the night sky in heavy rain above dark clouds and a fir forest, the tail rim-lit by the cabin light and the engines' glow
+    sfx: howling wind and rain, his shoes clanging on metal steps, a rushing whoosh as he jumps, the loud snap of a parachute opening
+    must: ["the stairway comes out of the belly of the plane directly under the tail, on the centre line, never from the side", "the stairway slopes DOWN from the belly toward its lower end", "he only ever moves DOWN the stairway, away from the plane", "all engines are at the tail"]
+    never: ["a door or opening in the side of the fuselage", "a wheeled stair truck standing on the ground", "anyone walking up the stairs", "the plane on the ground"]
+  - id: s10
+    narration: "The FBI searched for years, and nothing was found."
+    shot: "0-2 s: search teams with flashlights and a sniffer dog sweep through a misty pine forest; 2-4 s: an agent in a tan trench coat turns to the camera and shrugs with a puzzled face, palms up."
+    camera: "slow tracking shot through the trees, ending on a medium shot of the agent"
+    setting: "a misty pine forest at dawn, soft bright light beams through the trees"
+    sfx: "footsteps crunching wet leaves, a dog sniffing, distant radio static"
+
+  - id: s11
+    narration: "Until a kid digging in river sand found rotting cash from the ransom."
+    characters: ["the boy"]
+    shot: '0-1.5 s: low close-up: the boy kneels on a sunny riverbank and digs with both hands in wet, dark sand; his fingers uncover three old, crumpled, mud-stained bundles of banknotes, brown and rotting at the edges, held together by perished rubber bands; 1.5-3 s: he lifts one soggy bundle up, wet sand falling off it, and stares at it with huge eyes and an open mouth; 3-4 s: he holds it up toward the camera, amazed and excited.'
+    camera: low close-up on his digging hands, then a smooth push-in up to his amazed face
+    opens: low close-up of the boy's hands digging in wet riverbank sand
+    ends: the boy holding the soggy, rotting bundle of banknotes up toward the camera, amazed, the sparkling river behind him
+    setting: a sunny sandy riverbank with a wide sparkling river and green hills behind
+    sfx: wet sand scraping, river water lapping, a soft soggy papery crunch, birds in the distance
+    popups:
+      - text: "$5,800"
+        at_word: "ransom"
+  - id: s12
+    narration: "So now planes have this little flap. Once they're flying, the wind pushes it down and locks the stairway shut."
+    clip_start: 2.3                # skips a glitch at 1-2 s where the hatch drops open
+    shot: 'One continuous move with the airliner on a sunny day. 0-2 s: low close-up under the tail as the airliner rolls down the runway for take-off: beside the closed rear stairway hatch, the small paddle sticks out on its spring, outlined with a soft green glow; 2-4 s: the airliner speeds up and lifts off, white wind streaks rush past and push the paddle flat against the belly; 4-6.5 s: a clean x-ray view through the belly skin shows the small locking plate, linked to the paddle, sliding under the edge of the folded stairway like a bolt, and the stairway stays firmly shut.'
+    camera: low tracking close-up under the tail, moving with the airliner as it takes off
+    opens: low close-up under the tail on the sunny runway, the small paddle sticking out beside the closed stairway hatch
+    ends: the stairway locked shut under the tail as the airliner climbs into the blue sky
+    setting: a bright runway on a sunny day, deep blue sky
+    sfx: jet engines roaring, rushing air, a solid metal clack as the paddle snaps flat, a firm click of the lock
+  - id: s13
+    narration: "It's called the Cooper vane, named after him. D.B. Cooper."
+    characters: ["the hijacker"]
+    end_frame: "s01@0"              # LOOP: the video ends on its own first frame (the paddle), then replays
+    clip_start: 4.18                # 8 - 3.82: the scene uses the last 3.82 s, which end on s01's first frame
+    shot: 'One continuous shot on a sunny airport ramp under the tail of the airliner, parked; its belly stairway is folded up and closed. 0-4 s: a slow, gentle low glide toward the hijacker, who stands calmly under the tail with his briefcase, looking up at the small paddle on the belly. 4-5.5 s: he points up at the small paddle; it glows with a soft green outline. 5.5-6.7 s: he turns his face to the camera and gives one slow, cool nod, his black sunglasses glinting in the sun, then steps out of the frame to the left. 6.7-8 s: the camera glides low under the belly and pushes in to a close-up of the small paddle hanging on its spring beside the closed hatch, outlined in green, the yellow taxi line on the concrete below, landing exactly on the end frame.'
+    camera: slow low glide toward him, then a smooth push-in under the belly to the close-up of the paddle (the end frame)
+    ends: exactly the end frame, the first frame of the video (close-up of the paddle under the belly, sunny ramp, yellow line)
+    setting: a sunny airport ramp, clean concrete with yellow lines, deep blue sky, bright midday sun
+    sfx: light wind across the ramp, his shoes on concrete, a soft metallic creak of the spring, a distant jet engine hum
+    must: ["bright sunny daylight", "the plane is parked on the ground with the belly stairway closed", "all engines are at the tail"]
+    never: ["night or rain", "an open stairway", "a door in the side of the fuselage"]
+    popups:
+      - text: "D.B. COOPER"
+        at_word: "D.B."
+        color: lime
+        size: 150
+        hold: 2.4

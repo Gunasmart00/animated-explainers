@@ -1,0 +1,58 @@
+# Kids stories and rhymes: slower, warm voice, bigger captions, still in brand colours.
+# Note: kids content may need its own channel and "Made for kids" settings; HowZit / Lowkey
+# Genius explainers are posted as "Not made for kids".
+video:
+  width: 1080
+  height: 1920
+  fps: 30
+
+voice:
+  engine: edge
+  name: en-US-AnaNeural   # child-like voice; en-IN-NeerjaNeural is warm and clear too
+  rate: "-8%"
+  pitch: "+0Hz"
+
+scene:
+  pad_after: 0.35
+  default_motion: zoom_in
+  zoom: 0.05
+  background: ground
+
+captions:
+  font: Open Sans ExtraBold
+  bold: false
+  size: 112
+  color: white
+  outline_color: "#000000"
+  outline: 6
+  shadow: 2
+  words_per_line: 3
+  position_y: 0.70
+  uppercase: false
+  highlight_color: lime
+
+popups:
+  font: Open Sans ExtraBold
+  size: 190
+  position_y: 0.40
+  hold: 1.8
+  default_color: white
+  glow: true
+  outline: 7
+
+music:
+  file: auto
+  volume: 0.25
+  duck: true
+
+sfx:
+  cuts: whoosh
+  popups: pop
+  volume: 0.35
+
+loudness: -14
+
+quality:
+  upscale: auto
+  crf: 16
+  preset: slow
