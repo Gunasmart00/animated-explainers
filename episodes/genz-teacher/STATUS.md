@@ -1,9 +1,9 @@
 # Episode Status: Don't Underestimate Gen Z Teachers (genz-teacher)
 
-- **Current Phase:** `final_published_pending`
+- **Current Phase:** `published`
 - **Active AI:** Antigravity (Gemini Pro)
 - **Last AI:** Claude Code (limit hit mid-upload on 2026-10-19)
-- **Last Updated:** 2026-10-20 14:40 IST
+- **Last Updated:** 2026-10-20 17:15 IST
 - **Audio:** ElevenLabs "Mark – Natural Conversations", 33.0 s, −14 LUFS in build
 - **Flow Project:** `genz-teacher`, Veo 3.1 Fast, 9:16 portrait, Upscaled 1080p
 - **Total Flow Credits Spent:** ~240 credits
@@ -17,6 +17,7 @@
 - **2026-10-19 (Owner):** Confirmed real-world size rules: desks 75 cm, teacher 1.65 m, phone 16x7.7 cm, cheat slips 7x5 cm. No readable text on papers (grey scribble only).
 - **2026-10-19 (Claude):** Full build completed (`HowZit - Dont Underestimate Gen Z Teachers.mp4`).
 - **2026-10-19 (Claude):** YouTube upload initiated. Draft saved in YouTube Studio titled *"She Caught the Whole Class Cheating in 4K 💀"*. Claude hit weekly quota right before final publish click.
+- **2026-10-20 (Owner):** Confirmed episode published on Instagram and YouTube Shorts. Episode fully done.
 
 ---
 
@@ -37,8 +38,7 @@
 
 ---
 
-## 3. Immediate Next Step & AI Handoff
-- **Task:** Finalize YouTube Shorts publish in YouTube Studio.
-- **Title:** `She Caught the Whole Class Cheating in 4K 💀`
-- **Category:** Education | **Altered Content:** Yes | **Playlist:** HowZit
-- **Pinned Comment:** `Tag the friend who'd pass you the whole answer sheet 👇😂`
+## 3. Status Summary
+- **Status:** **Published** on YouTube Shorts and Instagram (`@howzit.explains` x Lowkey Genius).
+- **Repository:** All clips, audio, and final MP4 committed and pushed to GitHub.
+

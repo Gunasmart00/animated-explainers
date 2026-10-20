@@ -235,7 +235,7 @@ def main():
     (out / f"{d.name}_flow_prompts.md").write_text(text, encoding="utf-8")
     (out / f"{d.name}_timing.json").write_text(json.dumps(timing, indent=1), encoding="utf-8")
     total = sum(v["seconds"] for v in timing.values())
-    print(f"{len(timing)} scenes, {total:.1f} s → {out / (d.name + '_flow_prompts.md')}")
+    print(f"{len(timing)} scenes, {total:.1f} s -> {out / (d.name + '_flow_prompts.md')}")
 
 
 if __name__ == "__main__":

@@ -6,12 +6,12 @@ This file tracks the real-time production status across AI switches (Claude Code
 
 ## Current Status
 
-- **Active Episode:** `genz-teacher` (Don't Underestimate Gen Z Teachers)
-- **Current Phase:** `final_published_pending` (Video rendered, YouTube draft awaiting final publish click)
+- **Active Episode:** `how-seatbelts-know-when-to-lock` (How Seatbelts Know When To Lock)
+- **Current Phase:** `scripting`
 - **Active AI:** Antigravity (Gemini Pro)
 - **Last AI Active:** Claude Code
-- **Last Updated:** 2026-10-20 14:40 IST
-- **Total Flow Credits Spent:** ~240 credits (within 300 limit)
+- **Last Updated:** 2026-10-20 19:11 IST
+- **Completed Episodes:** 3/3 published (`db-cooper`, `stop-drinking-water`, `genz-teacher`)
 
 ---
 
@@ -21,29 +21,27 @@ This file tracks the real-time production status across AI switches (Claude Code
 |---|---|---|---|---|
 | `db-cooper` | The Man Who Vanished Mid-Flight | **Published** | `episodes/db-cooper/output/db-cooper_howzit.mp4` | [Live Link](https://youtube.com/shorts/Xn5k2dD12MA) |
 | `stop-drinking-water` | What Happens When You Stop Drinking Water | **Published** | `episodes/stop-drinking-water/output/stop-drinking-water_howzit.mp4` | [Live Link](https://youtube.com/shorts/TbRr7Y8m5Hw) |
-| `genz-teacher` | She Caught the Whole Class Cheating in 4K 💀 | **Draft on Studio** | `episodes/genz-teacher/output/HowZit - Dont Underestimate Gen Z Teachers.mp4` | Draft in YouTube Studio |
+| `genz-teacher` | She Caught the Whole Class Cheating in 4K 💀 | **Published** | `episodes/genz-teacher/output/HowZit - Dont Underestimate Gen Z Teachers.mp4` | [Live Link](https://youtube.com/shorts/z8e4bJj5_k0) |
+| `how-seatbelts-know-when-to-lock` | How Seatbelts Know When To Lock | **Scripting** | TBD | In Production |
 
 ---
 
 ## Active Tasks & Handover Notes
 
-### Task 1: Complete Gen Z Teacher YouTube Shorts Publish
-1. Open YouTube Studio (**Content -> Shorts**).
-2. Edit draft *"She Caught the Whole Class Cheating in 4K 💀"*.
-3. Confirm settings:
-   - Paid promotion: No
-   - Altered content (AI): Yes
-   - Category: Education
-   - Tags: `teacher catches students cheating, exam cheating, gen z teacher, caught in 4k, school animation, 3d animation, funny shorts, howzit`
-4. Visibility: **Public** -> Click **Publish**.
-5. Pin channel comment: *"Tag the friend who'd pass you the whole answer sheet 👇😂"*
+### Task 1: Research & Story Construction
+1. Research seatbelt dual-locking retractor mechanics:
+   - Vehicle-sensitivity mechanism (steel inertia pendulum / weighted ball).
+   - Webbing-sensitivity mechanism (centrifugal clutch / flyweight ratchet).
+   - Pre-tensioner explosive micro-charge (optional twist / climax).
+2. Write `episodes/how-seatbelts-know-when-to-lock/story.md` with exactly 2 credible engineering sources per claim.
 
-### Task 2: Ready for Next Episode Selection
-When the owner is ready for the next video, pick from `ideas/backlog.csv` or user topic:
-- *How Seatbelts Know When To Lock* (how-it-works / cross-section mechanics)
-- *Why Pen Caps Have A Tiny Hole* (hidden-function / airflow physics)
-- *What Happens If You Step In Quicksand* (survival / density physics)
-- *Trapped In A Sinking Car* (survival / water pressure)
+### Task 2: Scene-by-Scene Script & Flow Prompts
+1. Write `episodes/how-seatbelts-know-when-to-lock/script.yaml` following Zack D. Films retention formula:
+   - 0:00–0:03 Hook: pull slow vs yank fast (< 10 words, premise inversion).
+   - 0:04–0:18 Mechanical Escalation: transparent B-pillar cutaway, glowing mechanism, metallic ratchet clicks.
+   - 0:19–0:35 Payoff: emergency braking lock, seamless loop back to the first frame.
+2. Generate voiceover and run `.venv\Scripts\python.exe -m studio.flow episodes/how-seatbelts-know-when-to-lock`.
+
 
 ---
 
