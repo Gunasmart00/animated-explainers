@@ -1,0 +1,55 @@
+title: "378 Strangers Bought Each Other Coffee"
+preset: explainer
+structure: hook
+hook: "A woman at a coffee drive-through"
+# Owner pick 2026-10-24 (touching story). Zack look + formula (docs/zack-structure.md); page: README.md.
+# Easter egg: the barista's tally board (s03). Twist: the chain ends with someone who just didn't play along. Loops to s01.
+caption: |
+  378 strangers bought each other coffee 😮
+  Then one woman ended it in the funniest way.
+
+  Follow @howzit.explains for true stories you won't believe.
+  Would YOU have kept the chain going? 👇
+hashtags: [payitforward, kindness, coffee, truestory, wholesome]
+viral_hashtags: [viral, fyp, foryou, explore, explorepage, trending, didyouknow, facts, mindblown, heartwarming, goodnews, storytime, 3danimation, starbucks, florida]
+cover_text: "378 IN A ROW"
+alt_text: "3D animation: at a Florida coffee drive-through, a woman pays for the car behind her, and 378 strangers keep the chain going for 11 hours until one woman simply pays for her own coffee and drives off."
+voiceover: audio/voiceover.mp3   # owner, ElevenLabs Mark, 35.24 s
+music: true
+
+facts:
+  - claim: "Starbucks on Tyrone Boulevard, St. Petersburg, Florida, Wednesday 20 Aug 2014, from about 7 AM; a woman paid for her iced coffee and the caramel macchiato of the car behind her"
+    sources: ["https://patch.com/florida/stpete/378-people-pay-it-forward-st-pete-starbucks", "https://www.tampabay.com/news/humaninterest/more-than-250-have-paid-it-forward-at-local-starbucks-and-the-chain-is/2193784/"]
+  - claim: "Staff counted and told each customer how many had paid it forward before them"
+    sources: ["https://www.npr.org/transcripts/342228894", "https://www.nbcnews.com/news/us-news/378-customers-pay-it-forward-strangers-florida-starbucks-n186126"]
+  - claim: "378 people over 11 hours; at 6 PM a woman declined and paid for her own $2.25 drink"
+    sources: ["https://www.nbcnews.com/news/us-news/378-customers-pay-it-forward-strangers-florida-starbucks-n186126", "https://patch.com/florida/stpete/378-people-pay-it-forward-st-pete-starbucks"]
+
+# Voice timing (silencedetect pauses, 2026-10-24): 11 phrases; clip windows 0-7.56, 7.56-12.47, 12.47-20.59, 20.59-27.57, 27.57-35.24
+scenes:
+  - id: s01
+    clip: clips/c01.mp4
+    clip_start: 0.0
+    narration: "A woman at a coffee drive-through paid for her iced coffee... and then for the stranger's caramel macchiato in the car behind her."
+  - id: s02
+    clip: clips/c02.mp4
+    vo_start: 7.56
+    narration: "So that driver paid for the next car. And that driver paid for the one after that."
+  - id: s03
+    clip: clips/c03.mp4
+    vo_start: 12.47
+    narration: "The baristas started counting, and told every driver how long the chain was. You see, now nobody wanted to be the one who broke it."
+  - id: s04
+    clip: clips/c04.mp4
+    vo_start: 20.59
+    narration: "For eleven hours, car after car kept paying. 378 people in a row."
+    popups:
+      - { text: "11 HOURS", at_word: "eleven" }
+      - { text: "378 IN A ROW", at_word: "378", color: lime, size: 150 }
+  - id: s05
+    clip: clips/c05.mp4
+    vo_start: 27.57
+    narration: "Finally, at six in the evening, a woman pulled up, heard her coffee was already paid for... and just paid for her own, and drove off."
+    popups:
+      - { text: "6 PM", at_word: "six" }
+    end_frame: "s01@0"

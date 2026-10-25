@@ -1,0 +1,79 @@
+title: "A Whale Saved Her From A Shark"
+preset: explainer
+structure: hook
+hook: "This whale wouldn't stop shoving her"
+# Owner pick 2026-10-25 (goosebumps lane). Zack look; stills-first; page: README.md. Loop = soft cut to s01 (same whale).
+# Easter egg: the shark is already in the deep blue of the first frame. Twist: the same whale came back a year later.
+# Credit cap 200 (owner 2026-10-25): spent 180 + C4 retake 20. s06/s07 are approved stills with a slow push-in.
+caption: |
+  This whale kept shoving a scientist through the water... she thought it was going to kill her 😮
+  Then she saw the shark.
+
+  Follow @howzit.explains for true stories you won't believe.
+  Would YOU have trusted the whale? 👇
+hashtags: [humpbackwhale, whale, shark, ocean, truestory]
+viral_hashtags: [viral, fyp, foryou, explorepage, trending, reels, reelsviral, didyouknow, mindblown, heartwarming, goodnews, storytime, 3danimation, animals, wildlife]
+cover_text: "SAVED BY A WHALE"
+alt_text: "3D animation: a humpback whale keeps pushing a snorkelling scientist and tucks her under its fin; back at her boat she sees a tiger shark nearby while a second whale slaps its tail; a year later the same whale, known by the notches in its tail, swims up to her boat and nudges her."
+voiceover: audio/voiceover.mp3   # owner, ElevenLabs Mark, 40.28 s
+
+facts:
+  - claim: "In 2017 off Rarotonga, Cook Islands, a humpback of about 23 tonnes pushed whale biologist Nan Hauser (28 years of research) for over ten minutes, tucked her under its pectoral fin and lifted her out of the water"
+    sources: ["https://www.newshub.co.nz/home/world/2018/01/humpback-whale-protects-diver-from-nearby-tiger-shark.amp.html", "https://www.nationalgeographic.com/animals/article/whale-protects-diver-from-shark-video-spd"]
+  - claim: "A tiger shark of about 4.5 m was nearby; a second whale slapped its tail; she was bruised"
+    sources: ["https://www.newshub.co.nz/home/world/2018/01/humpback-whale-protects-diver-from-nearby-tiger-shark.amp.html", "https://foxnews.com/science/hero-whale-saves-snorkeler-from-tiger-shark-in-the-pacific-ocean.amp"]
+  - claim: "Humpbacks are known to protect other species, such as seals, from killer whales"
+    sources: ["https://www.nationalgeographic.com/animals/article/whale-protects-diver-from-shark-video-spd", "https://mymodernmet.com/humpback-whale-saves-scientist/"]
+  - claim: "About a year later a whale with two notches in its fluke and a head scar swam to her boat, ignored the others and nudged her"
+    sources: ["https://www.iflscience.com/scientist-reunites-with-whale-that-protected-her-from-huge-shark-71326", "https://mymodernmet.com/humpback-whale-saves-scientist/"]
+
+# Voice timing (silencedetect, 2026-10-25): 0, 6.75, 13.95, 17.32, 23.16, 27.14, 30.70, 35.58 (end 40.28)
+scenes:
+  - id: s01
+    clip: clips/c01.mp4
+    clip_start: 0.0
+    narration: "A 25-ton whale wouldn't stop shoving this scientist through the water... and she thought it was going to kill her."
+    popups:
+      - { text: "25 TONS", at_word: "whale" }
+  - id: s02
+    clip: clips/c02.mp4          # take 1: the shark shows up early (the viewer sees it before she does)
+    vo_start: 6.75
+    narration: "For ten minutes, it pushed her with its head, tucked her under its giant fin... and even lifted her out of the water."
+    popups:
+      - { text: "10 MINUTES", at_word: "minutes" }
+  - id: s03
+    clip: clips/c03.mp4          # take 1, cut before the extra swimmer at 3.0 s
+    clip_end: 2.9
+    vo_start: 13.95
+    narration: "Bruised and terrified, she swam for her boat."
+  - id: s04
+    image: images/s4.jpg         # placeholder until the C4 retake arrives (then: clip: clips/c04.mp4)
+    motion: zoom_in
+    vo_start: 17.32
+    narration: "Then she saw why. A fifteen-foot tiger shark was lurking right next to them."
+    popups:
+      - { text: "TIGER SHARK 🦈", at_word: "shark" }
+  - id: s05
+    clip: clips/c05.mp4
+    clip_end: 3.3                # the whale shows teeth at 3.9 s
+    vo_start: 23.16
+    narration: "You see, humpbacks have been seen protecting seals from killer whales."
+  - id: s06
+    image: images/s6.jpg         # still + push-in (credit cap)
+    motion: zoom_in
+    vo_start: 27.14
+    narration: "And a second whale was slapping its tail to keep the shark away."
+  - id: s07
+    image: images/s7.jpg         # still + push-in (credit cap)
+    motion: zoom_in
+    vo_start: 30.70
+    narration: "A year later, a humpback swam straight up to her boat, ignored everyone else..."
+    popups:
+      - { text: "1 YEAR LATER", at_word: "later" }
+  - id: s08
+    clip: clips/c08.mp4
+    clip_start: 0.0
+    vo_start: 35.58
+    narration: "...and gently nudged her. Two notches on its tail. It was the same whale."
+    popups:
+      - { text: "SAME WHALE 🐋", at_word: "same", color: lime }

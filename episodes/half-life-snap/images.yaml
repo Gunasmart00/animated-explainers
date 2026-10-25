@@ -1,0 +1,121 @@
+# Image jobs (by hand: output/half-life-snap_image_prompts.md; or tools/gen_image.py). Zack style refs added automatically.
+model: gemini-nano-banana-2.1
+size: 2K
+style: [people, sets]
+style_max: 1
+images:
+  cast:
+    aspect: "16:9"
+    prompt: |
+      A character and creature line-up for a 3D animation, all drawn to the SAME real-world scale, side view, on a
+      plain light-blue studio background, bright even light, sharp focus:
+      1. THE EVERYMAN: a man in his early 30s, short dark-brown hair, light stubble, a plain grey T-shirt, blue jeans,
+         white sneakers; a small bright ORANGE pocket hand-sanitiser bottle clipped to his front belt loop; 1.78 m tall.
+         Standing on the left, right hand raised mid finger-snap.
+      2. THE PUMA: an adult puma (mountain lion), plain tawny coat, pale belly, black-tipped tail; 0.7 m tall at the
+         shoulder (reaches the man's hip), about 2.2 m long including the tail.
+      3. THE GOAT: a wild Kashmiri goat, long shaggy cream-and-grey coat, long backward-curving horns, beard;
+         0.7 m tall at the shoulder (the man's hip).
+      Realistic proportions, realistic face with normal-sized eyes, realistic animals (not cute, not cartoon). No
+      text, no logos, no labels, no numbers.
+
+  S1:   # C1 start (hook) and the END frame of C8 (loop). Easter egg: the orange sanitiser on his belt loop.
+    aspect: "9:16"
+    refs: ["images/cast.jpg"]
+    prompt: |
+      The first attached image is our cast line-up: use exactly this man (same face, hair, grey T-shirt, jeans,
+      orange sanitiser bottle on his belt loop).
+      Realistic 3D video-game cutscene still, vertical 9:16.
+      A busy, plain game-level city crosswalk seen from a high three-quarter angle: flat light-grey road with white
+      zebra stripes, plain sky-blue and teal building walls with simple windows, a few plain trees in square planters,
+      a red city bus at the kerb, pigeons on the pavement, about twenty people in plain solid-colour T-shirts crossing.
+      In the middle of the crowd, facing the camera, THE EVERYMAN raises his right hand at chest height, thumb and
+      middle finger pressed together, just about to snap; calm, curious face. The small orange bottle on his belt loop
+      is visible but not centred.
+      Bright, flat, even daylight, a cool blue palette with the red bus and the orange bottle as the only warm colours,
+      everything in sharp focus, low-detail textures. Not a cartoon, not Pixar, not a photograph. No text, no logos,
+      no numbers, no writing on the bus or buildings.
+
+  S2:   # C2 start: half the street gone
+    aspect: "9:16"
+    refs: ["images/cast.jpg", "images/s1.jpg"]
+    prompt: |
+      The first attached image is our cast line-up; the second is our approved opening shot: keep the same street,
+      bus, buildings, light and rendering look.
+      Realistic 3D video-game cutscene still, vertical 9:16.
+      The same crosswalk a moment later, same high angle: HALF of the people are gone, leaving wide gaps in the crowd;
+      the remaining people freeze and stare at the empty spots, shocked. Through the bus windows every other seat is
+      suddenly empty. Only half of the pigeons remain. In the row of planters, every other tree is gone, leaving bare
+      soil. THE EVERYMAN stands in the middle, hand still raised, eyes wide, jaw dropped.
+      No smoke, no dust, no glow, no injuries: people are simply not there any more.
+      Bright, flat, even daylight, cool blue palette, sharp focus. Not a cartoon, not Pixar, not a photograph. No text.
+
+  S3:   # C3 start: the planet gets quieter (seismograph)
+    aspect: "9:16"
+    prompt: |
+      Realistic 3D video-game cutscene still, vertical 9:16.
+      A plain game-level science lab: sky-blue walls, a white ceiling with one spotlight, a grey desk. On the desk a
+      drum seismograph: a slowly turning paper drum and a thin needle arm. The needle has drawn a band of big, busy
+      zig-zags on the left part of the paper that shrinks into a calm, almost flat line on the right. Close, high
+      three-quarter view on the needle and paper.
+      Bright, flat, even light, cool blue palette with the needle's arm in orange, sharp focus, low-detail textures.
+      Not a cartoon, not a photograph. No text, no numbers, no grid labels on the paper.
+
+  S4:   # C4 start: the calm whale
+    aspect: "9:16"
+    prompt: |
+      Realistic 3D video-game cutscene still, vertical 9:16.
+      Underwater in the open ocean: clear cool-blue water, the bright rippling surface at the top. A North Atlantic
+      right whale, about 15 m long: a stocky all-black body with NO dorsal fin, a broad white-blotched patch of rough
+      skin on its head (callosities), a long arched mouth, wide paddle-shaped flippers, swims slowly and calmly from
+      right to left. Far above at the surface, the small dark shape of a distant ship moving away.
+      Bright, even light, everything in sharp focus, low-detail textures. Not a cartoon, not a photograph. No text.
+
+  S5:   # C5 start: the puma in the empty city (Santiago)
+    aspect: "9:16"
+    refs: ["images/cast.jpg"]
+    prompt: |
+      The first attached image is our cast line-up: use exactly this puma (same look, same real size: shoulder height
+      0.7 m, about the height of a car's bonnet).
+      Realistic 3D video-game cutscene still, vertical 9:16.
+      An empty, plain game-level city street at blue dusk: flat grey road with white lane lines, plain pale-blue and
+      teal apartment walls, a few parked plain cars, street lights just switched on (cool white). No people at all.
+      THE PUMA walks calmly down the middle of the road toward the camera, low camera at road level.
+      Bright, clean game-style dusk (faces and fur clearly lit, never dark or gloomy), sharp focus. Not a cartoon, not a
+      photograph. No text, no logos, no number plates, no shop signs.
+
+  S6:   # C6 start: goats take over the seaside town (Wales)
+    aspect: "9:16"
+    refs: ["images/cast.jpg"]
+    prompt: |
+      The first attached image is our cast line-up: use exactly this goat's look for a herd of six goats (same size:
+      shoulder height 0.7 m, about as high as a shop's window ledge).
+      Realistic 3D video-game cutscene still, vertical 9:16.
+      A quiet, plain game-level seaside-town street in bright daylight: a row of plain white and pale-blue two-storey
+      shop fronts with closed doors, a low stone wall, neat hedges, a grey pavement. No people.
+      A herd of six shaggy, horned goats trots down the middle of the street; one goat munches a hedge.
+      Bright, flat, even daylight, cool palette, sharp focus. Not a cartoon, not a photograph. No text, no shop signs.
+
+  S7:   # C7 start: x-ray cutaway into his belly, the bacteria
+    aspect: "9:16"
+    refs: ["images/cast.jpg", "images/s1.jpg"]
+    prompt: |
+      The first attached image is our cast line-up: use exactly this man.
+      Realistic 3D video-game cutscene still, vertical 9:16.
+      THE EVERYMAN stands on the same plain crosswalk (from the second image), seen from the front at waist height;
+      his grey T-shirt and belly turn see-through as a clean x-ray cutaway on a SEPARATE glowing anatomical hologram
+      floating just in front of him (he stays fully dressed): a simple translucent blue model of the intestines, packed
+      with thousands of tiny glowing spheres in orange, yellow and teal (bacteria).
+      Bright, even light, sharp focus, clean glowing outlines. Not a cartoon, not a photograph. No text, no labels.
+
+  S8:   # C8 start: the bacteria grow back; travel out to his fingertips (ends on S1 for the loop)
+    aspect: "9:16"
+    refs: ["images/cast.jpg", "images/s1.jpg"]
+    prompt: |
+      The first attached image is our cast line-up: use exactly this man.
+      Realistic 3D video-game cutscene still, vertical 9:16.
+      Extreme close-up of THE EVERYMAN's right hand raised at chest height, thumb and middle finger pressed together
+      about to snap, the same crosswalk softly visible behind (same light and look as the second image). Thousands of
+      tiny glowing orange, yellow and teal spheres (bacteria) shimmer on the skin of his fingertips, shown as a clean
+      x-ray-style glow.
+      Bright, even light, sharp focus. Not a cartoon, not a photograph. No text, no labels.

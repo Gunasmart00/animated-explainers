@@ -249,7 +249,7 @@ def _final_mix(cfg, prof, name, episode_dir, work, W, H, total, out, draft, sfx=
     if ca.get("enabled", True):
         inputs += ["-i", f"joined_{name}_fx.wav"]
         fc.append(f"[{n}:a]volume={ca.get('volume', 0.9)}[c0]")
-        beds.append(("c0", ca.get("duck", True), 3))
+        beds.append(("c0", ca.get("duck", True), ca.get("duck_ratio", 3)))
         n += 1
     ducked = [b for b in beds if b[1]]
     voice = "[1:a]"

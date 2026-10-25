@@ -9,6 +9,7 @@ Shared workspace with Claude Code (`CLAUDE.md`). Both AIs follow the same rules 
 1. **Read `ACTIVE_PRODUCTION.md`** first to determine the active episode, current phase, and immediate next task.
 2. **Read `episodes/<current>/STATUS.md`** for specific episode history, approved clips, and decisions made.
 3. **Reference Docs:**
+   - **Owner creative rules (2026-10-20, override the bible where they differ):** `docs/owner-creative-rules.md`. Covers: hook, progression and climax, with a **twist in the last second**; zoom-in opening with a wide establishing shot; an emotion in the first 3 s; an Easter egg; never sad; **quick music**; post once a day at peak time.
    - Visual & Narrative style: `docs/zack-style-bible.md`
    - Flow / Veo Prompt Engineering: `docs/flow-ai-pitfalls-and-rules.md`
    - Cross-AI Rules: `docs/ai-handoff-protocol.md`

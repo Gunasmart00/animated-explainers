@@ -1,0 +1,236 @@
+title: "NASA Crashed Its Own Spacecraft Into Jupiter"
+preset: explainer
+structure: hook
+hook: "NASA crashed a billion-dollar spacecraft into Jupiter... on purpose."
+# Owner brief 2026-10-20: pitch #1. Space + "oh that's genius". Rules: docs/owner-creative-rules.md
+# H-P-C: hook (s01) -> progression (s02-s09, the "why" is held back until s08-s09) -> climax (s10) -> TWIST (s11, Cassini) -> loop (s12).
+# Easter egg: three tiny smiling germ microbes on Galileo's gold foil in s02-s03, paid off in s08.
+# Loop: "...That's why..." -> "NASA crashed a billion-dollar spacecraft into Jupiter... on purpose." and s12 ends on s01's first frame.
+caption: |
+  NASA flew a billion-dollar spacecraft into Jupiter on purpose. The reason is genius. 🪐
+  Watch till the end: they did it twice.
+
+  Follow @howzit.explains for how things work in under a minute.
+  Would you have crashed it? 👇
+hashtags: [space, nasa, jupiter, europa, sciencefacts]
+cover_text: "WHY CRASH IT?"
+alt_text: "Bright 3D animation of NASA's Galileo spacecraft, with its antenna stuck half-open, discovering a hidden ocean under the ice of Jupiter's moon Europa, then being steered into Jupiter to protect it from Earth germs, and Cassini later doing the same at Saturn."
+
+voiceover: audio/voiceover.mp3   # owner records in ElevenLabs (Mark - Natural Conversations) from the narration below
+music: true                      # owner rule 2026-10-20: quick, upbeat, licensed space track, low under the voice; no whoosh on cuts
+flow_style: |
+  Soft stylised 3D animation in a high-end animated-film look: natural adult body proportions with a normal head size, only slightly larger expressive eyes, softly stylised faces with clean simplified detail, smooth skin with subtle texture, realistic hair and clothes with clean simplified folds. Spacecraft, planets and moons have accurate real shapes and proportions with clean, simplified materials (crisp gold foil, white mesh, metal). Space scenes are rich and beautiful: deep blue-black space full of crisp stars, planets and moons lit brightly by sunlight from one side with glowing rims, vivid true colours, never murky or grey. Indoor scenes are bright, soft and cheerful with clean saturated colours (teal, mint, warm golden light). Smooth, fluid, natural motion with believable weight and gentle easing; the camera moves smoothly, never shakes or jumps. Every character and spacecraft keeps exactly the same look for the whole clip. Not a big-headed cartoon, not chibi, not photorealistic, not live action, not 2D, not gritty.
+style_reference: ../stop-drinking-water/images/style-samples/style-B.jpg   # same look as the last episodes
+flow_lengths: [8]
+loop: true
+
+characters:
+  - name: "the flight engineer"
+    look: "a cheerful young mission engineer in her late 20s (soft stylised 3D, natural proportions), curly black hair in a high puff, warm brown skin, round tortoiseshell glasses, a mint-green polo shirt with no logo, navy trousers, a slim black headset with a small microphone; she looks exactly the same in every shot"
+    size: "1.65 m tall adult woman"
+
+objects:
+  - name: "Galileo"
+    look: "NASA's Galileo spacecraft: an octagonal main body wrapped in shiny gold and black thermal blankets; on top a large white umbrella-like mesh dish antenna that is JAMMED HALF-OPEN, lopsided, with a few of its thin ribs still stuck to the central mast; two long thin booms each ending in a dark cylindrical power generator; one very long thin pole (magnetometer boom) with small sensor pods; no text, no logos"
+    size: "about 6 m tall, the dish 4.8 m across, the long pole 11 m; a tiny speck next to any planet or moon"
+  - name: "the germ hitchhikers"
+    look: "three tiny, cute, pale-green rounded cartoon microbes with little smiling faces and stubby wiggling arms, clinging to the gold foil"
+    size: "tiny: each about the size of a grain of rice on the spacecraft's foil, only visible in close-ups"
+  - name: "Jupiter"
+    look: "the giant planet Jupiter: cream, tan, orange and brown cloud bands, swirling storms, the Great Red Spot, lit brightly from one side"
+    size: "about 11 Earths wide; it fills the sky behind the spacecraft"
+  - name: "Europa"
+    look: "Jupiter's moon Europa: a smooth white-to-tan ball of ice criss-crossed by long thin reddish-brown crack lines"
+    size: "a little smaller than Earth's Moon; far smaller than Jupiter"
+  - name: "Cassini"
+    look: "NASA's Cassini spacecraft: a tall cylindrical body wrapped in shiny gold foil with a big round white dish antenna on top and one long thin pole; no text, no logos"
+    size: "about 6.8 m tall with a 4 m dish; a tiny speck next to Saturn"
+  - name: "Saturn"
+    look: "the planet Saturn: pale gold and cream bands with huge flat bright rings"
+    size: "about 9 Earths wide, rings far wider"
+  - name: "Enceladus"
+    look: "Saturn's small moon Enceladus: a bright white icy ball with tall feathery plumes of sparkling ice spray rising from its south pole"
+    size: "small: about 500 km across"
+
+setting: "space around Jupiter and Saturn, plus a bright, modern, generic mission control room with rows of consoles and one giant curved wall screen (no readable text, numbers or logos anywhere)"
+
+facts:
+  - claim: "Galileo cost over a billion dollars"
+    sources: ["https://science.nasa.gov/mission/galileo/", "https://www.nbcnews.com/news/amp/wbna3077515"]
+  - claim: "Galileo was the first spacecraft to orbit Jupiter"
+    sources: ["https://science.nasa.gov/mission/galileo/", "https://en.wikipedia.org/wiki/Galileo_(spacecraft)"]
+  - claim: "Its umbrella-like main antenna never fully opened, about 3 of 18 ribs stuck"
+    sources: ["https://science.nasa.gov/mission/galileo/", "https://spaceflightnow.com/galileo/030921galileohistory.html"]
+  - claim: "Galileo's magnetometer found evidence of a salty ocean under Europa's ice"
+    sources: ["https://www.jpl.nasa.gov/news/galileo-findings-boost-idea-of-other-worldly-ocean/", "https://science.nasa.gov/mission/galileo/"]
+  - claim: "Europa's ocean may hold more than twice the water of all Earth's oceans"
+    sources: ["https://science.nasa.gov/mission/europa-clipper/", "https://science.nasa.gov/earth/oceans/europa-water-world-infographic/"]
+  - claim: "By 2003 Galileo was nearly out of fuel and could soon not be steered"
+    sources: ["https://www.astronomy.com/space-exploration/galileos-death-plunge/", "https://science.nasa.gov/mission/galileo/"]
+  - claim: "It was crashed so it could never hit Europa and contaminate it with Earth microbes"
+    sources: ["https://www.nbcnews.com/news/amp/wbna3077515", "https://en.wikipedia.org/wiki/Galileo_(spacecraft)"]
+  - claim: "It hit Jupiter at nearly 108,000 mph on 21 Sep 2003"
+    sources: ["https://www.astronomy.com/space-exploration/galileos-death-plunge/", "https://www.nbcnews.com/news/amp/wbna3077515"]
+  - claim: "In 2017 NASA plunged Cassini into Saturn to keep ocean moon Enceladus pristine"
+    sources: ["https://science.nasa.gov/mission/cassini/", "https://spaceref.com/science-and-exploration/cassini-becomes-part-of-saturn/"]
+
+scenes:
+  - id: s01
+    clip: clips/visual.mp4   # one continuous take (tools/join_continuous.py)
+    clip_start: 0.0
+    clip_end: 5.26
+    narration: "NASA crashed a billion-dollar spacecraft into Jupiter... on purpose."
+    characters: ["the flight engineer"]
+    shot: "0-1.5 s: WIDE establishing shot of a bright, modern mission control room: rows of consoles, and a giant curved wall screen showing glowing Jupiter with a tiny gold spacecraft beside it; the camera is already zooming in from the back of the room. 1.5-3 s: the camera keeps zooming in to the flight engineer at the front console; she takes a breath, eyes wide, with a nervous, excited grin, and slams her palm on a big round green button. 3-4 s: on the wall screen behind her, the tiny spacecraft turns and fires its engine toward Jupiter."
+    camera: "starts wide from the back of the room and zooms steadily in to a medium close-up of her face and the button"
+    opens: "wide shot of the whole bright mission control room, the wall screen showing Jupiter and a tiny spacecraft"
+    ends: "medium close-up of the engineer's excited face, the wall screen with Jupiter behind her"
+    sfx: "busy mission-control murmur, console beeps, a big chunky button press, a low rocket rumble from the screen"
+    emotion: "nervous excitement, a held breath, then a determined slam"
+    popups:
+      - { text: "ON PURPOSE?!", at_word: "purpose", size: 150 }
+    must: ["the wall screen shows Jupiter with a tiny spacecraft", "she is the only character in close-up", "bright, cheerful room"]
+    never: ["readable text, numbers or logos on screens or clothes", "a dark or gloomy room"]
+
+  - id: s02
+    clip: clips/visual.mp4   # one continuous take (tools/join_continuous.py)
+    clip_start: 5.26
+    clip_end: 9.75
+    vo_start: 5.26
+    narration: "This is Galileo, the first spacecraft ever to orbit Jupiter."
+    shot: "0-4 s: Galileo glides through space past the camera, sunlit gold foil gleaming, its lopsided white dish on top, two long booms and its very long thin pole; giant banded Jupiter fills the background. Tiny detail: three small pale-green smiling microbes cling to the gold foil near the bottom of the body (small, not the focus)."
+    camera: "slow orbiting hero shot around the spacecraft, Jupiter huge behind it"
+    sfx: "deep space hum, soft thruster puffs"
+    easter_egg: "three tiny smiling microbes on the gold foil"
+    must: ["the dish is jammed half-open and lopsided", "Galileo is tiny compared with Jupiter"]
+    never: ["a fully open round dish", "text or logos on the spacecraft"]
+
+  - id: s03
+    clip: clips/visual.mp4   # one continuous take (tools/join_continuous.py)
+    clip_start: 9.75
+    clip_end: 14.96
+    vo_start: 9.75
+    narration: "Its main antenna jammed half-open, like a broken umbrella. It worked anyway."
+    shot: "0-2 s: close-up on the big white umbrella-like mesh dish: it tries to open, ribs creak, but a few ribs stay stuck to the central mast and it stays lopsided, like a broken umbrella. 2-4 s: a smaller antenna below it starts pulsing with soft glowing rings that travel off toward a tiny blue Earth far away. The three tiny microbes peek over the edge of the foil."
+    camera: "close-up on the jammed dish, then a smooth pull-back to show the glowing signal rings leaving"
+    sfx: "metal creaks, a sad little 'sproing' of a stuck rib, then cheerful data beeps"
+    must: ["umbrella-like dish only partly open with stuck ribs", "signals still go home"]
+    never: ["the dish fully opening"]
+
+  - id: s04
+    clip: clips/visual.mp4   # one continuous take (tools/join_continuous.py)
+    clip_start: 14.96
+    clip_end: 19.97
+    vo_start: 14.96
+    narration: "Then, flying past the icy moon Europa, it sensed something strange."
+    shot: "0-2 s: wide: Galileo zips past Europa, a white-tan ice ball with long reddish-brown cracks, Jupiter huge behind it. 2-4 s: the long thin pole on Galileo glows; faint glowing magnetic field lines around Europa bend and twist."
+    camera: "fast flyby tracking Galileo past Europa, then a quick push-in on the glowing pole"
+    sfx: "whoosh of the flyby, a rising electronic 'ping... ping...' detection sound"
+    popups:
+      - { text: "?", at_word: "strange" }
+    must: ["Europa is a white-tan ice ball with reddish cracks", "Galileo is tiny next to Europa"]
+    never: ["Europa looking like a rocky grey moon"]
+
+  - id: s05
+    clip: clips/visual.mp4   # one continuous take (tools/join_continuous.py)
+    clip_start: 19.97
+    clip_end: 25.53
+    vo_start: 19.97
+    narration: "Under the ice: a salty ocean holding over twice the water of Earth's oceans."
+    shot: "0-2.5 s: the camera dives through Europa's cracked ice shell, which slices open like a cutaway, revealing a deep, glowing blue ocean far below the ice. 2.5-4.5 s: beside Europa appear two floating water spheres: a small one labelled by a tiny Earth icon and a bigger one more than twice its size beside Europa."
+    camera: "dive through the ice into a cross-section, then a pull-back to the side-by-side water spheres"
+    sfx: "ice cracking, a deep underwater whoosh, a bright 'bloop' as the water spheres appear"
+    popups:
+      - { text: "2× EARTH'S OCEANS", at_word: "twice", color: lime }
+    must: ["ice shell on top, deep blue ocean below, rocky core at the centre"]
+    never: ["fish or creatures in the ocean", "text or numbers drawn in the scene"]
+
+  - id: s06
+    clip: clips/visual.mp4   # one continuous take (tools/join_continuous.py)
+    clip_start: 25.53
+    clip_end: 28.47
+    vo_start: 25.53
+    narration: "So why destroy the spacecraft that found it?"
+    characters: ["the flight engineer"]
+    shot: "0-3 s: back in the bright mission control room: the flight engineer looks at the wall screen showing Galileo beside Europa, tilts her head and frowns in puzzled confusion, tapping her pen on her chin."
+    camera: "slow push-in on her puzzled face with the screen behind"
+    sfx: "a curious 'hmm' music sting, a pen tapping"
+    popups:
+      - { text: "WHY?", at_word: "why" }
+
+  - id: s07
+    clip: clips/visual.mp4   # one continuous take (tools/join_continuous.py)
+    clip_start: 28.47
+    clip_end: 33.46
+    vo_start: 28.47
+    narration: "By 2003, it was nearly out of fuel. Soon, nobody could steer it."
+    shot: "0-2 s: a cutaway inside Galileo shows its round fuel tank glowing low, the last bit of fuel draining. 2-4 s: outside, its little thrusters sputter weakly and the spacecraft starts to drift and slowly tumble in the sunlight."
+    camera: "x-ray cutaway into the tank, then pull out to the drifting spacecraft"
+    sfx: "a draining gurgle, sputtering thruster puffs, a slow warning beep"
+    must: ["the dish stays jammed half-open"]
+
+  - id: s08
+    clip: clips/visual.mp4   # one continuous take (tools/join_continuous.py)
+    clip_start: 33.46
+    clip_end: 38.05
+    vo_start: 33.46
+    narration: "And anything built on Earth can carry tiny hitchhikers: Earth germs."
+    shot: "0-4 s: an extreme close-up of Galileo's gold foil: the three tiny pale-green microbes from earlier wake up, stretch, wave cheerfully at the camera and hold on tight like passengers on a bus."
+    camera: "macro push-in on the foil until the microbes fill the frame"
+    sfx: "tiny squeaky giggles, a cartoon 'boing'"
+    easter_egg_payoff: "the microbes seen in s02-s03"
+    popups:
+      - { text: "HITCHHIKERS", at_word: "hitchhikers" }
+    never: ["scary or gross germs: they are cute and friendly"]
+
+  - id: s09
+    clip: clips/visual.mp4   # one continuous take (tools/join_continuous.py)
+    clip_start: 38.05
+    clip_end: 43.89
+    vo_start: 38.05
+    narration: "If it hit Europa, they could reach that ocean, and any life we found might just be ours."
+    shot: "0-2 s: a glowing dotted path curves from the drifting Galileo toward Europa. 2-5 s: imagined: the three tiny microbes slide down a crack in Europa's ice into the blue ocean and swim; years later a future robot submarine shines its light on them, and its little camera tilts in confusion because they look exactly like Earth germs."
+    camera: "follow the dotted path to Europa, then dive with the microbes under the ice"
+    sfx: "a soft ice slide, bubbly swim sounds, a curious robot beep"
+    must: ["it is clearly imaginary and playful", "the ocean is deep blue under the ice"]
+    never: ["the spacecraft actually crashing into Europa in reality-style footage", "anything scary"]
+
+  - id: s10
+    clip: clips/visual.mp4   # one continuous take (tools/join_continuous.py)
+    clip_start: 43.89
+    clip_end: 49.24
+    vo_start: 43.89
+    narration: "So NASA dove it straight into Jupiter at almost 108,000 miles an hour."
+    characters: ["the flight engineer"]
+    shot: "0-3 s: Galileo, with its jammed dish, dives straight down into Jupiter's swirling orange and cream cloud bands, glowing hotter and hotter until it becomes a bright fiery streak and disappears into the clouds. 3-4.5 s: in mission control the flight engineer watches the screen and gives a proud smile and a small salute."
+    camera: "chase camera behind the diving spacecraft, then a cut to her proud face"
+    sfx: "rising roar of entry, a bright sizzle, then a warm proud music swell"
+    popups:
+      - { text: "108,000 MPH", at_word: "108,000", color: lime }
+    must: ["Jupiter's clouds fill the frame", "the dive is fast and dramatic but not sad"]
+    never: ["an explosion debris cloud", "crying or sadness"]
+
+  - id: s11
+    clip: clips/visual.mp4   # one continuous take (tools/join_continuous.py)
+    clip_start: 49.24
+    clip_end: 55.47
+    vo_start: 49.24
+    narration: "Fourteen years later, they did it again: Cassini, into Saturn, to protect another ocean moon."
+    shot: "0-2 s: wide: golden Saturn with its huge bright rings; small icy Enceladus nearby sprays tall sparkling plumes from its south pole. 2-4.5 s: the gold Cassini spacecraft with its big white dish dives between the rings and the planet into Saturn's clouds and becomes a bright streak."
+    camera: "wide reveal of Saturn and Enceladus, then a chase behind Cassini into the clouds"
+    sfx: "a sparkling plume hiss, a rising entry roar"
+    popups:
+      - { text: "AGAIN!", at_word: "again" }
+    must: ["Enceladus plumes clearly visible", "Cassini is tiny next to Saturn"]
+
+  - id: s12
+    clip: clips/visual.mp4   # one continuous take (tools/join_continuous.py)
+    clip_start: 55.47
+    clip_end: 56.6
+    vo_start: 55.47
+    narration: "That's why..."
+    characters: ["the flight engineer"]
+    shot: "0-2.5 s: the camera pulls straight back out of a giant curved wall screen into the bright mission control room; the screen now shows glowing Jupiter with a tiny gold spacecraft beside it, and the room settles into the exact wide shot of the opening, the flight engineer at the front console."
+    camera: "smooth straight pull-back out of the screen into the wide room, ending exactly on the first frame of s01"
+    end_frame: "s01@0"
+    sfx: "mission-control murmur returning, console beeps"

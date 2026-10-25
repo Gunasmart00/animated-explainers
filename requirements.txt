@@ -5,3 +5,5 @@ fonttools>=4.40
 numpy>=1.24
 # times captions and scenes to the ElevenLabs voiceover (first run downloads a ~460 MB speech model once)
 faster-whisper>=1.0
+# Gemini API image generation (tools/gen_image.py)
+google-genai>=2.0

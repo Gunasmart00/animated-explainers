@@ -1,0 +1,163 @@
+# Image jobs (by hand: output/whale-shark_image_prompts.md; or tools/gen_image.py). Zack style refs added automatically.
+model: gemini-nano-banana-2.1
+size: 2K
+style: [animals/whale, animals/shark, people]
+style_max: 1
+images:
+  cast:
+    aspect: "16:9"
+    prompt: |
+      A character and creature line-up for a 3D animation, all drawn to the SAME real-world scale, side view, on a
+      plain light-blue studio background, bright even light, sharp focus:
+      1. THE SCIENTIST: a newly invented woman about 63, short silver-grey hair, tanned face, black full-length
+         wetsuit, a clear dive mask pushed up on her forehead, a bright orange snorkel, bright orange swim fins in her
+         hand; 1.65 m tall. Standing on the left.
+      2. THE HUMPBACK WHALE: an adult humpback, 14 m long (more than eight times the woman's height), dark blue-grey
+         back, white throat and belly with long grooves, knobbly round bumps on the top of the head and the lower jaw,
+         very long WHITE pectoral fins about 4.5 m long (nearly three times the woman's height) with a bumpy front edge,
+         a small dorsal fin, a pale scar on top of its head, a wide tail fluke whose trailing edge has TWO small
+         notches.
+      3. THE TIGER SHARK: 4.5 m long (nearly three times the woman's height), grey-brown back with faint dark vertical
+         stripes, white belly, a blunt, wide, square snout, dark eyes.
+      Realistic proportions, realistic face with normal-sized eyes, realistic animals (not cute, not cartoon). No
+      text, no logos, no labels, no numbers.
+
+  S1:   # C1 start (hook) and the END frame of C8 (loop). Easter egg: the shark's faint shape far below.
+    aspect: "9:16"
+    refs: ["images/cast.jpg"]
+    prompt: |
+      The first attached image is our cast line-up: use exactly this woman, this humpback and this tiger shark (same
+      looks, same real-world sizes).
+      Realistic 3D video-game cutscene still, vertical 9:16.
+      REAL SIZES (the line-up draws the animals too small): the humpback is 14 m long, more than eight times the
+      woman's 1.65 m height, its head alone longer than she is tall; the tiger shark is 4.5 m, nearly three times her height.
+      Underwater in the clear tropical Pacific: bright, clear cyan-blue water, soft light rays from the surface above,
+      the surface visible as a bright rippling ceiling at the top of the picture, deep blue fading below.
+      Close underwater shot at the woman's level: the humpback's enormous head (knobbly bumps, the pale scar on top,
+      one eye visible) fills the right half of the picture and presses against THE SCIENTIST, pushing her sideways
+      through the water. She is small next to it (the head alone is several times her size), arms spread, orange fins
+      kicking, eyes wide behind her mask, startled. Far below in the hazy deep blue, small and easy to miss: the faint
+      dark shape of the tiger shark.
+      Even, bright, neutral light, everything in sharp focus, plain surfaces, low-detail textures. Not a cartoon, not
+      Pixar, not a photograph. No text, no logos, no numbers.
+
+  S2:   # C2 start: tucked under the giant fin
+    aspect: "9:16"
+    refs: ["images/cast.jpg", "images/s1.jpg"]
+    prompt: |
+      The first attached image is our cast line-up: use exactly this woman and this humpback (same looks, same sizes).
+      The second attached image is our approved opening shot: keep the same water, light and rendering look.
+      Realistic 3D video-game cutscene still, vertical 9:16.
+      REAL SIZES (the line-up draws the animals too small): the humpback is 14 m long, more than eight times the
+      woman's 1.65 m height, its head alone longer than she is tall; the tiger shark is 4.5 m, nearly three times her height.
+      She wears ONE clear dive mask, on her face, with the orange snorkel (no second mask around her neck).
+      Underwater, clear cyan-blue tropical water, light rays from the bright surface above.
+      Side view a few metres away: the humpback lies on its side just below the surface and has curled one of its long
+      WHITE pectoral fins (about three times her height) around THE SCIENTIST, holding her snugly against its white,
+      grooved belly; her orange fins stick out below the fin, her masked face looks up toward the surface. The whale's
+      eye is visible near the base of the fin.
+      Even, bright, neutral light, everything in sharp focus, plain surfaces, low-detail textures. Not a cartoon, not
+      Pixar, not a photograph. No text, no logos, no numbers.
+
+  S3:   # C3 start: swimming for the boat
+    aspect: "9:16"
+    refs: ["images/cast.jpg", "images/s1.jpg"]
+    prompt: |
+      The first attached image is our cast line-up: use exactly this woman and this humpback.
+      The second attached image is our approved opening shot: keep the same rendering look.
+      Realistic 3D video-game cutscene still, vertical 9:16.
+      REAL SIZES (the line-up draws the animals too small): the humpback is 14 m long, more than eight times the
+      woman's 1.65 m height, its head alone longer than she is tall; the tiger shark is 4.5 m, nearly three times her height.
+      She wears ONE clear dive mask, on her face, with the orange snorkel (no second mask around her neck).
+      Above the water, camera just above the surface: a calm, bright turquoise lagoon, clear blue sky, a green island
+      far away. THE SCIENTIST, head and shoulders above the water, mask on, swims hard toward a small plain white
+      motorboat about ten metres ahead (an outboard motor, two people on board leaning over the side, reaching out
+      to her). Right behind her, the humpback's huge dark back and the tip of one white pectoral fin break the
+      surface.
+      Even, bright, neutral daylight, everything in sharp focus, plain surfaces, low-detail textures. Not a cartoon, not
+      Pixar, not a photograph. No text, no logos, no numbers, no writing on the boat.
+
+  S4:   # C4 start: the reveal, the tiger shark right there
+    aspect: "9:16"
+    refs: ["images/cast.jpg", "images/s1.jpg"]
+    prompt: |
+      The first attached image is our cast line-up: use exactly this tiger shark, this woman and this humpback (same
+      looks, same real-world sizes: the shark is nearly three times her length).
+      The second attached image is our approved opening shot: keep the same water, light and rendering look.
+      Realistic 3D video-game cutscene still, vertical 9:16.
+      REAL SIZES (the line-up draws the animals too small): the humpback is 14 m long, more than eight times the
+      woman's 1.65 m height, its head alone longer than she is tall; the tiger shark is 4.5 m, nearly three times her height.
+      She wears ONE clear dive mask, on her face, with the orange snorkel (no second mask around her neck).
+      Underwater, clear cyan-blue water, the bright surface at the top.
+      Low angle looking up toward the surface: THE TIGER SHARK glides across the middle of the picture from left to
+      right, close to the camera, its stripes and blunt square snout clearly visible. Above it, at the surface, the
+      woman's legs and bright orange fins kick toward the dark underside of a small boat; between the shark and her, the
+      humpback's huge body and white pectoral fin.
+      Even, bright, neutral light, everything in sharp focus, plain surfaces, low-detail textures. Not a cartoon, not
+      Pixar, not a photograph. No text, no logos, no numbers. No blood.
+
+  S5:   # C5 start: "you see" cutaway: a humpback protecting a seal from killer whales (Antarctica)
+    aspect: "9:16"
+    refs: ["images/cast.jpg"]
+    prompt: |
+      The first attached image is our cast line-up: use this humpback's species look (dark back, white grooved belly,
+      long white pectoral fins).
+      Realistic 3D video-game cutscene still, vertical 9:16.
+      Antarctic sea: calm dark-blue water, small white ice floes, a pale cloudy sky.
+      A humpback whale floats on its back at the surface, its white grooved chest out of the water, and holds a small
+      grey seal on its chest between its two long white pectoral fins, out of the water. Around it, two black-and-white
+      killer whales circle, their tall black dorsal fins cutting the water.
+      Even, bright, neutral light, everything in sharp focus, plain surfaces, low-detail textures. Not a cartoon, not
+      Pixar, not a photograph. No text, no logos, no numbers. No blood.
+
+  S6:   # C6 start: the second whale's tail slap drives the shark away
+    aspect: "9:16"
+    refs: ["images/cast.jpg", "images/s4.jpg"]
+    prompt: |
+      The first attached image is our cast line-up: use exactly this tiger shark and this humpback species look.
+      The second attached image is our approved shark shot: keep the same water, light and rendering look.
+      Realistic 3D video-game cutscene still, vertical 9:16.
+      REAL SIZES (the line-up draws the animals too small): the humpback is 14 m long, more than eight times the
+      woman's 1.65 m height, its head alone longer than she is tall; the tiger shark is 4.5 m, nearly three times her height.
+      Underwater, clear cyan-blue water, the bright surface at the top.
+      Wide view: in the upper part of the picture a SECOND humpback whale (no scar) brings its huge tail fluke down hard
+      at the surface, a burst of white bubbles exploding under it. Below, the tiger shark turns away and swims off
+      into the deep blue. In the far background, the first humpback with the tiny woman (orange fins) beside it.
+      Even, bright, neutral light, everything in sharp focus, plain surfaces, low-detail textures. Not a cartoon, not
+      Pixar, not a photograph. No text, no logos, no numbers. No blood.
+
+  S7:   # C7 start (30.70-35.58): a year later, the whale surfaces beside her boat
+    aspect: "9:16"
+    refs: ["images/cast.jpg", "images/s3.jpg"]
+    prompt: |
+      The first attached image is our cast line-up: use exactly this woman and this humpback (pale scar on its head).
+      The second attached image is our approved boat shot: keep the same boat, lagoon, sky and rendering look.
+      Realistic 3D video-game cutscene still, vertical 9:16.
+      REAL SIZES (the line-up draws the animals too small): the humpback is 14 m long, more than eight times the
+      woman's 1.65 m height, its head alone longer than she is tall; the tiger shark is 4.5 m, nearly three times her height.
+      Above the water, a bright calm turquoise lagoon, clear blue sky, a green island far away.
+      The humpback's huge head (knobbly bumps, the pale scar on top, one eye just above the waterline) has surfaced
+      right beside the small plain white motorboat, water streaming off it, looking up at the boat. On the boat, THE
+      SCIENTIST (black wetsuit, mask pushed up on her forehead) leans over the side toward it, one hand over her
+      mouth, amazed; two other people on the boat stand back at the far end.
+      Even, bright, neutral daylight, everything in sharp focus, plain surfaces, low-detail textures. Not a cartoon, not
+      Pixar, not a photograph. No text, no logos, no numbers, no writing on the boat.
+
+  S8:   # C8 start (35.58-40.28): underwater, the gentle nudge; C8 then glides to the notched fluke (soft-cut loop to S1)
+    aspect: "9:16"
+    refs: ["images/cast.jpg", "images/s1.jpg"]
+    prompt: |
+      The first attached image is our cast line-up: use exactly this woman and this humpback.
+      The second attached image is our approved opening shot: keep the same water, light and rendering look.
+      Realistic 3D video-game cutscene still, vertical 9:16.
+      REAL SIZES (the line-up draws the animals too small): the humpback is 14 m long, more than eight times the
+      woman's 1.65 m height, its head alone longer than she is tall; the tiger shark is 4.5 m, nearly three times her height.
+      She wears ONE clear dive mask, on her face, with the orange snorkel (no second mask around her neck).
+      Underwater, bright clear cyan-blue water, light rays from the surface, the dark underside of the small boat at the
+      top edge of the picture.
+      THE SCIENTIST (black wetsuit, mask, orange snorkel and fins) floats calmly beside the humpback's enormous head,
+      face to face with its eye (the pale scar on top of its head visible); she rests one hand gently on its head,
+      smiling behind her mask. The whale's long body stretches away behind it, its tail fluke far back in the blue.
+      No shark.
+      Even, bright, neutral light, everything in sharp focus, plain surfaces, low-detail textures. Not a cartoon, not
+      Pixar, not a photograph. No text, no logos, no numbers.

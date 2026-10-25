@@ -1,0 +1,76 @@
+title: "Could We Stop An Asteroid?"
+preset: explainer
+structure: hook
+hook: "Could we actually stop an asteroid?"
+# Owner pick 2026-10-25 (space lane). One chained, camera-heavy flight (no stills): C1 Ingredients, C2-C7 Frames from
+# Claude's cut frames, C7 ends on C1's first frame (seamless loop). Question loop: asked at 2 s, answered in the last line.
+# Credits: 160 (C1 retake once). Easter egg: the tiny camera satellite that follows the spacecraft (C3).
+caption: |
+  If an asteroid was heading for Earth... could we actually stop it? 🤔☄️
+  NASA tested it for real.
+
+  Follow @howzit.explains for space stories you won't believe.
+  Did you know we already moved one? 👇
+hashtags: [nasa, asteroid, space, dart, science]
+viral_hashtags: [viral, fyp, foryou, explorepage, trending, reels, reelsviral, didyouknow, mindblown, spacefacts, astronomy, universe, storytime, 3danimation, sciencefacts]
+cover_text: "COULD WE STOP IT?"
+alt_text: "3D animation: an asteroid heads for Earth; a movie-style missile misses it; NASA engineers build a vending-machine-sized spacecraft that flies seven million miles and smashes into a harmless asteroid moonlet at 14,000 mph; its orbit shrinks by 32 minutes instead of the 73 seconds needed."
+voiceover: audio/voiceover.mp3   # owner, ElevenLabs Mark, 42.92 s
+
+facts:
+  - claim: "DART hit the asteroid moonlet Dimorphos on 26 Sep 2022 at about 14,000 mph, about 7 million miles from Earth; DART was vending-machine sized"
+    sources: ["https://www.foxnews.com/science/nasas-dart-spacecraft-slams-asteroid-knock-off-path.amp", "https://www.sciencenews.org/article/dart-mission-deflected-asteroid-for-planetary-defense"]
+  - claim: "Dimorphos is about 525 ft across (football-stadium size) and poses no threat to Earth"
+    sources: ["https://www.foxnews.com/science/nasas-dart-spacecraft-slams-asteroid-knock-off-path.amp", "https://www.sciencenews.org/article/dart-mission-deflected-asteroid-for-planetary-defense"]
+  - claim: "Success needed a 73-second orbit change; the orbit shortened by 32 minutes (11 h 55 min to 11 h 23 min)"
+    sources: ["https://www.sciencenews.org/article/dart-mission-deflected-asteroid-for-planetary-defense", "https://www.universetoday.com/158049/success-dart-impact-shortened-asteroids-orbit-time-by-32-minutes/"]
+
+# Voice timing (silencedetect 2026-10-25): 0, 7.28, 14.16, 20.94, 26.67, 32.55, 39.28 (end 42.92)
+scenes:
+  - id: s01
+    clip: clips/c01.mp4
+    clip_start: 0.0
+    narration: "If an asteroid was heading straight for Earth... could we actually stop it? In the movies, we'd just nuke it."
+    popups:
+      - { text: "COULD WE STOP IT? 🤔", at_word: "stop" }
+      - { text: "NUKE IT? 🚀", at_word: "nuke" }
+  - id: s02
+    clip: clips/c02.mp4
+    vo_start: 7.28
+    narration: "In 2022, NASA decided to find out for real. They built a spacecraft the size of a vending machine..."
+    popups:
+      - { text: "VENDING MACHINE SIZE 🥤", at_word: "vending" }
+  - id: s03
+    clip: clips/c03.mp4
+    vo_start: 14.16
+    narration: "...and flew it seven million miles. Its target: a harmless asteroid as wide as a football stadium."
+    popups:
+      - { text: "7 MILLION MILES", at_word: "million" }
+      - { text: "STADIUM-SIZED 🏟️", at_word: "stadium" }
+  - id: s04
+    clip: clips/c04.mp4
+    vo_start: 20.94
+    narration: "Fourteen thousand miles per hour. One shot... It smashed straight into it."
+    popups:
+      - { text: "14,000 MPH", at_word: "Fourteen" }
+      - { text: "ONE SHOT 🎯", at_word: "shot" }
+  - id: s05
+    clip: clips/c05.mp4
+    vo_start: 26.67
+    narration: "But here's the thing: the plan was never to blow it up. Just to nudge it, so it would miss us."
+    popups:
+      - { text: "JUST A NUDGE 👉", at_word: "nudge" }
+  - id: s06
+    clip: clips/c06.mp4
+    vo_start: 32.55
+    narration: "NASA only needed its orbit to change by seventy-three seconds. It changed by thirty-two minutes."
+    popups:
+      - { text: "NEEDED: 73 SECONDS", at_word: "seconds" }
+      - { text: "GOT: 32 MINUTES 🤯", at_word: "minutes" }
+  - id: s07
+    clip: clips/c07.mp4
+    clip_start: 4.36           # the dive; the clip ends on C1's first frame (seamless loop)
+    vo_start: 39.28
+    narration: "So... could we stop an asteroid? We already moved one."
+    popups:
+      - { text: "WE ALREADY MOVED ONE ✅", at_word: "moved", color: lime }

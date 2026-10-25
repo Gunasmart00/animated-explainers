@@ -20,15 +20,28 @@ This project is worked on interchangeably by **Claude Code** and **Antigravity (
    - `docs/flow-ai-pitfalls-and-rules.md` (Prompt engineering defenses against AI video failure modes)
    - `docs/ai-handoff-protocol.md` (Full specification of multi-AI state tracking)
 
+## Look + format (owner, 2026-10-24): every video uses the **Zack look**: a real-time video-game engine render (Character-Creator people, plain game-level sets, cool blue palette with one warm accent, flat even light, everything sharp), his story formula, a wiki-style page per short. Style block: F-STYLE in `prompts/flow.md` (= `docs/zack-structure.md`). Never use his frames as Flow inputs. This overrides "one cartoon style" below.
+
+## Owner creative rules (2026-10-20; read before every script, they override older notes)
+**`docs/owner-creative-rules.md`** covers:
+- the H-P-C story with a **double payoff** (a twist in the very last second) and no early payoff;
+- the opening: the camera **zooms in as the video starts**, then a **wide establishing shot**, then zoom in;
+- **an emotion in the first 3 s**;
+- a planned **Easter egg**;
+- what we make: universal biology/science, **business "oh that's genius" stories**, **space**, and **never sad**;
+- **quick music** (this replaces the old no-music rule; still no whoosh on cuts);
+- fast pacing, captions and questions;
+- **post once a day at peak time**, consistently.
+
 ## Owner decisions (latest 2026-10-18; these override older notes and the brand guide for these videos)
 - **Look, pacing and sound follow the owner's Zack D. Films reference Reels** (`docs/zack-style-analysis.md`):
-  bright, cartoonish, stylised 3D (not dark, not photoreal), 30–45 s, a new shot every 1–3 s (or one continuous
+  bright video-game-engine 3D (the Zack look; not dark, not photoreal, not cartoon), 30–45 s, a new shot every 1–3 s (or one continuous
   camera journey for demonstrations), fast continuous narration,
   dense sound effects, **no music** (allowed for design/engineering episodes), captions in Open Sans ExtraBold.
 - **Scenes are made in Google Flow (Veo)** with sound effects; **narration in ElevenLabs** with the voice the owner
   selected there (never change it); fallback voice: built-in Brian (+14%) when there are no ElevenLabs credits.
 - **Branding = the HowZit logo on screen.** No end card.
-- **One cartoon style for every video** (owner, 2026-10-18): the cartoon 3D family-film look of the F-STYLE block in
+- **One style for every video** (owner, 2026-10-18; look changed to the Zack look 2026-10-24): the F-STYLE block in
   `prompts/flow.md`; recurring people and objects keep one fixed look (`characters:` and `objects:` in script.yaml).
   Story figures look like their famous image (e.g. D.B. Cooper: dark suit, black sunglasses, thin black tie).
 - **Every clip is checked before the next one is made, and the owner approves all clips before the final build.**
@@ -55,7 +68,7 @@ Chrome signed in to Google and ElevenLabs. Do every step yourself; stop only whe
 3. **Folder:** `.venv\Scripts\python.exe -m studio.new "<title>"`; put the research and sources in `story.md`;
    set the idea's status to `scripting` in `ideas/backlog.csv` (add it if missing).
 4. **Script:** write `script.yaml` per `prompts/scene-script.md` (narration, very detailed `shot`, `camera`, `sfx`,
-   characters, pop-ups, shared clips, caption, 5 hashtags, facts). Check the length with
+   characters, pop-ups, shared clips, caption, 5 video hashtags + 15 viral_hashtags, facts). Check the length with
    `python -m studio.flow episodes\<name> --offline` (30–45 s; up to 60 s only if the story needs it).
 5. **ASK** once: show the narration (one line per scene) and a short shot list, with the cost (Flow clips × 20 credits,
    narration characters). Go on when the owner says yes; apply any changes first.
@@ -65,10 +78,9 @@ Chrome signed in to Google and ElevenLabs. Do every step yourself; stop only whe
    length, mode and full prompt.
 8. **Flow** in Chrome, per `prompts/flow.md`: one project; **one clip at a time**: generate it, download it, run
    `python tools\clip_check.py clips\<id>.mp4 <seconds>` and look at the sheet (right action inside the narration
-   window, true real-world sizes, same cartoon style, same character look, right vehicle type, no text, smooth, opening/final frames
+   window, true real-world sizes, same Zack look, same character look, right vehicle type, no text, smooth, opening/final frames
    connect to the neighbours). Fix the prompt and regenerate until it passes, then move to the next clip. Never put a
-   real person's name in a Flow prompt. Keep a running credit count; **ASK** before going past 300 credits for one
-   video or using Quality.
+   real person's name in a Flow prompt. Keep a running credit count; **HARD CAP: 200 credits per video, including retakes (owner, 2026-10-25); never plan past it**; **ASK** before using Quality.
 8b. **ASK:** show the owner every clip (the draft and a one-frame-per-scene sheet) and wait for approval of all
    clips before the final build. Download the approved clips as Upscaled 1080p.
 9. **Draft:** `python -m studio.build episodes\<name> --draft`; grab frames (CLAUDE.md "Checking a render") and fix
@@ -77,7 +89,7 @@ Chrome signed in to Google and ElevenLabs. Do every step yourself; stop only whe
     brightness ≥ 0.35, dark pixels ≤ 0.2 (≤ 0.3 for space, night or underground episodes), loudness ≈ −14 LUFS.
 11. **Deliver:** copy `output/<name>_howzit.mp4` to `%USERPROFILE%\Downloads\HowZit - <title>.mp4` and
     `output/<name>_post.md` to `...\HowZit - <title> - caption.md`; set the backlog status to `ready`. Report the
-    length, credits used, anything regenerated or skipped, and paste the caption + 5 hashtags.
+    length, credits used, anything regenerated or skipped, and paste the caption + all 20 hashtags (5 in the Instagram caption, 15 for the first comment; all 20 on YouTube).
 Never post to Instagram, never type passwords, stop at sign-in pages and CAPTCHAs, never buy credits.
 
 ## Hard rules (from youtube_clipping/CLAUDE.md)
@@ -89,7 +101,7 @@ Never post to Instagram, never type passwords, stop at sign-in pages and CAPTCHA
 6. **No Ben 10 IP** (names, Omnitrix hourglass, characters).
 7. Media (`episodes/*/output`, `.cache`, clips and audio files) is git-ignored. Never commit video or audio.
 8. **Never use OpusClip** (the connector or the app) unless the owner asks for it in that conversation.
-9. Instagram allows 5 hashtags per post; scripts carry exactly 5.
+9. Hashtags (owner 2026-10-21): 20 per post = 5 video tags (`hashtags:`) + 15 broad popular tags (`viral_hashtags:`). Instagram caption takes only 5 (the rest go in the first comment); YouTube gets all 20 in the description, `#shorts` first. See `docs/owner-creative-rules.md` §8.
 
 ## Layout
 - `studio/build.py` — `python -m studio.build <episode> [--draft] [--offline] [--only sNN] [--profile howzit|youtube]`.

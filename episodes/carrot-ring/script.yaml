@@ -1,0 +1,60 @@
+title: "Her Lost Wedding Ring Grew On A Carrot"
+preset: explainer
+structure: hook
+hook: "A woman almost threw away a tiny carrot"
+# Owner pick 2026-10-24 (touching true story). Zack look + formula; page: README.md. Loops to s01.
+# Easter egg: a carrot next to the ring on the 1995 counter (s02). Twist: it didn't fit anymore.
+caption: |
+  She found her lost wedding ring... on a carrot 😮
+  It had been missing for 16 years.
+
+  Follow @howzit.explains for true stories you won't believe.
+  How do YOU think it got there? 👇
+hashtags: [weddingring, lostandfound, truestory, sweden, wholesome]
+viral_hashtags: [viral, fyp, foryou, explore, explorepage, trending, didyouknow, facts, mindblown, heartwarming, goodnews, storytime, 3danimation, garden, gardening]
+cover_text: "16 YEARS LATER"
+alt_text: "3D animation: a woman in Sweden pulls a tiny carrot from her garden and finds her wedding ring wrapped around it, 16 years after losing it while baking; a cutaway shows it went into the compost and a carrot grew through it; in the end the ring no longer fits her finger."
+voiceover: audio/voiceover.mp3   # owner, ElevenLabs Mark, 36.68 s
+music: true
+
+facts:
+  - claim: "Lena Påhlsson of Mora, Sweden lost her white-gold wedding ring with seven small diamonds in 1995 while doing her Christmas baking"
+    sources: ["https://www.thelocal.se/20111230/38248", "https://www.sverigesradio.se/artikel/4885650"]
+  - claim: "Years later the family pulled up the kitchen floor during a renovation looking for it"
+    sources: ["https://www.thelocal.se/20111230/38248", "https://www.sverigesradio.se/artikel/4885650"]
+  - claim: "In October 2011 she found it wrapped around a small carrot; she almost threw the carrot away"
+    sources: ["https://www.sverigesradio.se/artikel/4885650", "https://www.thelocal.se/20111230/38248"]
+  - claim: "It probably went into the compost with kitchen scraps; the ring no longer fit and had to be resized"
+    sources: ["https://www.thelocal.se/20111230/38248", "https://www.snopes.com/long-lost-wedding-ring-found-around-carrot/"]
+
+# Voice timing (silencedetect, 2026-10-25): clip windows 0-8.12, 8.12-13.30, 13.30-19.13, 19.13-25.56, 25.56-30.99, 30.99-36.68
+scenes:
+  - id: s01
+    clip: clips/c01.mp4
+    clip_start: 0.0
+    narration: "A woman almost threw away a tiny carrot from her garden... then she saw what was wrapped around it. Her wedding ring."
+    popups:
+      - { text: "HER WEDDING RING 💍", at_word: "ring", color: lime }
+  - id: s02
+    clip: clips/c02.mp4
+    vo_start: 8.12
+    narration: "Sixteen years earlier, she'd set it down while doing her Christmas baking... and it vanished."
+    popups:
+      - { text: "16 YEARS EARLIER", at_word: "earlier" }
+  - id: s03
+    clip: clips/c03.mp4
+    vo_start: 13.30
+    narration: "She searched everywhere. Years later, they even pulled up the kitchen floor. Nothing."
+  - id: s04
+    clip: clips/c04.mp4
+    vo_start: 19.13
+    narration: "You see, it had probably fallen in with the vegetable peelings, gone into the compost, and been spread over the garden."
+  - id: s05
+    clip: clips/c05.mp4
+    vo_start: 25.56
+    narration: "Then a single carrot seed landed right in the middle of it... and grew straight through."
+  - id: s06
+    clip: clips/c06.mp4
+    vo_start: 30.99
+    narration: "Finally, she had her ring back. But after sixteen years... it didn't fit anymore."
+    end_frame: "s01@0"

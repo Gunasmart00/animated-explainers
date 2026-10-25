@@ -1,0 +1,72 @@
+title: "This Dog Walked 2,551 Miles Home"
+preset: explainer
+structure: hook
+hook: "A skinny dog limped down Main Street"
+# Owner pick 2026-10-24 (touching true story). Zack-style formula (docs/zack-structure.md); page: README.md.
+# Easter egg: paw-print map in the diner window (K0), paid off by the letters mapping his route (s06). Loops to s01.
+caption: |
+  This dog walked 2,551 miles to get home 🥲
+  Wait till you hear who helped him.
+
+  Follow @howzit.explains for stories you won't believe are true.
+  Would your dog do this? 👇
+hashtags: [dog, dogsofinstagram, truestory, wholesome, history]
+viral_hashtags: [viral, fyp, foryou, explore, explorepage, trending, didyouknow, facts, mindblown, heartwarming, goodnews, dogstory, animals, 3danimation, storytime]
+cover_text: "2,551 MILES"
+alt_text: "Semi-realistic 3D animation: a skinny collie limps into a snowy 1920s Oregon town and is hugged by a girl; a flashback shows him lost at an Indiana gas station, crossing plains, deserts, a river and the snowy Rockies, fed by strangers whose letters later mapped his route home."
+voiceover: audio/voiceover.mp3   # owner, ElevenLabs Mark, 40.52 s
+music: true                      # add a soft emotional licensed track in-app
+
+facts:
+  - claim: "Lost Aug 1923 in Wolcott, Indiana, chased from a gas station by three dogs; home in Silverton, Oregon, 15 Feb 1924"
+    sources: ["https://en.wikipedia.org/wiki/Bobbie_the_Wonder_Dog", "https://digital-release.koin.com/news/oregon/jeff-gianolas-journal-bobbie-the-wonder-dog/"]
+  - claim: "2,551 miles, crossing plains, rivers and the Rockies in winter; toenails worn almost to nothing"
+    sources: ["https://en.wikipedia.org/wiki/Bobbie_the_Wonder_Dog", "https://digital-release.koin.com/news/oregon/jeff-gianolas-journal-bobbie-the-wonder-dog/"]
+  - claim: "A daughter spotted him on Main Street outside the family's restaurant"
+    sources: ["https://digital-release.koin.com/news/oregon/jeff-gianolas-journal-bobbie-the-wonder-dog/", "https://en.wikipedia.org/wiki/Bobbie_the_Wonder_Dog"]
+  - claim: "Letters from people who fed or sheltered him were used to map his route"
+    sources: ["https://en.wikipedia.org/wiki/Bobbie_the_Wonder_Dog", "https://digital-release.koin.com/news/oregon/jeff-gianolas-journal-bobbie-the-wonder-dog/"]
+
+scenes:
+  - id: s01
+    clip: clips/visual.mp4
+    clip_start: 0.0
+    clip_end: 9.95
+    narration: "A skinny dog limped down Main Street, his toenails worn down to almost nothing, when a girl outside her family's diner froze. It was Bobbie."
+    popups:
+      - { text: "BOBBIE?!", at_word: "Bobbie", size: 150 }
+  - id: s02
+    clip: clips/visual.mp4
+    clip_start: 9.95
+    clip_end: 15.78
+    vo_start: 9.95
+    narration: "Six months earlier, on a road trip to Indiana, three dogs had chased him away from a gas station."
+    popups:
+      - { text: "6 MONTHS EARLIER", at_word: "earlier" }
+  - id: s03
+    clip: clips/visual.mp4
+    clip_start: 15.78
+    clip_end: 20.60
+    vo_start: 15.78
+    narration: "The family searched for days, then drove all the way home to Oregon without him."
+  - id: s04
+    clip: clips/visual.mp4
+    clip_start: 20.60
+    clip_end: 32.56
+    vo_start: 20.60
+    narration: "But Bobbie never gave up. He crossed plains and deserts, swam rivers, and climbed the Rocky Mountains in the middle of winter. 2,551 miles."
+    popups:
+      - { text: "2,551 MILES", at_word: "2,551", color: lime }
+  - id: s05
+    clip: clips/visual.mp4
+    clip_start: 32.56
+    clip_end: 38.10
+    vo_start: 32.56
+    narration: "And when his story hit the newspapers, letters poured in from strangers who had fed him along the way."
+  - id: s06
+    clip: clips/visual.mp4
+    clip_start: 38.10
+    clip_end: 41.0
+    vo_start: 38.10
+    narration: "They used them to map his whole journey home."
+    end_frame: "s01@0"

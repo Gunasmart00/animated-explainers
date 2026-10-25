@@ -52,8 +52,9 @@ music:
 
 clip_audio:             # the sound effects Google Flow (Veo) generates inside each clip
   enabled: true
-  volume: 0.9
-  duck: true            # dips a little while the narrator speaks
+  volume: 0.45          # owner 2026-10-25: clip sound was fighting the narration (was 0.9)
+  duck: true            # dips while the narrator speaks
+  duck_ratio: 8         # strong dip under the voice (was 3)
 
 sfx:
   cuts: null            # owner 2026-10-18: NO whoosh on scene changes (sounded odd); clips carry their own Flow sound effects

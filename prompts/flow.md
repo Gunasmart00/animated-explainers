@@ -20,7 +20,7 @@ in `output\<name>_flow_prompts.md`. The blocks below are the source; keep their 
 ## Generate one clip at a time, and check it (owner rule, 2026-10-18)
 1. Generate **one** clip. Download it (720p is enough to check), then look at frames every 0.5 s across the part the
    scene uses (`python tools/clip_check.py clips\sNN.mp4 <seconds>` makes the sheet) and listen to its sound.
-2. Check: right subject and action in the first seconds; cartoon style matching the other clips; the same character
+2. Check: right subject and action in the first seconds; the Zack look (game-engine render, cool blue palette, flat even light) matching the other clips; the same character
    look (D.B. Cooper-type figures: dark suit, black sunglasses); vehicles are the right type (an airliner is an
    airliner, never a fighter or private jet); no text; no warped hands or faces; smooth motion; the opening frame
    follows on from the previous clip and the final frame leads into the next.
@@ -29,6 +29,19 @@ in `output\<name>_flow_prompts.md`. The blocks below are the source; keep their 
    approval** before building.
 
 ## Before spending a single credit: research → visual facts → engineered prompt (owner rule, 2026-10-18)
+
+**Credit cap: 200 per video, retakes included (owner, 2026-10-25).** Plan clips so the whole video fits, keep about 40 credits for retakes, and when the cap is reached fix things in the edit (trim with `clip_start`/`clip_end`, a still with a slow push-in) instead of generating again.
+
+**Only name what is in the shot (whale video, 2026-10-25: 5 of 8 clips failed).** Veo adds anything a prompt mentions. A shark named in shared lines (motion, sizes, avoid) put sharks into clips that had none. Start each prompt with an exact cast line ("In this clip there is exactly: one woman and one humpback. Nothing else."), keep every animal and prop out of clips where it is absent, and state anatomy traps ("a baleen whale: NO teeth, mouth closed").
+
+**Core-object geometry (owner, 2026-10-24).** Before writing any prompt, research how the story's core object really
+looks and is used (reference photos, diagrams) and put a **GEOMETRY** line in every prompt that shows it: which wall or
+side things are on, which way each vehicle or person faces, what lines up with what, distances. Describe each shot from a
+named camera position ("rear three-quarter view from behind the car", "from inside the kiosk looking out"). Failure it
+prevents (drive-through C1 v1): the car drove nose-first at the service window as if into the counter. Real
+drive-throughs: the window is in the SIDE wall, the car pulls up PARALLEL to it, the driver's door level with the window.
+Reference photos are for research only, never Flow inputs (they pull the look toward photo-real and are someone's work).
+
 Flow credits are limited. A clip that shows the wrong thing is wasted money, so basic mistakes must be caught on paper.
 The D.B. Cooper video wasted about 300 credits on avoidable errors: fighter jets for an airliner, passengers leaving
 through the nose, the jump stairs on the side of the plane, stairs that went up instead of down, and engines under
@@ -85,8 +98,9 @@ the wings of a 727. Each rule below exists because of one of these.
 - A real person's name gets the prompt **refused** (refunded). Use the character's look only.
 
 ## Style block (F-STYLE)
+Zack look (owner, 2026-10-24; from `docs/zack-structure.md`, which explains it). Every episode uses it; studio/flow.py reads this block.
 ```
-Stylised cartoon 3D animation in the look of a modern animated family feature film: every person is a cartoon character with rounded, slightly exaggerated proportions (larger head, big expressive eyes with bright highlights, small nose, smooth soft skin, chunky simplified hands), clear and exaggerated facial expressions and body language; simple clean clothes in solid saturated colours, no logos or writing on clothes. Objects, vehicles and buildings are also cartoon-styled: smooth rounded shapes, clean bevelled edges, slightly chunky proportions, simple clean materials (no grime, no photographic textures). Bright, clean, high-key lighting like sunny daylight, with soft shadows and a gentle glow on highlights; a dark setting (night, storm, space, underground) still has a brightly lit subject with strong rim light and vivid glowing accents, never muddy or gloomy. Warm and cool colour contrast (teal, cyan or blue surroundings against warm red, orange and golden subjects), saturated but clean, not neon. Hidden mechanisms are shown with clean x-ray cutaways and glowing outlines. Shallow depth of field on close-ups. Crisp, high-detail render with smooth, fluid, natural motion, believable weight and gentle easing; the camera moves smoothly, never shakes or jumps. Every character keeps exactly the same face, hair, clothes and colours for the whole clip. Not photorealistic, not live action, not gritty, not horror, not 2D flat illustration, not a video game screenshot.
+IMPORTANT: realistic 3D video-game graphics, NOT a cartoon and NOT an animated movie: adults have realistic adult anatomy, realistic head shapes and realistic small eyes (no big cartoon eyes, no rounded cartoon faces, no exaggerated expressions beyond what a real person does). 3D animation that looks like a real-time video-game engine render (an Unreal Engine cutscene), the look of popular 3D explainer shorts. People: realistic proportions with video-game character faces (smooth, slightly plastic skin, simple realistic hair, natural-sized eyes, a little stiff, big clear expressions), plain solid-colour clothes (T-shirts in white, orange, yellow, red). Animals: realistic game-asset models with simplified fur. Sets: simple game-level spaces built from plain, solid-coloured surfaces (blue-grey, sky-blue or teal painted walls, white ceilings, light wood or grey floors), low-detail textures, only a few props, often a single ceiling spotlight. Light: clean, neutral-to-cool and even, like a bright game level, soft short shadows; no golden hour, no warm candle or lantern glow, no lens flares, no light rays, no fog or haze. Everything in sharp focus (no depth of field, no film grain). Colours: a cool blue-dominant palette (blue, teal, navy, white) with one warm accent colour (orange, red or yellow) on the main character or object. Camera: slightly wide-angle; high three-quarter views, close-ups on hands and objects, top-down shots. Not a photograph, not cinematic film lighting, not Pixar or cartoon style, not anime, no text anywhere.
 ```
 
 ## Reference image (F0), one per recurring character or key object
@@ -149,3 +163,9 @@ From all 8 reference Reels (`docs/zack-style-analysis.md`, Parts 1 and 2).
   name in a Flow prompt** (Flow refuses "prominent people"): describe the look instead ("a calm man in a dark suit,
   black sunglasses, thin black tie"). Unknown people (like D.B.
   Cooper) seen from behind or in shadow.
+
+
+## Retired style (before 2026-10-24, the cartoon family-film look; do not use)
+```
+Stylised cartoon 3D animation in the look of a modern animated family feature film: every person is a cartoon character with rounded, slightly exaggerated proportions (larger head, big expressive eyes with bright highlights, small nose, smooth soft skin, chunky simplified hands), clear and exaggerated facial expressions and body language; simple clean clothes in solid saturated colours, no logos or writing on clothes. Objects, vehicles and buildings are also cartoon-styled: smooth rounded shapes, clean bevelled edges, slightly chunky proportions, simple clean materials (no grime, no photographic textures). Bright, clean, high-key lighting like sunny daylight, with soft shadows and a gentle glow on highlights; a dark setting (night, storm, space, underground) still has a brightly lit subject with strong rim light and vivid glowing accents, never muddy or gloomy. Warm and cool colour contrast (teal, cyan or blue surroundings against warm red, orange and golden subjects), saturated but clean, not neon. Hidden mechanisms are shown with clean x-ray cutaways and glowing outlines. Shallow depth of field on close-ups. Crisp, high-detail render with smooth, fluid, natural motion, believable weight and gentle easing; the camera moves smoothly, never shakes or jumps. Every character keeps exactly the same face, hair, clothes and colours for the whole clip. Not photorealistic, not live action, not gritty, not horror, not 2D flat illustration, not a video game screenshot.
+```

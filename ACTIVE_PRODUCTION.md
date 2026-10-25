@@ -6,12 +6,12 @@ This file tracks the real-time production status across AI switches (Claude Code
 
 ## Current Status
 
-- **Active Episode:** `how-seatbelts-know-when-to-lock` (How Seatbelts Know When To Lock)
-- **Current Phase:** `scripting`
+- **Active Episode:** `why-fast-food-logos-are-red-and-yellow` (Why Fast Food Logos Are Red and Yellow)
+- **Current Phase:** `ready` (final video rendered, verified, and ready to post)
 - **Active AI:** Antigravity (Gemini Pro)
 - **Last AI Active:** Claude Code
-- **Last Updated:** 2026-10-20 19:11 IST
-- **Completed Episodes:** 3/3 published (`db-cooper`, `stop-drinking-water`, `genz-teacher`)
+- **Last Updated:** 2026-10-22 01:54 IST
+- **Completed Episodes:** 3/3 published (`db-cooper`, `stop-drinking-water`, `genz-teacher`), `jupiter-crash` ready, `why-fast-food-logos-are-red-and-yellow` ready
 
 ---
 
@@ -21,27 +21,19 @@ This file tracks the real-time production status across AI switches (Claude Code
 |---|---|---|---|---|
 | `db-cooper` | The Man Who Vanished Mid-Flight | **Published** | `episodes/db-cooper/output/db-cooper_howzit.mp4` | [Live Link](https://youtube.com/shorts/Xn5k2dD12MA) |
 | `stop-drinking-water` | What Happens When You Stop Drinking Water | **Published** | `episodes/stop-drinking-water/output/stop-drinking-water_howzit.mp4` | [Live Link](https://youtube.com/shorts/TbRr7Y8m5Hw) |
+| `jupiter-crash` | NASA Crashed Its Own Spacecraft Into Jupiter | **Ready** | `episodes/jupiter-crash/output/jupiter-crash_howzit.mp4` | — |
+| `why-fast-food-logos-are-red-and-yellow` | Why Fast Food Logos Are Red and Yellow | **Ready** | `episodes/why-fast-food-logos-are-red-and-yellow/output/why-fast-food-logos-are-red-and-yellow_howzit.mp4` | — |
+| `ice-cream-machine` | Why McDonald's Ice Cream Machine Is Always Broken | **Prompts** | — | — |
 | `genz-teacher` | She Caught the Whole Class Cheating in 4K 💀 | **Published** | `episodes/genz-teacher/output/HowZit - Dont Underestimate Gen Z Teachers.mp4` | [Live Link](https://youtube.com/shorts/z8e4bJj5_k0) |
-| `how-seatbelts-know-when-to-lock` | How Seatbelts Know When To Lock | **Scripting** | TBD | In Production |
 
 ---
 
 ## Active Tasks & Handover Notes
 
-### Task 1: Research & Story Construction
-1. Research seatbelt dual-locking retractor mechanics:
-   - Vehicle-sensitivity mechanism (steel inertia pendulum / weighted ball).
-   - Webbing-sensitivity mechanism (centrifugal clutch / flyweight ratchet).
-   - Pre-tensioner explosive micro-charge (optional twist / climax).
-2. Write `episodes/how-seatbelts-know-when-to-lock/story.md` with exactly 2 credible engineering sources per claim.
-
-### Task 2: Scene-by-Scene Script & Flow Prompts
-1. Write `episodes/how-seatbelts-know-when-to-lock/script.yaml` following Zack D. Films retention formula:
-   - 0:00–0:03 Hook: pull slow vs yank fast (< 10 words, premise inversion).
-   - 0:04–0:18 Mechanical Escalation: transparent B-pillar cutaway, glowing mechanism, metallic ratchet clicks.
-   - 0:19–0:35 Payoff: emergency braking lock, seamless loop back to the first frame.
-2. Generate voiceover and run `.venv\Scripts\python.exe -m studio.flow episodes/how-seatbelts-know-when-to-lock`.
-
+### Task: Fast Food Logos — ready to publish
+1. Final video: [why-fast-food-logos-are-red-and-yellow_howzit.mp4](file:///g:/Apps/animated-explainers/episodes/why-fast-food-logos-are-red-and-yellow/output/why-fast-food-logos-are-red-and-yellow_howzit.mp4).
+2. Posting copy & captions ready in [why-fast-food-logos-are-red-and-yellow_post.md](file:///g:/Apps/animated-explainers/episodes/why-fast-food-logos-are-red-and-yellow/output/why-fast-food-logos-are-red-and-yellow_post.md).
+3. Owner posts as Collab Reel on Instagram (`@howzit.explains` x `@lowkeygenius`) at audience peak time.
 
 ---
 

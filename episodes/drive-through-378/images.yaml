@@ -1,0 +1,135 @@
+# Image jobs for tools/gen_image.py (Gemini API, Nano Banana). Run from the repo root:
+#   .venv\Scripts\python.exe tools\gen_image.py episodes\drive-through-378 cast
+# Zack style references are added automatically from refs\zack\curated\catalog.yaml (style only; every person and
+# place is newly invented; Claude checks each result for lookalikes before use).
+model: gemini-nano-banana-2.1
+size: 2K
+style: [people, sets]
+style_max: 3
+images:
+  cast:
+    aspect: "16:9"
+    style: [people]
+    prompt: |
+      A character line-up for a 3D animation: four newly invented adults standing side by side, full body, facing the
+      camera, on a plain teal studio background, bright even light, sharp focus:
+      1. THE BARISTA: a friendly man in his mid-20s, short black curly hair, short neat beard, plain teal cap, plain
+         white T-shirt, plain navy apron, black trousers.
+      2. THE FIRST DRIVER: a woman about 40, auburn hair in a ponytail, bright orange T-shirt, blue jeans.
+      3. THE SECOND DRIVER: a woman about 30, short platinum-blonde bob, lemon-yellow T-shirt, white jeans.
+      4. THE LAST DRIVER: a woman about 55, grey hair in a bun, big black sunglasses pushed up on her head, plain white
+         T-shirt, navy trousers.
+      Realistic adult heights (1.65-1.80 m), realistic faces with normal-sized eyes. No text, no logos, no labels, no
+      numbers.
+
+  S1:   # C1 start (hook) and the END frame of C5 (loop)
+    aspect: "9:16"
+    refs: ["images/cast.jpg"]
+    style: [people]
+    prompt: |
+      The first attached image is our cast line-up: use exactly these people (same faces, hair, clothes).
+      Realistic 3D video-game cutscene still, vertical 9:16.
+      A small drive-through coffee kiosk with smooth teal-painted walls and a white-framed sliding service window;
+      grey asphalt lane, white kerb, palm trees, clear blue sky.
+      GEOMETRY: the service window is cut into the kiosk's long SIDE wall, about 1 m above the ground; cars stop in
+      the lane PARALLEL to that wall with the DRIVER'S door (the car's left side) level with the window, an arm's
+      length away; the driver stays seated in the car; the barista stays inside the kiosk. A windshield never faces the
+      window.
+      The camera is behind and slightly above a small red hatchback, at its rear right corner, looking forward along
+      the car: the teal wall runs along the car's LEFT side and the driver's open window is level with the service
+      window. THE BARISTA leans out of the window and hands a plain white iced-coffee cup sideways into the driver's
+      window; THE FIRST DRIVER (orange T-shirt, auburn ponytail) sits in the car and reaches out to take it, smiling.
+      Bright, even, neutral daylight, soft short shadows, everything in sharp focus. Plain surfaces, low-detail
+      textures. Realistic adult faces with normal-sized eyes. Not a cartoon, not Pixar, not a photograph. No text, no
+      signs, no menu board, no logos, no numbers, no printing on cups or cars.
+
+  S2:   # C2 start: "So that driver paid for the next car"
+    aspect: "9:16"
+    refs: ["images/cast.jpg", "images/s1.jpg"]
+    style: [people]
+    prompt: |
+      The first attached image is our cast line-up: use exactly these people (same faces, hair, clothes).
+      The second attached image is our approved opening shot: keep exactly the same kiosk, window, colours, lane and
+      rendering look.
+      Realistic 3D video-game cutscene still, vertical 9:16.
+      A small drive-through coffee kiosk with smooth teal-painted walls and a white-framed sliding service window;
+      grey asphalt lane, white kerb, palm trees, clear blue sky.
+      GEOMETRY: the service window is cut into the kiosk's long SIDE wall, about 1 m above the ground; cars stop in
+      the lane PARALLEL to that wall with the DRIVER'S door (the car's left side) level with the window, an arm's
+      length away; the driver stays seated in the car; the barista stays inside the kiosk. A windshield never faces the
+      window.
+      View from INSIDE the kiosk, just behind THE BARISTA's right shoulder, looking out through the open service
+      window: right outside, a light-blue sedan is stopped parallel to the wall, its open driver's window level with
+      the service window. THE SECOND DRIVER (platinum-blonde bob, lemon-yellow T-shirt), seated in the car, holds out a
+      plain card to the barista with a big amazed smile. Inside: a plain white counter and one ceiling light.
+      Bright, even, neutral daylight, soft short shadows, everything in sharp focus. Plain surfaces, low-detail
+      textures. Realistic adult faces with normal-sized eyes. Not a cartoon, not Pixar, not a photograph. No text, no
+      signs, no menu board, no logos, no numbers, no printing on cups or cars.
+
+  S3:   # C3 start: "The baristas started counting"
+    aspect: "9:16"
+    refs: ["images/cast.jpg", "images/s2.jpg"]
+    style: [people]
+    prompt: |
+      The first attached image is our cast line-up: use exactly these people (same faces, hair, clothes).
+      The second attached image is our approved shot from inside the kiosk: keep exactly the same interior (teal walls,
+      white counter, white sliding window, ceiling light), the same barista and the same rendering look.
+      Realistic 3D video-game cutscene still, vertical 9:16.
+      A small drive-through coffee kiosk with smooth teal-painted walls and a white-framed sliding service window;
+      grey asphalt lane, white kerb, palm trees, clear blue sky.
+      GEOMETRY: the service window is cut into the kiosk's long SIDE wall, about 1 m above the ground; cars stop in
+      the lane PARALLEL to that wall with the DRIVER'S door (the car's left side) level with the window, an arm's
+      length away; the driver stays seated in the car; the barista stays inside the kiosk. A windshield never faces the
+      window.
+      Medium shot inside the kiosk, side view: THE BARISTA stands at the open service window, grinning, and with a
+      marker adds one more straight tally line to a small whiteboard on the inside wall next to the window (several
+      groups of five tally lines: four straight lines with a diagonal line through them; no digits, no letters). Next
+      to him a second barista, a young woman with a black ponytail in the same plain teal cap, white T-shirt and navy
+      apron, leans toward the window holding a plain white cup. Through the window: the side of a white car parked
+      parallel to the wall; its driver is a NEW man (about 35, short brown hair, navy T-shirt), NOT anyone from the
+      cast line-up. Plain teal and white interior, one ceiling light.
+      Bright, even, neutral daylight, soft short shadows, everything in sharp focus. Plain surfaces, low-detail
+      textures. Realistic adult faces with normal-sized eyes. Not a cartoon, not Pixar, not a photograph. No text, no
+      signs, no menu board, no logos, no numbers, no printing on cups or cars.
+
+  S4:   # C4 start: "For eleven hours, car after car kept paying"
+    aspect: "9:16"
+    refs: ["images/s1.jpg"]
+    style: [people]
+    prompt: |
+      The first attached image is our approved opening shot: the kiosk must look exactly like it (same teal walls,
+      white window frame, lane, kerb, palm trees, rendering look).
+      Realistic 3D video-game cutscene still, vertical 9:16.
+      A small drive-through coffee kiosk with smooth teal-painted walls and a white-framed sliding service window;
+      grey asphalt lane, white kerb, palm trees, clear blue sky.
+      High top-down view from far above: the small teal drive-through kiosk in the middle of a grey parking lot, and a
+      very long line of colourful cars (red, white, navy, yellow, light blue, green) in the drive-through lane, nose to
+      tail, wrapping around the kiosk and continuing out along the road. Palm trees, white lane lines. No people
+      visible.
+      Bright, even, neutral daylight, soft short shadows, everything in sharp focus. Plain surfaces, low-detail
+      textures. Not a cartoon, not Pixar, not a photograph. No text, no
+      signs, no menu board, no logos, no numbers, no printing on cups or cars.
+
+  S5:   # C5 start: "Finally, at six in the evening, a woman pulled up"
+    aspect: "9:16"
+    refs: ["images/cast.jpg", "images/s1.jpg"]
+    style: [people]
+    prompt: |
+      The first attached image is our cast line-up: use exactly these people (same faces, hair, clothes).
+      The second attached image is our approved opening shot: keep exactly the same kiosk, window, colours, lane and
+      rendering look.
+      Realistic 3D video-game cutscene still, vertical 9:16.
+      A small drive-through coffee kiosk with smooth teal-painted walls and a white-framed sliding service window;
+      grey asphalt lane, white kerb, palm trees, clear blue sky.
+      GEOMETRY: the service window is cut into the kiosk's long SIDE wall, about 1 m above the ground; cars stop in
+      the lane PARALLEL to that wall with the DRIVER'S door (the car's left side) level with the window, an arm's
+      length away; the driver stays seated in the car; the barista stays inside the kiosk. A windshield never faces the
+      window.
+      The camera is behind and slightly above a small mint-green car, at its rear right corner, looking forward along
+      the car (the same camera position as the opening shot): the teal wall runs along the car's LEFT side, the
+      driver's open window level with the service window. THE BARISTA leans out, beaming, holding a plain white cup
+      toward her; THE LAST DRIVER (grey bun, big black sunglasses pushed up on her head, white T-shirt), seated in the
+      car, looks at him, puzzled. Still bright summer daylight.
+      Bright, even, neutral daylight, soft short shadows, everything in sharp focus. Plain surfaces, low-detail
+      textures. Realistic adult faces with normal-sized eyes. Not a cartoon, not Pixar, not a photograph. No text, no
+      signs, no menu board, no logos, no numbers, no printing on cups or cars.

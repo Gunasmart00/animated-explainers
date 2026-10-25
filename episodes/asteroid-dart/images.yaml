@@ -1,0 +1,88 @@
+# Image jobs (by hand: output/asteroid-dart_image_prompts.md). Zack style refs added automatically.
+# Credit cap 200: 6 clips planned. Every prompt names only what is in the picture (lesson from the whale video).
+model: gemini-nano-banana-2.1
+size: 2K
+style: []   # no Zack space refs exist; his sets refs would add floors to space shots
+style_max: 1
+images:
+  S1:   # C1 (hook + the question): an asteroid heading for Earth
+    aspect: "9:16"
+    prompt: |
+      Realistic 3D video-game cutscene still, vertical 9:16.
+      Deep space. In the lower half of the picture, the bright blue Earth with white clouds, seen from far away. In the
+      upper half, close to the camera, a huge dark-grey asteroid covered in rocks and craters, tumbling slowly toward
+      the Earth, lit from one side by the sun. Black sky with a few faint stars.
+      In this picture there is exactly: the Earth and one asteroid. Nothing else.
+      Even, bright light on the subjects, everything in sharp focus, plain surfaces, low-detail textures. Not a
+      cartoon, not Pixar, not a photograph. No text, no logos, no numbers, no flags.
+
+  S2:   # C2: engineers with the vending-machine-sized spacecraft
+    aspect: "9:16"
+    style: [people]
+    prompt: |
+      Realistic 3D video-game cutscene still, vertical 9:16.
+      A bright white clean room with plain white walls and a grey floor. In the middle, on a low metal stand, a small
+      spacecraft: a boxy body about 1.2 m wide and 1.3 m tall (the size of a vending machine), wrapped in shiny gold
+      foil, with one round white dish antenna on its side, one small camera lens on its front face, and two long solar
+      panels rolled up into thin white cylinders fixed to its two sides. Two engineers in full white clean-room suits,
+      hoods and face masks (newly invented people, average height 1.75 m, standing beside it so the spacecraft
+      reaches their chest) look at it; one points at the camera lens.
+      In this picture there is exactly: two engineers and one spacecraft. Nothing else.
+      Bright, even, neutral light, everything in sharp focus, plain surfaces, low-detail textures. Realistic faces
+      with normal-sized eyes. Not a cartoon, not Pixar, not a photograph. No text, no logos, no flags, no numbers.
+
+  S3:   # C3: the spacecraft flying 7 million miles (Easter egg: the tiny camera satellite behind it)
+    aspect: "9:16"
+    refs: ["images/s2.jpg"]
+    prompt: |
+      The attached image is our approved spacecraft: keep exactly the same gold-foil box body, dish antenna and front
+      camera.
+      Realistic 3D video-game cutscene still, vertical 9:16.
+      Deep space, black sky with faint stars. In the middle of the picture, the small spacecraft flies away from the
+      camera with its two long, thin, flat rectangular dark-blue solar panels now fully unrolled, sticking straight out
+      on opposite sides (each panel about seven times as long as the body). Far ahead, small in the distance: a large
+      grey asteroid shaped like a spinning top, with a much smaller grey moonlet next to it. Far behind the spacecraft,
+      small and easy to miss, a tiny shoebox-sized satellite with two little solar wings follows it.
+      In this picture there is exactly: the spacecraft, the tiny satellite, the big asteroid and its small moonlet.
+      Bright, even light, everything in sharp focus, plain surfaces, low-detail textures. Not a cartoon, not Pixar,
+      not a photograph. No text, no logos, no numbers, no flags.
+
+  S4:   # C4: seconds before impact
+    aspect: "9:16"
+    refs: ["images/s3.jpg"]
+    prompt: |
+      The attached image is our approved travel shot: keep the same spacecraft, asteroids and rendering look.
+      Realistic 3D video-game cutscene still, vertical 9:16.
+      Close to the small moonlet asteroid: its grey surface of loose boulders and gravel fills the lower two thirds of
+      the picture, an egg-shaped rubble pile. The small spacecraft, with its two long flat solar panels, is a few
+      seconds from hitting the surface, flying straight down toward it from the upper part of the picture. The big
+      spinning-top asteroid is in the background. Black sky.
+      In this picture there is exactly: the spacecraft, the moonlet and the big asteroid behind it.
+      Bright, even light, everything in sharp focus, plain surfaces, low-detail textures. Not a cartoon, not Pixar,
+      not a photograph. No text, no logos, no numbers, no explosions yet.
+
+  S5:   # C5: the nudge explained (the orbit)
+    aspect: "9:16"
+    refs: ["images/s3.jpg"]
+    prompt: |
+      The attached image is our approved travel shot: keep the same two asteroids and rendering look.
+      Realistic 3D video-game cutscene still, vertical 9:16.
+      A clear view from above: the big spinning-top asteroid in the middle, and the small moonlet circling it. The
+      moonlet's path around the big asteroid is shown as one thin glowing cyan ring line. Black sky with faint stars.
+      In this picture there is exactly: the big asteroid, the small moonlet and one glowing ring line.
+      Bright, even light, everything in sharp focus, plain surfaces, low-detail textures. Not a cartoon, not Pixar,
+      not a photograph. No text, no labels, no numbers, no arrows.
+
+  S6:   # C6: the result and the answer (the debris plume; Hera arriving)
+    aspect: "9:16"
+    refs: ["images/s4.jpg"]
+    prompt: |
+      The attached image is our approved moonlet: keep the same asteroid and rendering look.
+      Realistic 3D video-game cutscene still, vertical 9:16.
+      The small moonlet asteroid just after being hit: a huge fan-shaped plume of grey dust and boulders sprays out
+      from one side of it into space, lit bright by the sun, and stretches into a long tail like a comet. The big
+      spinning-top asteroid is behind it. In the foreground, a new small spacecraft (a box with two square solar
+      panels) arrives to look at it.
+      In this picture there is exactly: the moonlet with its dust plume, the big asteroid and one new spacecraft.
+      Bright, even light, everything in sharp focus, plain surfaces, low-detail textures. Not a cartoon, not Pixar,
+      not a photograph. No text, no logos, no numbers, no flags, no fire.

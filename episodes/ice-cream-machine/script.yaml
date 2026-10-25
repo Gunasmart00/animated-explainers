@@ -1,0 +1,105 @@
+title: "Why McDonald's Ice Cream Machine Is Always Broken"
+preset: explainer
+structure: hook
+hook: "Why is the McDonald's ice cream machine ALWAYS broken?"
+# Owner pick 2026-10-21. Business "so that's why". Rules: docs/owner-creative-rules.md. Workflow: docs/owner-flow-workflow.md
+# Payoff ("they usually mean cleaning") held back to s08; twist (US government, 2024 repair right) in s09-s10; loops to s01.
+# Easter egg: the small hourglass on the machine from the first frame = the up-to-4-hour cleaning cycle (s06).
+# Visuals are brand-free (no logos, no golden arches, no text); the brand is only in the voiceover.
+caption: |
+  Why is the McDonald's ice cream machine ALWAYS broken? 🍦
+  It's usually not broken at all. Watch till the end: the US government had to step in.
+
+  Follow @howzit.explains for how things work in under a minute.
+  Has it ever been "broken" for you? 👇
+hashtags: [mcdonalds, icecream, mcflurry, fastfood, businessfacts]
+viral_hashtags: [viral, fyp, foryou, explore, explorepage, trending, didyouknow, facts, funfacts, mindblown, learnsomethingnew, foodie, explained, 3danimation, lifehacks]
+cover_text: "IT'S NOT BROKEN"
+alt_text: "Bright 3D animation of a fast-food soft-serve machine: a kid is told it's broken, a map shows broken machines across town, an x-ray shows the machine heating and freezing itself clean overnight, a technician unlocks it with a code, and a government stamp finally lets restaurants fix their own machines."
+
+voiceover: audio/voiceover.mp3   # owner, ElevenLabs Mark - Natural Conversations, 55.56 s
+music: true                      # add a licensed track in-app when posting
+
+facts:
+  - claim: "More than 1 in 10 US McDonald's can't serve ice cream at a given time (McBroken: ~11% 2021, ~15% Oct 2024)"
+    sources: ["https://www.bostonglobe.com/2021/09/02/business/why-are-mcdonalds-mcflurry-machines-often-broken-ftc-wants-figure-it-out/", "https://abc7news.com/mcdonalds-restaurants-finally-have-solution-busted-mcflurry-machine-problem/15480610/"]
+  - claim: "The nightly heat-clean cycle heats the mix to kill bacteria then cools it, and can take up to 4 hours"
+    sources: ["https://www.bostonglobe.com/2021/09/02/business/why-are-mcdonalds-mcflurry-machines-often-broken-ftc-wants-figure-it-out/", "https://tastingtable.com/2191919/mcdonalds-ice-cream-machine-employee/"]
+  - claim: "If the cycle fails, a technician with a secret passcode must service it"
+    sources: ["https://www.bostonglobe.com/2021/09/02/business/why-are-mcdonalds-mcflurry-machines-often-broken-ftc-wants-figure-it-out/", "https://tastingtable.com/2191919/mcdonalds-ice-cream-machine-employee/"]
+  - claim: "From Oct 2024 a US Copyright Office exemption lets restaurants bypass the digital locks to repair the machines"
+    sources: ["https://abc7news.com/mcdonalds-restaurants-finally-have-solution-busted-mcflurry-machine-problem/15480610/", "https://rla.org/media/article/news-and-views/public-knowledge-ifixit-free-mcflurry"]
+
+scenes:
+  - id: s01
+    clip: clips/visual.mp4
+    clip_start: 0.0
+    clip_end: 3.62
+    narration: "Why is the McDonald's ice cream machine ALWAYS broken?"
+    popups:
+      - { text: "ALWAYS?!", at_word: "ALWAYS", size: 150 }
+  - id: s02
+    clip: clips/visual.mp4
+    clip_start: 3.62
+    clip_end: 9.94
+    vo_start: 3.62
+    narration: "You walk in, you're craving a McFlurry, and... \"Sorry, machine's broken.\" Again."
+  - id: s03
+    clip: clips/visual.mp4
+    clip_start: 9.94
+    clip_end: 17.86
+    vo_start: 9.94
+    narration: "And it's not just you. Right now, more than one in ten in the US are down. There's literally a website tracking it live."
+    popups:
+      - { text: "1 IN 10", at_word: "ten", color: lime }
+  - id: s04
+    clip: clips/visual.mp4
+    clip_start: 17.86
+    clip_end: 23.70
+    vo_start: 17.86
+    narration: "So what's going on? Okay... milk is basically a buffet for bacteria."
+    popups:
+      - { text: "?", at_word: "on" }
+  - id: s05
+    clip: clips/visual.mp4
+    clip_start: 23.70
+    clip_end: 31.84
+    vo_start: 23.70
+    narration: "So every single night, the machine cooks itself clean. It heats the mix hot enough to kill the germs, then chills it all the way back down."
+  - id: s06
+    clip: clips/visual.mp4
+    clip_start: 31.84
+    clip_end: 34.14
+    vo_start: 31.84
+    narration: "And that can take up to four hours."
+    popups:
+      - { text: "UP TO 4 HOURS", at_word: "four" }
+  - id: s07
+    clip: clips/visual.mp4
+    clip_start: 34.14
+    clip_end: 41.42
+    vo_start: 34.14
+    narration: "Oh, and if one tiny step fails? It locks itself. And only a technician with a secret code can unlock it."
+    popups:
+      - { text: "SECRET CODE", at_word: "code" }
+  - id: s08
+    clip: clips/visual.mp4
+    clip_start: 41.42
+    clip_end: 47.47
+    vo_start: 41.42
+    narration: "So when they say \"broken\"... they usually mean \"cleaning.\" Or \"waiting for that one guy.\""
+  - id: s09
+    clip: clips/visual.mp4
+    clip_start: 47.47
+    clip_end: 50.61
+    vo_start: 47.47
+    narration: "It got so bad, the US government stepped in."
+  - id: s10
+    clip: clips/visual.mp4
+    clip_start: 50.61
+    clip_end: 56.0
+    vo_start: 50.61
+    narration: "And in 2024, restaurants finally won the right to fix their own ice cream machines."
+    popups:
+      - { text: "2024", at_word: "2024" }
+    end_frame: "s01@0"

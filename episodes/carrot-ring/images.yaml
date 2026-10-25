@@ -1,0 +1,118 @@
+# Image jobs (by hand: output/carrot-ring_image_prompts.md; or tools/gen_image.py). Zack style refs added automatically.
+model: gemini-nano-banana-2.1
+size: 2K
+style: [people]
+style_max: 3
+images:
+  cast:
+    aspect: "16:9"
+    prompt: |
+      A character line-up for a 3D animation: newly invented people standing side by side, full body, facing the
+      camera, on a plain teal studio background, bright even light, sharp focus:
+      1. LENA (2011): a Swedish woman about 50, chin-length straight ash-blonde hair, light-blue eyes, rosy cheeks, a
+         red knitted cardigan over a white T-shirt, blue jeans, dark-green rubber boots, green gardening gloves.
+      2. LENA (1995): the SAME woman 16 years younger (about 34): the same face, longer ash-blonde hair in a ponytail, a
+         plain white apron over a red sweater, jeans.
+      3. OLA (her husband, 1995): a man about 38, short light-brown hair, short trimmed beard, navy flannel shirt,
+         jeans, brown boots.
+      4. ANNA (their daughter, 2011): a woman about 25, long light-brown hair, mustard-yellow sweater, jeans.
+      On the far right, floating at chest height: a large close-up of a plain white-gold wedding ring with a row of
+      seven tiny diamonds.
+      Realistic adult proportions, realistic faces with normal-sized eyes. No text, no logos, no labels, no numbers.
+
+  S1:   # C1 start (hook) and the END frame of C6 (loop): she is about to toss a tiny carrot
+    aspect: "9:16"
+    refs: ["images/cast.jpg"]
+    prompt: |
+      The first attached image is our cast line-up: use exactly these people (same faces, hair, clothes). Only LENA
+      (2011) is in this picture.
+      Realistic 3D video-game cutscene still, vertical 9:16.
+      An autumn vegetable garden behind a small Swedish wooden house painted deep red with white window frames; a
+      raised vegetable bed with feathery green carrot tops in rows; a few birch trees with yellow leaves; a clear pale
+      blue sky.
+      Medium shot, three-quarter front view, camera slightly below her eye level: LENA (2011, ash-blonde hair, red
+      knitted cardigan, green gardening gloves, green rubber boots) kneels at the vegetable bed and holds up a tiny,
+      crooked, finger-sized orange carrot with its green top in her gloved right hand, arm half raised as if about to
+      toss it onto a small pile of rejected carrots beside her; she looks at it with a slightly disappointed face. A
+      plain metal bucket of good carrots stands next to her.
+      Bright, even, neutral daylight, soft short shadows, everything in sharp focus. Plain surfaces, low-detail textures.
+      Realistic adult faces with normal-sized eyes. Not a cartoon, not Pixar, not a photograph. No text, no signs, no
+      logos, no numbers.
+
+  S2:   # C2 start: 1995 Christmas baking, the ring on the counter (Easter egg: a carrot in the peelings bowl)
+    aspect: "9:16"
+    refs: ["images/cast.jpg"]
+    prompt: |
+      The first attached image is our cast line-up: use exactly these people (same faces, hair, clothes). Only LENA
+      (1995) is in this picture.
+      Realistic 3D video-game cutscene still, vertical 9:16.
+      A cosy 1990s Swedish kitchen at Christmas: plain pale-blue painted walls, a light wooden counter, a window with
+      snow outside, two red candles and a small straw Christmas goat on the windowsill.
+      Medium shot from the side of the counter: LENA (1995, ponytail, white apron over a red sweater) rolls out
+      gingerbread dough with a wooden rolling pin, smiling. On the counter in the foreground, clearly visible: her
+      white-gold wedding ring with a row of seven tiny diamonds, lying next to a small bowl of vegetable peelings with
+      one whole little carrot in it; a tray of star-shaped gingerbread cookies.
+      Bright, even, neutral light, soft short shadows, everything in sharp focus. Plain surfaces, low-detail textures.
+      Realistic adult faces with normal-sized eyes. Not a cartoon, not Pixar, not a photograph. No text, no signs, no
+      logos, no numbers.
+
+  S3:   # C3 start: the search, Ola prying up the kitchen floor
+    aspect: "9:16"
+    refs: ["images/cast.jpg", "images/s2.jpg"]
+    prompt: |
+      The first attached image is our cast line-up: use exactly these people (same faces, hair, clothes). The second
+      attached image is our approved kitchen: keep the same kitchen, colours and rendering look (no Christmas
+      decorations now).
+      Realistic 3D video-game cutscene still, vertical 9:16.
+      Wide shot of the same kitchen during a renovation: several wooden floorboards lifted and stacked against the
+      wall. OLA (1995, short light-brown hair, short beard, navy flannel shirt) kneels on the floor, prying up another
+      floorboard with a crowbar and peering into the gap; LENA (1995, ponytail, red sweater, no apron) kneels beside him
+      shining a flashlight under the counter, frowning. Both look tired and hopeful.
+      Bright, even, neutral light, soft short shadows, everything in sharp focus. Plain surfaces, low-detail textures.
+      Realistic adult faces with normal-sized eyes. Not a cartoon, not Pixar, not a photograph. No text, no signs, no
+      logos, no numbers.
+
+  S4:   # C4 start: the ring slips into the peelings bowl (close-up, Zack object shot)
+    aspect: "9:16"
+    refs: ["images/s2.jpg"]
+    prompt: |
+      The first attached image is our approved kitchen: keep exactly the same counter, ring, bowl and rendering look.
+      Realistic 3D video-game cutscene still, vertical 9:16.
+      Close-up from the side, at counter height: a woman's hands in red sleeves (LENA, 1995) tip the small bowl of
+      vegetable peelings (curly carrot and potato peelings) into a green kitchen compost bucket with its lid open. Half
+      hidden among the falling peelings, the white-gold ring with a row of seven tiny diamonds glints as it tumbles into
+      the bucket with them. She is not looking at it (her face is out of frame). The light wooden counter edge runs
+      along the top of the picture.
+      Bright, even, neutral light, soft short shadows, everything in sharp focus. Plain surfaces, low-detail textures.
+      Not a cartoon, not Pixar, not a photograph. No text, no signs, no logos, no numbers.
+
+  S5:   # C5 start: underground cutaway, a carrot seed lands in the ring
+    aspect: "9:16"
+    refs: ["images/s1.jpg"]
+    prompt: |
+      The first attached image is our approved garden: keep the same vegetable bed, red house in the distance and
+      rendering look.
+      Realistic 3D video-game explainer still, vertical 9:16: a clean CUTAWAY of the garden bed, like a slice of soil in
+      a glass box, side view. The top third: the surface of the vegetable bed with dark soil and a few crumbs of
+      compost, the red house and birches small in the background. The bottom two thirds: smooth layers of brown soil
+      seen from the side, and in the middle, about 5 cm under the surface, the white-gold ring with seven tiny diamonds,
+      tilted toward the camera so its round hole is clearly visible, glowing slightly so it stands out. A single tiny
+      carrot seed sits exactly in the middle of the ring's hole, with a thin white root just starting to grow down
+      through it and a tiny green sprout rising up toward the surface.
+      Bright, even, neutral light, everything in sharp focus. Plain surfaces, low-detail textures. Not a cartoon, not
+      Pixar, not a photograph. No text, no labels, no arrows, no logos, no numbers.
+
+  S6:   # C6 start: the ring stops at her knuckle; Anna laughing
+    aspect: "9:16"
+    refs: ["images/cast.jpg", "images/s1.jpg"]
+    prompt: |
+      The first attached image is our cast line-up: use exactly these people (same faces, hair, clothes). The second
+      attached image is our approved garden: keep the same garden, house, light and rendering look.
+      Realistic 3D video-game cutscene still, vertical 9:16.
+      Medium close shot in the same garden: LENA (2011, ash-blonde hair, red cardigan, gloves off) stands holding up her
+      left hand and pushes the white-gold ring with seven tiny diamonds onto her ring finger; it is stuck at the knuckle
+      and will not go further; she looks at it with a funny, surprised face. Next to her, ANNA (2011, long light-brown
+      hair, mustard-yellow sweater) holds a little carrot and laughs. A bucket of carrots at their feet.
+      Bright, even, neutral daylight, soft short shadows, everything in sharp focus. Plain surfaces, low-detail textures.
+      Realistic adult faces with normal-sized eyes. Not a cartoon, not Pixar, not a photograph. No text, no signs, no
+      logos, no numbers.

@@ -1,0 +1,170 @@
+title: "Why Fast Food Logos Are Red and Yellow"
+preset: explainer
+structure: hook
+hook: "Almost every fast food logo is red and yellow... on purpose."
+caption: |
+  Ever wonder why almost every fast food logo uses the exact same colors? 🍟🍔
+  It's called the Ketchup and Mustard Theory. And wait till you see why Starbucks went green.
+  
+  Follow @howzit.explains for daily 3D explainers!
+  What's your go-to fast food spot? 👇
+hashtags: [fastfood, marketing, psychology, didyouknow, foodfacts]
+viral_hashtags: [shorts, viral, fyp, trending, learnontiktok, business, secrets, lifehacks, facts, mindblowing, animation, design, branding, psychologyfacts, explore]
+cover_text: "THE FAST FOOD COLOR TRAP"
+alt_text: "Stylized 3D animation showing glowing red and yellow fast food signs, a brain cutaway reacting to color psychology, and the hidden reason behind green branding like Starbucks."
+
+voiceover: audio/voiceover.mp3
+music: true                      # licensed upbeat music bed, low under voice; no whoosh on cuts
+flow_style: |
+  Soft stylised 3D animation in a high-end animated-film look: natural adult body proportions with slightly larger expressive eyes, softly stylised faces with clean simplified detail, smooth skin, realistic casual clothing with clean simplified folds. Urban fast food street scenes are bright, warm and vibrant with saturated neon red and yellow glows, deep twilight blue sky for contrast, reflections on clean pavements and car glass. Food cutaways are clean, appetizing, graphic 3D cross-sections. Smooth, fluid cinematic camera motion with gentle easing, never jittery or shaky. Every character and setting maintains consistent model look across shots. Not chibi, not 2D, not gritty, not photorealistic.
+style_reference: ../stop-drinking-water/images/style-samples/style-B.jpg
+flow_lengths: [8]
+loop: true
+
+characters:
+  - name: "the hungry driver"
+    look: "a funny, relatable young man in his mid-20s (soft stylised 3D, natural proportions), short messy brown hair, friendly face with big expressive hazel eyes, wearing a burnt-orange hoodie over a white tee; highly expressive comedic facial reactions"
+    size: "1.75 m tall adult man"
+
+objects:
+  - name: "the sneaky green cup"
+    look: "a cute little green iced cup with a dome lid, green straw, and tiny smiling face drawn on it, wearing dark sunglasses"
+    size: "standard coffee cup size on the dashboard"
+  - name: "the neon signs"
+    look: "stylized vibrant neon restaurant signs in bold crimson red and warm golden yellow with burger, fries, and taco icons; no copyrighted trademarked logos"
+    size: "towering billboard roadside signs"
+
+setting: "a vibrant, modern city food boulevard at twilight with glowing red and yellow signs, alternating with a stylized car interior and graphic brain cross-section"
+
+facts:
+  - claim: "Fast food chains universally use red and yellow in branding (Ketchup and Mustard Theory)"
+    sources: ["https://www.businessinsider.com/fast-food-red-and-yellow-logos-ketchup-mustard-theory-2018-8", "https://www.colourstudies.com"]
+  - claim: "Red increases heart rate and triggers appetite and impulsive cravings"
+    sources: ["https://graphicdesignblog.org", "https://www.colourstudies.com"]
+  - claim: "Yellow is the most visible daylight color from long distances on highways and evokes warmth"
+    sources: ["https://karenhaller.com", "https://www.businessinsider.com/fast-food-red-and-yellow-logos-ketchup-mustard-theory-2018-8"]
+  - claim: "The red-yellow combination creates urgency encouraging quick eating and rapid table turnover"
+    sources: ["https://econlife.com", "https://ailogocreator.io"]
+  - claim: "Blue suppresses appetite because naturally occurring blue food is rare and signals poison"
+    sources: ["https://www.psychologytoday.com/us/blog/sensory-marketing/why-blue-suppresses-appetite", "https://www.webmd.com"]
+  - claim: "Subway and Starbucks use green to project health and relaxation so customers linger"
+    sources: ["https://karenhaller.com", "https://brandstolife.com.au"]
+
+scenes:
+  - id: s01
+    clip: clips/visual.mp4
+    clip_start: 0.0
+    clip_end: 4.32
+    vo_start: 0.0
+    narration: "Almost every fast food logo is red and yellow... on purpose."
+    characters: ["the hungry driver"]
+    shot: "0-1.5 s: WIDE establishing shot of a bustling city boulevard at dusk, glowing giant red and yellow fast-food signs towering above the road; camera is already zooming in rapidly toward a car stopped at the light. 1.5-3 s: camera punches in through the windshield to the hungry driver staring up with huge round eyes, jaw dropped in comic hunger, drool almost forming. 3-4.5 s: reflections of bright yellow french fries and red burger signs dance across his eyes."
+    camera: "starts wide from high boulevard angle and zooms steadily into a close-up of the driver's stunned face"
+    opens: "wide establishing shot of the glowing fast food strip at dusk"
+    ends: "close-up of the driver's hungry face with neon glow"
+    sfx: "distant city traffic hum, soft neon sign buzz, stomach growl rumble"
+    emotion: "hypnotized hunger, comic shock and awe"
+    popups:
+      - { text: "ON PURPOSE?!", at_word: "purpose", size: 150 }
+    must: ["camera zooms in continuously from wide opening", "bright vivid red and yellow neon glows", "no real-world trademark text"]
+    never: ["gloomy or dark shadows", "static camera"]
+
+  - id: s02
+    clip: clips/visual.mp4
+    clip_start: 4.32
+    clip_end: 8.25
+    vo_start: 4.32
+    narration: "Marketers call it the Ketchup and Mustard Theory, and it's a trap."
+    characters: ["the hungry driver"]
+    shot: "0-2 s: the driver looks sideways at his dashboard: next to him sits a giant 3D red ketchup bottle and a yellow mustard bottle dancing playfully. 2-4 s: in the cup holder right next to them sits the sneaky green cup wearing sunglasses (Easter egg). The driver taps his chin suspiciously."
+    camera: "medium shot inside the car interior, panning smoothly between the condiments and driver"
+    sfx: "playful squeak of ketchup bottle, cartoon trap snap"
+    easter_egg: "the tiny green iced cup in the cup holder smiling"
+    popups:
+      - { text: "THE TRAP", at_word: "trap", color: lime }
+    must: ["playful stylized condiment bottles", "bright, cozy car interior"]
+
+  - id: s03
+    clip: clips/visual.mp4
+    clip_start: 8.25
+    clip_end: 13.05
+    vo_start: 8.25
+    narration: "Red raises your heart rate and tricks your brain into feeling instant hunger."
+    characters: ["the hungry driver"]
+    shot: "0-2.5 s: stylized 3D translucent anatomical cutaway of the driver's head and chest: glowing red pulses travel up from his beating heart into his brain's appetite center. 2.5-4.5 s: the appetite center lights up like a hungry red neon burger icon pulsing with energy."
+    camera: "smooth push-in into graphic 3D cross-section"
+    sfx: "thumping heartbeat: thump-thump thump-thump, energetic electric pulse sizzle"
+    popups:
+      - { text: "+HEART RATE", at_word: "rate", color: lime }
+    must: ["clean, graphic, appealing anatomy, never gross or medical", "glowing neon red energy"]
+
+  - id: s04
+    clip: clips/visual.mp4
+    clip_start: 13.05
+    clip_end: 17.26
+    vo_start: 13.05
+    narration: "While yellow is the easiest color to spot from a highway, triggering warm comfort."
+    shot: "0-2 s: dynamic high-angle shot of a highway stretching into the distance at sunset: among dozens of dull billboards, a radiant golden-yellow arch beacon pierces through the haze like a lighthouse. 2-4.5 s: a warm golden glow washes over passing cars, emitting little floating yellow smiley icons."
+    camera: "sweeping aerial flyover along the highway toward the yellow beacon"
+    sfx: "highway breeze rush, warm cheerful chime chord"
+    popups:
+      - { text: "MAX VISIBILITY", at_word: "easiest", color: lime }
+    must: ["golden hour warm sky", "yellow sign clearly visible from furthest distance"]
+
+  - id: s05
+    clip: clips/visual.mp4
+    clip_start: 17.26
+    clip_end: 22.92
+    vo_start: 17.26
+    narration: "Together, they don't just pull you in: they create urgency so you eat fast and leave."
+    characters: ["the hungry driver"]
+    shot: "0-2 s: inside a fast-food booth wrapped entirely in saturated red seats and bright yellow walls: the driver is comically scarfing down fries at super speed. 2-4 s: a giant glowing clock on the wall ticks forward rapidly, and the red and yellow walls push him gently toward the exit door; high turnover!"
+    camera: "fast tracking camera across the booth, zooming out as the clock hands spin"
+    sfx: "fast chewing sounds, sped-up ticking clock, cartoon slide whistle"
+    popups:
+      - { text: "EAT & LEAVE!", at_word: "leave", color: lime }
+    emotion: "hectic, funny rush"
+    must: ["brightly lit diner booth", "comedic fast-forward motion"]
+
+  - id: s06
+    clip: clips/visual.mp4
+    clip_start: 22.92
+    clip_end: 28.40
+    vo_start: 22.92
+    narration: "Ever notice nobody uses blue? In nature, blue food usually means poison."
+    characters: ["the hungry driver"]
+    shot: "0-2 s: a fast-food tray appears with an eerie glowing neon-blue hamburger and blue fries. 2-4 s: the driver leans in, sniffs it, pulls an exaggerated disgusted face with sticking-out tongue and green wavy stink lines, sliding the tray far away."
+    camera: "close-up on the blue tray, pulling back to driver's repulsed face"
+    sfx: "eerie spooky sci-fi synth note, disgusted gag sound effect"
+    popups:
+      - { text: "POISON?!", at_word: "poison", color: lime }
+    emotion: "hilarious disgust, wrinkling nose"
+    must: ["vibrant unnatural blue burger", "comedic exaggerated disgust"]
+
+  - id: s07
+    clip: clips/visual.mp4
+    clip_start: 28.40
+    clip_end: 34.42
+    vo_start: 28.40
+    narration: "Except Subway and Starbucks. They went green to feel healthy... while you drink eight hundred calories."
+    characters: ["the hungry driver"]
+    shot: "0-2.5 s: the scene shifts to a serene, leafy emerald green cafe storefront; the driver relaxes into a comfy green armchair, taking a sip from a giant green cup with whipped cream and caramel drizzle. 2.5-5 s: X-ray overlay on the cup pops up with a giant glowing label: '800 CALORIES' with sugar cubes stacking to the ceiling; the driver freezes mid-sip, eyes popping out."
+    camera: "smooth orbit around the cozy armchair, then snap-zoom on the 800-calorie overlay"
+    sfx: "relaxing lounge acoustic guitar strum, record scratch, loud buzzer"
+    popups:
+      - { text: "800 CALORIES!", at_word: "eight", color: lime }
+    easter_egg_payoff: "the green cup from s02 is now the star of the shot"
+    emotion: "peaceful relaxation instantly turning into shocked realization"
+    must: ["calm emerald green tones contrasting earlier red/yellow", "giant whipped cream drink with caramel"]
+
+  - id: s08
+    clip: clips/visual.mp4
+    clip_start: 34.42
+    clip_end: 35.47
+    vo_start: 34.42
+    narration: "That's why..."
+    characters: ["the hungry driver"]
+    shot: "0-2 s: the camera pulls straight back out through the cafe window into the wide boulevard at dusk; the glowing red and yellow neon signs surround the scene again, perfectly settling back into the exact opening wide shot of s01."
+    camera: "rapid smooth pull-back out to the wide boulevard, ending precisely on the first frame of s01"
+    end_frame: "s01@0"
+    sfx: "whoosh of camera pull-out, city ambience and neon hum returning"
